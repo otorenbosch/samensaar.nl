@@ -24,34 +24,32 @@
             color: #654321;
             text-align: center;
         }
-        .illustration-container {
+        .content-wrapper {
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 2rem 0;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
         .illustration {
-            max-width: 600px;
+            width: 100%;
+            height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: block;
+            margin: 2rem auto;
         }
     </style>
 </head>
 <body>
-    <div class="content-container min-h-screen p-8">
-        <div class="max-w-4xl mx-auto">
+    <div class="content-container min-h-screen py-8">
+        <div class="content-wrapper">
             <h1 class="title-text text-4xl md:text-5xl font-bold mb-4">
                 Sam en Saar
             </h1>
-            <h2 class="title-text text-4xl md:text-5xl font-bold mb-16">
+            <h2 class="title-text text-4xl md:text-5xl font-bold mb-8">
                 Het geheim van de bronzen bijl
             </h2>
 
-            <div class="illustration-container">
-                <img src="./images/bijl-potlood.jpg" alt="Schetsmatige illustratie van een hand die een voorwerp vasthoudt in een landschap" class="illustration">
-            </div>
+            <img src="./images/bijl-potlood.jpg" alt="Schetsmatige illustratie van een hand die een voorwerp vasthoudt in een landschap" class="illustration">
 
             <div class="space-y-6 text-lg body-text">
                 <p class="leading-relaxed">
