@@ -20,7 +20,6 @@ title: Boeken
                     <p><strong>ISBN:</strong> {{ book.isbn }}</p>
                     <p><strong>Prijs:</strong> {{ book.price }}</p>
                     <p><strong>Verzendkosten:</strong> {{ book.verzendkosten }}</p>
-                    <p><strong>Totaalprijs:</strong> {{ book.totaalprijs }}</p>
                     
                     {% if book.available %}
                         <div class="availability available">Nu beschikbaar</div>
@@ -34,7 +33,7 @@ title: Boeken
                         <a href="{{ '/assets/previews/' | relative_url }}{{ book.id }}-fragment.pdf" target="_blank" class="button preview">Lees een fragment</a>
                         <a href="{{ '/bestel/' | relative_url }}?boek={{ book.id }}" class="button secondary">Bestellen</a>
                     {% else %}
-                        <a href="{{ '/contact.html' | relative_url }}" class="button primary">Houd mij op de hoogte</a>
+                        <a href="{{ '/contact' | relative_url }}" class="button primary">Houd mij op de hoogte</a>
                     {% endif %}
                 </div>
             </div>
