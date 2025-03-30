@@ -205,14 +205,14 @@ title: Bestel
         max-width: 600px;
     }
     
-    /* Media query voor responsive layout */
-    @media (max-width: 900px) {
-        .options-container {
+    @media screen and (max-width: 900px) {
+        body .bestel-container .options-container {
+            display: flex !important;
             flex-direction: column !important;
             align-items: center !important;
         }
         
-        .option-card {
+        body .bestel-container .option-card {
             width: 100% !important;
             max-width: 100% !important;
             flex: 0 0 100% !important;
@@ -220,15 +220,15 @@ title: Bestel
             box-sizing: border-box !important;
         }
         
-        .option-title {
+        body .bestel-container .option-title {
             font-size: 1.5rem !important;
         }
         
-        .benefits-list {
+        body .bestel-container .benefits-list {
             padding-left: 10px !important;
         }
         
-        .order-button {
+        body .bestel-container .order-button {
             width: 100% !important;
             box-sizing: border-box !important;
             text-align: center !important;
