@@ -56,6 +56,13 @@ title: Agenda
         </div>
     {% endif %}
     
+    <div class="no-events-container">
+        <h2>Nog geen evenementen gepland</h2>
+        <p><i class="icon-location"></i> Diverse locaties</p>
+        <p><i class="icon-time"></i> 10:00 - 17:00</p>
+        <p>Op dit moment zijn er nog geen evenementen gepland. Houd deze pagina in de gaten voor toekomstige boekpresentaties, signeersessies en workshops!</p>
+    </div>
+    
     <div class="custom-event">
         <h2>Boek een evenement</h2>
         <p>Interesse in een workshop, lezing of signeersessie op uw locatie? Neem contact met ons op voor de mogelijkheden.</p>
@@ -67,6 +74,8 @@ title: Agenda
     /* Bestaande stijlen behouden */
     .agenda-content {
         text-align: left;
+        max-width: 800px;
+        margin: 0 auto;
     }
     
     .intro-text {
@@ -106,20 +115,25 @@ title: Agenda
         margin: 0 auto;
     }
     
+    /* Verbeterde timeline stijl die rekening houdt met mobiel */
     .events-timeline::before {
         content: '';
         position: absolute;
         top: 0;
         bottom: 0;
-        left: 120px;
+        left: 20px; /* Verplaatst van 120px naar 20px voor mobiel */
         width: 3px;
         background-color: #FFA500;
+        z-index: 0; /* Zorgt ervoor dat de lijn onder de inhoud zit */
     }
     
     .event-card {
         display: flex;
         margin-bottom: 30px;
         position: relative;
+        flex-direction: column; /* Standaard verticaal voor mobiel */
+        padding-left: 50px; /* Ruimte voor timeline links */
+        z-index: 1; /* Zorgt ervoor dat cards boven de tijdlijn staan */
     }
     
     .event-date {
@@ -130,9 +144,10 @@ title: Agenda
         color: white;
         border-radius: 5px;
         padding: 10px;
-        margin-right: 40px;
+        margin-bottom: 15px;
         position: relative;
-        z-index: 1;
+        /* Gepositioneerd aan het begin van het event, uitgelijnd met de tijdlijn */
+        margin-left: -30px; /* Trekt datum terug richting tijdlijn */
     }
     
     .event-day {
@@ -183,6 +198,7 @@ title: Agenda
         display: flex;
         gap: 15px;
         margin-top: 15px;
+        flex-wrap: wrap;
     }
     
     .event-button {
@@ -218,8 +234,21 @@ title: Agenda
         border-radius: 10px;
         padding: 30px;
         margin: 30px 0;
-        text-align: center;
+        position: relative;
+        padding-left: 50px; /* Consistente padding met events */
+        margin-left: 20px; /* Zorgt voor uitlijning met timeline */
         box-shadow: 0 4px 10px rgba(139, 69, 19, 0.15);
+    }
+    
+    .no-events-container::before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left: -10px; /* Positie ten opzichte van container om aan te sluiten op tijdlijn */
+        width: 20px;
+        height: 20px;
+        background-color: #FFA500;
+        border-radius: 50%;
     }
     
     .past-events-section {
@@ -254,20 +283,30 @@ title: Agenda
         border-radius: 10px;
     }
     
-    @media (max-width: 768px) {
+    /* Desktop-specifieke stijlen met media query */
+    @media (min-width: 769px) {
         .events-timeline::before {
-            left: 20px;
+            left: 120px; /* Oorspronkelijke positie voor desktop */
         }
         
         .event-card {
-            flex-direction: column;
+            flex-direction: row; /* Horizontale layout voor desktop */
+            padding-left: 0; /* Reset padding voor desktop */
         }
         
         .event-date {
-            width: auto;
-            margin-right: 0;
-            margin-bottom: 20px;
-            margin-left: 50px;
+            margin-right: 40px;
+            margin-bottom: 0;
+            margin-left: 0; /* Reset margin voor desktop */
+        }
+        
+        .no-events-container {
+            padding-left: 30px; /* Reset padding voor desktop */
+            margin-left: 120px; /* Uitlijning met tijdlijn op desktop */
+        }
+        
+        .no-events-container::before {
+            left: -20px; /* Aanpassing voor desktop */
         }
     }
 
