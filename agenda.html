@@ -114,12 +114,14 @@ title: Agenda
         left: 120px;
         width: 3px;
         background-color: #FFA500;
+        z-index: 0; /* Deze toevoegen */
     }
     
     .event-card {
         display: flex;
         margin-bottom: 30px;
         position: relative;
+        z-index: 1; /* Toevoegen: zorgt dat kaarten boven de tijdlijn komen */
     }
     
     .event-date {
@@ -261,13 +263,14 @@ title: Agenda
         
         .event-card {
             flex-direction: column;
+            padding-left: 30px; /* Toevoegen: geeft ruimte voor de tijdlijn */
         }
         
         .event-date {
             width: auto;
             margin-right: 0;
             margin-bottom: 20px;
-            margin-left: 50px;
+            margin-left: -10px; /* Aanpassen: was 50px, nu uitgelijnd met tijdlijn */
         }
     }
 
