@@ -37,9 +37,11 @@ title: Bestel
 
         <h2>Kies hoe je het boek wilt ontvangen:</h2>
         
-        <div class="options-container" style="display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 30px !important; margin-top: 30px !important;">
+        <!-- <div class="options-container" style="display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 30px !important; margin-top: 30px !important;"> -->
+        <div class="options-container" style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 30px;">    
             <!-- Optie 1 is altijd beschikbaar (via Boekengilde) -->
-            <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;">
+            <!-- <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;"> -->
+            <div class="option-card" style="width: 100%; box-sizing: border-box; margin-bottom: 20px;">    
                 <div class="option-title">OPTIE 1: VIA BOEKENGILDE</div>
                 
                 <ul class="benefits-list">
@@ -54,7 +56,8 @@ title: Bestel
             
             <!-- Optie 2 alleen tonen als directe aankoop beschikbaar is -->
             {% if boek.direct_purchase and boek.direct_purchase.available %}
-            <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;">
+            <!-- <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;"> -->
+            <div class="option-card" style="width: 100%; box-sizing: border-box; margin-bottom: 20px;">
                 <div class="option-title">OPTIE 2: {{ boek.direct_purchase.title }}</div>
                 
                 <ul class="benefits-list">
@@ -67,7 +70,8 @@ title: Bestel
             </div>
             {% else %}
             <!-- Fallback naar standaard optie 2 als er geen aangepaste directe aankoop is gespecificeerd -->
-            <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;">
+            <!-- <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;"> -->
+            <div class="option-card" style="width: 100%; box-sizing: border-box; margin-bottom: 20px;">
                 <div class="option-title">OPTIE 2: VIA DE AUTEUR</div>
                 
                 <ul class="benefits-list">
