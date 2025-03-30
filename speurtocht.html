@@ -668,6 +668,12 @@ title: Speurtocht
         margin: 0;
         font-weight: bold;
     }
+
+    .artifact.selected {
+    border: 3px solid #FFA500;
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    transform: scale(1.05);
+    }
     
     .drop-zones {
         display: grid;
@@ -1028,78 +1034,80 @@ title: Speurtocht
         
         startPuzzle3Button.addEventListener('click', function() {
             showScreen(puzzle3Screen, introScreen3);
-            setupDragAndDrop();
+            setupTapToMatch();
         });
         
-        function setupDragAndDrop() {
+        function setupTapToMatch() {
             const artifacts = document.querySelectorAll('.artifact');
             const dropZones = document.querySelectorAll('.drop-zone');
+            let selectedArtifact = null;
             
             // Reset
             dropZones.forEach(zone => {
-                zone.innerHTML = `<p>Sleep hier de ${zone.getAttribute('data-artifact').charAt(0).toUpperCase() + zone.getAttribute('data-artifact').slice(1)}</p>`;
+                zone.innerHTML = `<p>Selecteer eerst een voorwerp en klik dan hier om de ${zone.getAttribute('data-artifact')} te plaatsen</p>`;
                 zone.classList.remove('correct', 'incorrect', 'highlight');
             });
             
             correctMatches = 0;
             
-            // Maak artifacts sleepbaar
+            // Maak artifacts selecteerbaar
             artifacts.forEach(artifact => {
-                artifact.draggable = true;
+                artifact.classList.remove('selected');
+                artifact.style.visibility = 'visible';
+                artifact.style.cursor = 'pointer';
                 
-                artifact.addEventListener('dragstart', function(e) {
-                    e.dataTransfer.setData('text/plain', this.getAttribute('data-artifact'));
-                    setTimeout(() => this.style.opacity = '0.4', 0);
-                });
+                // Verwijder eventuele oude event listeners (belangrijk bij reset)
+                const newArtifact = artifact.cloneNode(true);
+                artifact.parentNode.replaceChild(newArtifact, artifact);
                 
-                artifact.addEventListener('dragend', function() {
-                    this.style.opacity = '1';
+                newArtifact.addEventListener('click', function() {
+                    // Deselecteer eerder geselecteerde artifact
+                    artifacts.forEach(a => a.classList.remove('selected'));
+                    
+                    // Selecteer deze artifact
+                    this.classList.add('selected');
+                    selectedArtifact = this;
                 });
             });
             
-            // Configureer drop zones
+            // Maak drop zones klikbaar
             dropZones.forEach(zone => {
-                zone.addEventListener('dragover', function(e) {
-                    e.preventDefault();
-                    this.classList.add('highlight');
-                });
+                zone.style.cursor = 'pointer';
                 
-                zone.addEventListener('dragleave', function() {
-                    this.classList.remove('highlight');
-                });
+                // Verwijder eventuele oude event listeners (belangrijk bij reset)
+                const newZone = zone.cloneNode(true);
+                zone.parentNode.replaceChild(newZone, zone);
                 
-                zone.addEventListener('drop', function(e) {
-                    e.preventDefault();
-                    this.classList.remove('highlight');
+                newZone.addEventListener('click', function() {
+                    if (!selectedArtifact) {
+                        alert('Selecteer eerst een voorwerp voordat je probeert het te plaatsen');
+                        return;
+                    }
                     
-                    const artifactType = e.dataTransfer.getData('text/plain');
-                    const matchingArtifact = document.querySelector(`.artifact[data-artifact="${artifactType}"]`);
+                    const artifactType = selectedArtifact.getAttribute('data-artifact');
                     
-                    if (matchingArtifact) {
-                        // Controleer of het een juiste match is
-                        if (artifactType === this.getAttribute('data-artifact')) {
-                            this.innerHTML = '';
-                            this.appendChild(matchingArtifact.cloneNode(true));
-                            this.classList.add('correct');
-                            correctMatches++;
-                            
-                            // Verberg het originele artefact
-                            matchingArtifact.style.visibility = 'hidden';
-                            
-                            // Controleer of alle matches juist zijn
-                            if (correctMatches === totalArtifacts) {
-                                feedback3.textContent = "Perfect! Je hebt alle voorwerpen correct geïdentificeerd. Je bent een echte archeoloog!";
-                                feedback3.className = "feedback correct";
-                                feedback3.style.display = "block";
-                                restartButton3.style.display = "block";
-                                completeButton3.style.display = "block";
-                            }
-                        } else {
-                            this.classList.add('incorrect');
-                            setTimeout(() => {
-                                this.classList.remove('incorrect');
-                            }, 1500);
+                    // Controleer of het een juiste match is
+                    if (artifactType === this.getAttribute('data-artifact')) {
+                        this.innerHTML = '';
+                        this.appendChild(selectedArtifact.cloneNode(true));
+                        this.classList.add('correct');
+                        selectedArtifact.style.visibility = 'hidden';
+                        selectedArtifact = null;
+                        correctMatches++;
+                        
+                        // Controleer of alle matches juist zijn
+                        if (correctMatches === totalArtifacts) {
+                            feedback3.textContent = "Perfect! Je hebt alle voorwerpen correct geïdentificeerd. Je bent een echte archeoloog!";
+                            feedback3.className = "feedback correct";
+                            feedback3.style.display = "block";
+                            restartButton3.style.display = "block";
+                            completeButton3.style.display = "block";
                         }
+                    } else {
+                        this.classList.add('incorrect');
+                        setTimeout(() => {
+                            this.classList.remove('incorrect');
+                        }, 1500);
                     }
                 });
             });
@@ -1115,7 +1123,7 @@ title: Speurtocht
                 artifact.style.visibility = 'visible';
             });
             
-            setupDragAndDrop();
+            setupTapToMatch();
         });
         
         completeButton3.addEventListener('click', function() {
