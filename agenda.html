@@ -1,0 +1,311 @@
+---
+layout: default
+title: Agenda
+---
+
+<h1 class="title-text">Agenda</h1>
+
+<div class="agenda-content">
+    <div class="intro-text">
+        <p>Op deze pagina vind je alle komende evenementen, boekpresentaties, workshops en signeersessies rondom "Sam en Saar - Het geheim van de bronzen bijl". Kom langs en ontmoet de auteur!</p>
+    </div>
+    
+    {% assign current_date = site.time | date: '%s' %}
+    {% assign visible_events = site.data.events | where: "visible", true %}
+    {% assign months = "januari,februari,maart,april,mei,juni,juli,augustus,september,oktober,november,december" | split: "," %}
+    
+    {% if visible_events.size > 0 %}
+        <div class="event-filter">
+            <button class="filter-button active" data-filter="all">Alle evenementen</button>
+            <button class="filter-button" data-filter="signeersessie">Signeersessies</button>
+            <button class="filter-button" data-filter="lezing">Lezingen</button>
+            <button class="filter-button" data-filter="workshop">Workshops</button>
+        </div>
+        
+        <div class="events-timeline">
+            {% for event in visible_events %}
+                <div class="event-card" data-type="{{ event.type }}">
+                    <div class="event-date">
+                        <span class="event-day">{{ event.date | date: "%-d" }}</span>
+                        <span class="event-month">
+                            {% assign month_index = event.date | date: "%-m" | minus: 1 %}
+                            {{ months[month_index] }}
+                        </span>
+                        <span class="event-year">{{ event.date | date: "%Y" }}</span>
+                    </div>
+                    <div class="event-details">
+                        <h2>{{ event.title }}</h2>
+                        <p class="event-location"><i class="icon-location"></i> {{ event.location }}</p>
+                        <p class="event-time"><i class="icon-time"></i> {{ event.start_time }} - {{ event.end_time }}</p>
+                        <p class="event-description">
+                            {{ event.description }}
+                        </p>
+                        <div class="event-actions">
+                            {% if event.url and event.url != "#" %}
+                                <a href="{{ event.url }}" class="event-button">Meer info</a>
+                            {% endif %}
+                            {% if event.registration_url and event.registration_url != "#" %}
+                                <a href="{{ event.registration_url }}" class="event-button secondary">Aanmelden</a>
+                            {% elsif event.ticket_url and event.ticket_url != "#" %}
+                                <a href="{{ event.ticket_url }}" class="event-button secondary">Tickets</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    
+    <div class="custom-event">
+        <h2>Boek een evenement</h2>
+        <p>Interesse in een workshop, lezing of signeersessie op uw locatie? Neem contact met ons op voor de mogelijkheden.</p>
+        <a href="{{ '/contact' | relative_url }}" class="contact-button">Contact opnemen</a>
+    </div>
+</div>
+
+<style>
+    /* Bestaande stijlen behouden */
+    .agenda-content {
+        text-align: left;
+    }
+    
+    .intro-text {
+        max-width: 700px;
+        margin: 0 auto 40px auto;
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    
+    .event-filter {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .filter-button {
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 2px solid #8B4513;
+        color: #8B4513;
+        border-radius: 30px;
+        padding: 8px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    
+    .filter-button:hover, .filter-button.active {
+        background-color: #8B4513;
+        color: white;
+    }
+    
+    .events-timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .events-timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 120px;
+        width: 3px;
+        background-color: #FFA500;
+    }
+    
+    .event-card {
+        display: flex;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    
+    .event-date {
+        width: 100px;
+        flex-shrink: 0;
+        text-align: center;
+        background-color: #8B4513;
+        color: white;
+        border-radius: 5px;
+        padding: 10px;
+        margin-right: 40px;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .event-day {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 1;
+    }
+    
+    .event-month {
+        display: block;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    
+    .event-year {
+        display: block;
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+    
+    .event-details {
+        flex: 1;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .event-details h2 {
+        color: #8B4513;
+        margin-bottom: 10px;
+        font-size: 1.4rem;
+    }
+    
+    .event-location, .event-time {
+        margin-bottom: 10px;
+        color: #555;
+        font-weight: 500;
+    }
+    
+    .event-description {
+        margin: 15px 0;
+        line-height: 1.6;
+    }
+    
+    .event-actions {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .event-button {
+        display: inline-block;
+        background-color: #8B4513;
+        color: white;
+        padding: 8px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    
+    .event-button.secondary {
+        background-color: transparent;
+        border: 2px solid #8B4513;
+        color: #8B4513;
+    }
+    
+    .event-button:hover {
+        background-color: #FFA500;
+        color: white;
+        transform: translateY(-2px);
+    }
+    
+    .event-button.secondary:hover {
+        background-color: #8B4513;
+        color: white;
+    }
+    
+    .no-events-container {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        padding: 30px;
+        margin: 30px 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(139, 69, 19, 0.15);
+    }
+    
+    .past-events-section {
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 50px 0 30px 0;
+    }
+    
+    .archive-button, .contact-button {
+        display: inline-block;
+        background-color: #8B4513;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 15px;
+        transition: all 0.3s;
+    }
+    
+    .archive-button:hover, .contact-button:hover {
+        background-color: #FFA500;
+    }
+    
+    .custom-event {
+        text-align: center;
+        margin: 40px 0;
+        padding: 25px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+    }
+    
+    @media (max-width: 768px) {
+        .events-timeline::before {
+            left: 20px;
+        }
+        
+        .event-card {
+            flex-direction: column;
+        }
+        
+        .event-date {
+            width: auto;
+            margin-right: 0;
+            margin-bottom: 20px;
+            margin-left: 50px;
+        }
+    }
+
+    /* Simuleer iconen met CSS */
+    .icon-location::before {
+        content: "📍";
+        margin-right: 5px;
+    }
+    
+    .icon-time::before {
+        content: "🕒";
+        margin-right: 5px;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const eventCards = document.querySelectorAll('.event-card');
+        
+        if(filterButtons.length > 0 && eventCards.length > 0) {
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    eventCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-type') === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        }
+    });
+</script>

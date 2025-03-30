@@ -1,0 +1,83 @@
+---
+layout: default
+title: Bedankt voor je bericht
+---
+
+<div class="thanks-container">
+    <h1 class="title-text">Bedankt voor je bericht!</h1>
+    
+    <div class="thanks-content">
+        <img src="{{ '/assets/images/bijl-potlood.jpg' | relative_url }}" alt="Schetsmatige illustratie" class="thanks-image">
+        
+        <p class="thanks-message">
+            Je bericht is succesvol verstuurd. Ik zal zo snel mogelijk contact met je opnemen.
+        </p>
+        
+        <div class="action-buttons">
+            <a href="{{ '/' | relative_url }}" class="home-button">Terug naar Home</a>
+            <a href="{{ '/boeken' | relative_url }}" class="book-button">Bekijk onze boeken</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .thanks-container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .thanks-content {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        padding: 30px;
+        margin-top: 30px;
+        box-shadow: 0 4px 8px rgba(139, 69, 19, 0.2);
+    }
+    
+    .thanks-image {
+        max-width: 250px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+    
+    .thanks-message {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+    
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .home-button, .book-button {
+        display: inline-block;
+        padding: 10px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    
+    .home-button {
+        background-color: #8B4513;
+        color: white;
+    }
+    
+    .book-button {
+        background-color: transparent;
+        border: 2px solid #8B4513;
+        color: #8B4513;
+    }
+    
+    .home-button:hover, .book-button:hover {
+        background-color: #FFA500;
+        color: white;
+        transform: translateY(-2px);
+    }
+</style>

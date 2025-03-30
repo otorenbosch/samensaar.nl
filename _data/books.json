@@ -1,0 +1,27 @@
+[
+    {
+      "id": "bronzen-bijl",
+      "title": "Sam en Saar en het geheim van de bronzen bijl",
+      "cover": "Het geheim van de bronzen bijl.jpg",
+      "description": "Wanneer de vader van Sam en Saar een bronzen bijl vindt op een maisakker, zet dat een reeks van gebeurtenissen in gang die hun leven voor altijd zal veranderen. Geïntrigeerd door de vondst droomt Sam over een wereld van oude verhalen, vergeten tijden en spannende avonturen. Wat begint als een eenvoudig zoekavontuur met een metaaldetector, ontvouwt zich tot een ontdekkingstocht door het verre verleden.",
+      "publication_year": 2025,
+      "age_group": "10+",
+      "pages": 120,
+      "isbn": "978 94 64 91997 4",
+      "price": "€19,95 excl. verzendkosten",
+      "verzendkosten": "€4,25",
+      "totaalprijs": "€24,20 (inclusief €2,00 BTW (9%))",
+      "available": true,
+      "direct_purchase": {
+        "available": true,
+        "title": "VIA DE AUTEUR",
+        "benefits": [
+          "Persoonlijk gesigneerd exemplaar",
+          "Met handgeschreven opdracht",
+          "Direct de auteur steunen",
+          "Inclusief exclusieve boekenlegger"
+        ],
+        "button_text": "BESTEL EEN GESIGNEERD EXEMPLAAR"
+      }
+    }
+  ]

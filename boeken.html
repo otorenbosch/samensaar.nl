@@ -1,0 +1,135 @@
+---
+layout: default
+title: Boeken
+---
+
+<h1 class="title-text">Onze Boeken</h1>
+
+<div class="books-container">
+    {% if site.data.books %}
+        {% for book in site.data.books %}
+            <div class="book-card">
+                <img src="{{ '/assets/images/' | relative_url }}{{ book.cover }}" alt="{{ book.title }}" class="book-cover">
+                <h2>{{ book.title }}</h2>
+                <p>{{ book.description }}</p>
+                
+                <div class="book-details">
+                    <p><strong>Jaar van uitgave:</strong> {{ book.publication_year }}</p>
+                    <p><strong>Leeftijd:</strong> {{ book.age_group }}</p>
+                    <p><strong>Aantal pagina's:</strong> {{ book.pages }}</p>
+                    <p><strong>ISBN:</strong> {{ book.isbn }}</p>
+                    <p><strong>Prijs:</strong> {{ book.price }}</p>
+                    <p><strong>Verzendkosten:</strong> {{ book.verzendkosten }}</p>
+                    <p><strong>Totaalprijs:</strong> {{ book.totaalprijs }}</p>
+                    
+                    {% if book.available %}
+                        <div class="availability available">Nu beschikbaar</div>
+                    {% else %}
+                        <div class="availability not-available">Binnenkort verkrijgbaar</div>
+                    {% endif %}
+                </div>
+                
+                <div class="action-buttons">
+                    {% if book.available %}
+                        <a href="{{ '/assets/previews/' | relative_url }}{{ book.id }}-fragment.pdf" target="_blank" class="button preview">Lees een fragment</a>
+                        <a href="{{ '/bestel/' | relative_url }}?boek={{ book.id }}" class="button secondary">Bestellen</a>
+                    {% else %}
+                        <a href="{{ '/contact.html' | relative_url }}" class="button primary">Houd mij op de hoogte</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Er zijn momenteel geen boeken beschikbaar. Kom later terug!</p>
+    {% endif %}
+</div>
+
+<style>
+    .books-container {
+        margin-top: 30px;
+    }
+    
+    .book-card {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 30px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .book-cover {
+        max-width: 250px;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+        border-radius: 5px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    }
+    
+    .book-details {
+        text-align: left;
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 15px;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
+    
+    .book-details p {
+        margin: 5px 0;
+    }
+    
+    .availability {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 3px;
+        font-weight: bold;
+        margin: 10px 0;
+    }
+    
+    .available {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    .not-available {
+        background-color: #FFC107;
+        color: #333;
+    }
+    
+    .action-buttons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .button {
+        display: inline-block;
+        padding: 10px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+        font-size: 1.1rem;
+    }
+    
+    .primary {
+        background-color: #8B4513;
+        color: white;
+    }
+    
+    .secondary {
+        background-color: #FFA500;
+        color: white;
+    }
+    
+    .preview {
+        background-color: #6A5ACD;
+        color: white;
+    }
+    
+    .button:hover {
+        opacity: 0.9;
+        transform: translateY(-2px);
+    }
+</style>

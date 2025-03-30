@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Home",
+    "link": "/"
+  },
+  {
+    "name": "Boeken",
+    "link": "/boeken/"
+  },
+  {
+    "name": "Interactief",
+    "link": "/interactief/"
+  },
+  {
+    "name": "Voor scholen",
+    "link": "/school/"
+  },
+  {
+    "name": "Agenda",
+    "link": "/agenda/"
+  },
+  {
+    "name": "Over mij",
+    "link": "/over-mij/"
+  },
+  {
+    "name": "Contact",
+    "link": "/contact/"
+  }
+]

@@ -1,0 +1,285 @@
+---
+layout: default
+title: Voor scholen
+---
+
+<h1 class="title-text">Voor scholen</h1>
+
+<div class="schools-container">
+    <div class="intro-section">
+        <div class="intro-text">
+            <h2>Sam en Saar in de klas</h2>
+            <p>
+                "Het geheim van de bronzen bijl" is niet alleen een spannend verhaal, maar ook een educatieve reis
+                door de geschiedenis. Het boek biedt talloze mogelijkheden om leerlingen te laten kennismaken met
+                archeologie, geschiedenis en avontuur!
+            </p>
+            <p>
+                Op deze pagina vind je lesmateriaal, lezingen en workshops voor basisscholen.
+            </p>
+        </div>
+        <div class="intro-image">
+            <img src="{{ '/assets/images/samsaarklas.jpg' | relative_url }}" alt="Sam en Saar in de klas" class="school-image">
+        </div>
+    </div>
+
+    <div class="education-section">
+        <h2>Educatief materiaal</h2>
+        
+        <div class="education-cards">
+            <div class="education-card">
+                <h3>Lesbrief groep 6-8</h3>
+                <p>Complete lesbrief met opdrachten, discussievragen en activiteiten rondom het boek.</p>
+                <a href="{{ '/assets/docs/lesbrief_bronzenbijl.pdf' | relative_url }}" class="download-button" target="_blank">Download PDF</a>
+            </div>
+            
+            <div class="education-card">
+                <h3>Werkbladen</h3>
+                <p>Printbare werkbladen over archeologie en de Bronstijd, die goed aansluitend bij het boek.</p>
+                <a href="{{ '/assets/docs/werkbladen_bronzenbijl.pdf' | relative_url }}" class="download-button" target="_blank">Download werkbladen</a>
+            </div>
+            
+            <div class="education-card">
+                <h3>Docentenhandleiding</h3>
+                <p>Uitgebreide handleiding voor docenten met achtergrondinformatie en suggesties.</p>
+                <a href="{{ '/assets/docs/docentenhandleiding_bronzenbijl.pdf' | relative_url }}" class="download-button" target="_blank">Download handleiding</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="visit-section">
+        <h2>Auteursbezoek</h2>
+        <div class="visit-content">
+            <div class="visit-text">
+                <p>
+                    Otto Torenbosch komt graag op bezoek in de klas om te vertellen over het boek,
+                    metaaldetectie en archeologie. Tijdens een interactieve presentatie neemt hij
+                    de leerlingen mee in de wereld van Sam en Saar.
+                </p>
+                <h3>Wat kun je verwachten?</h3>
+                <ul class="visit-list">
+                    <li>Interactieve presentatie (45-60 minuten)</li>
+                    <li>Demonstratie metaaldetector</li>
+                    <li>Vragen & antwoorden met de auteur</li>
+                    <li>Mogelijkheid tot boeksignering</li>
+                </ul>
+                <a href="{{ '/contact' | relative_url }}" class="contact-button">Informatie & boekingen</a>
+            </div>
+            <div class="visit-image">
+                <img src="{{ '/assets/images/auteurklas.jpg' | relative_url }}" alt="Auteursbezoek in de klas" class="author-visit-image">
+            </div>
+        </div>
+    </div>
+    
+    <div class="projects-section">
+        <h2>Schoolprojecten</h2>
+        <p class="projects-intro">
+            Verschillende scholen hebben al bijzondere projecten gedaan rondom "Sam en Saar". 
+            Hieronder enkele inspirerende voorbeelden:
+        </p>
+        
+        <div class="projects-gallery">            
+            <div class="project-item">
+                <img src="{{ '/assets/images/klas2.jpg' | relative_url }}" alt="Schoolproject voorbeeld 2" class="project-image">
+                <div class="project-caption">
+                    <h4>Montessorischool Borger, Borger</h4>
+                    <p>De auteur leest voor uit het boek en laat de kinderen kennis maken met metaaldetectie en archeologie</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .schools-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: left;
+    }
+    
+    .intro-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    
+    .intro-text {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .intro-image {
+        flex: 1;
+        min-width: 300px;
+        max-width: 400px;
+    }
+    
+    .school-image {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-height: 300px;
+        object-fit: cover;
+    }
+    
+    .education-section {
+        margin-bottom: 50px;
+    }
+    
+    .education-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+    }
+    
+    .education-card {
+        background-color: rgba(255, 255, 255, 0.6);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .download-button {
+        display: inline-block;
+        background-color: #8B4513;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        margin-top: 15px;
+        transition: background-color 0.3s;
+    }
+    
+    .download-button:hover {
+        background-color: #FFA500;
+    }
+    
+    .visit-section {
+        margin-bottom: 50px;
+    }
+    
+    .visit-content {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    
+    .visit-text {
+        flex: 1.2;
+        min-width: 300px;
+    }
+    
+    .visit-image {
+        flex: 0.8;
+        min-width: 250px;
+        max-width: 400px;
+    }
+    
+    .author-visit-image {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        max-height: 300px;
+        object-fit: cover;
+    }
+    
+    .visit-list {
+        padding-left: 20px;
+        margin: 15px 0;
+    }
+    
+    .visit-list li {
+        margin-bottom: 8px;
+    }
+    
+    .contact-button {
+        display: inline-block;
+        background-color: #FFA500;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-button:hover {
+        background-color: #8B4513;
+    }
+    
+    .projects-section h2 {
+        margin-bottom: 15px;
+    }
+    
+    .projects-intro {
+        margin-bottom: 30px;
+    }
+    
+    .projects-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .project-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .project-image {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s;
+    }
+    
+    .project-item:hover .project-image {
+        transform: scale(1.05);
+    }
+    
+    .project-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(139, 69, 19, 0.8);
+        color: white;
+        padding: 15px;
+    }
+    
+    .project-caption h4 {
+        margin: 0 0 5px 0;
+        color: white;
+    }
+    
+    .project-caption p {
+        margin: 0;
+        font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+        .intro-section, .visit-content {
+            flex-direction: column;
+        }
+        
+        .intro-image, .visit-image {
+            max-width: 100%;
+        }
+        
+        .projects-gallery {
+            grid-template-columns: 1fr;
+            max-width: 100%;
+        }
+    }
+</style>

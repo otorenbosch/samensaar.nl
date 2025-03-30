@@ -1,0 +1,108 @@
+<footer>
+    <style>
+        /* Footer */
+        footer {
+            background-color: #8B4513;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+            padding: 0 15px;
+        }
+
+        .footer-section h3 {
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p {
+            margin: 5px 0;
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            color: #FFA500;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 12px;
+        }
+        
+        .footer-email, .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-email:hover, .footer-link:hover {
+            color: #FFA500;
+            text-decoration: underline;
+        }
+    </style>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p><a href="mailto:info@samensaar.nl" class="footer-email">info@samensaar.nl</a></p>
+            <p><a href="https://www.samensaar.nl" class="footer-link" target="_blank">www.samensaar.nl</a></p>
+            <p>O. Torenbosch</p>
+            <p>KvK: 96781149</p>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Pagina's</h3>
+            <ul>
+                {% assign first_four_nav = site.data.navigation | slice: 0, 4 %}
+                {% for item in first_four_nav %}
+                <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>Meer</h3>
+            <ul>
+                {% assign last_three_nav = site.data.navigation | slice: 4, 3 %}
+                {% for item in last_three_nav %}
+                <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    
+    <div class="copyright">
+        <p>&copy; {{ site.time | date: '%Y' }} Sam en Saar. Alle rechten voorbehouden.</p>
+    </div>
+</footer>

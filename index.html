@@ -1,67 +1,74 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam en Saar - Het geheim van de bronzen bijl</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Comic Neue', 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
-            background-color: #FFDDB0;
-        }
-        .title-text {
-            color: #8B4513;
-            width: 100%;
-            text-align: center;
-            display: block;
-        }
-        .body-text {
-            color: #654321;
-            text-align: center;
-        }
-        .content-wrapper {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        .illustration {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 2rem auto;
-        }
-    </style>
-</head>
-<body>
-    <div class="min-h-screen py-8">
-        <div class="content-wrapper">
-            <h1 class="title-text text-4xl md:text-5xl font-bold mb-4">
-                Sam en Saar
-            </h1>
-            <h2 class="title-text text-4xl md:text-5xl font-bold mb-8">
-                Het geheim van de bronzen bijl
-            </h2>
+---
+layout: default
+title: Home
+---
 
-            <img src="./images/bijl-potlood.jpg" alt="Schetsmatige illustratie van een hand die een voorwerp vasthoudt in een landschap" class="illustration">
+<h1 class="title-text">Het geheim van de bronzen bijl</h1>
 
-            <div class="space-y-6 text-lg body-text">
-                <p class="leading-relaxed">
-                    Wanneer de vader van Sam en Saar een bronzen bijl vindt op een maisakker, zet dat een reeks van ontdekkingen in gang die hun leven voor altijd zal veranderen. Geïntrigeerd door de vondst droomt Sam over een wereld van oude verhalen, vergeten tijden en spannende avonturen. Wat begint als een eenvoudig zoekavontuur met een metaaldetector, ontvouwt zich tot een ontdekkingstocht door het verre verleden, waar dromen en werkelijkheid soms akelig dicht bij elkaar komen.
-                </p>
+<img src="{{ '/assets/images/Het geheim van de bronzen bijl.jpg' | relative_url }}" alt="Schetsmatige illustratie van een landschap uit de bronstijd en huidige tijd" class="illustration">
 
-                <p class="leading-relaxed">
-                    <strong>Het geheim van de bronzen bijl</strong> is een avontuurlijk boek waarin heden en verleden op bijzondere wijze met elkaar verbonden worden. Het verhaal neemt je mee langs oude veldslagen, vergeten rituelen en spannende speurtochten. Samen met zijn zus Saar en hun nieuwsgierige vader, gaat Sam op zoek naar antwoorden die misschien wel dieper begraven liggen dan ze ooit hadden kunnen vermoeden.
-                </p>
-
-                <p class="font-semibold text-xl mt-8">
-                    Een spannend avontuur vol geschiedenis, mysterie en onverwachte ontdekkingen!
-                </p>
-            </div>
-        </div>
+<div class="body-text">
+    <p class="home-intro">
+        Wanneer de vader van Sam en Saar een bronzen bijl vindt op een maisakker, zet dat een reeks van ontdekkingen in gang die hun leven voor altijd zal veranderen. Geïntrigeerd door de vondst droomt Sam over een wereld van oude verhalen, vergeten tijden en spannende avonturen.
+    </p>
+    
+    <p class="home-intro">
+        <strong>Het geheim van de bronzen bijl</strong> is een avontuurlijk boek waarin heden en verleden op bijzondere wijze met elkaar verbonden worden. Het verhaal neemt je mee langs oude veldslagen, vergeten rituelen en spannende speurtochten.
+    </p>
+    
+    <p class="home-intro" style="font-size: 1.2rem; font-weight: 600;">
+        Een spannend avontuur vol geschiedenis, mysterie en onverwachte ontdekkingen!
+    </p>
+    
+    <div class="cta-container">
+        <a href="{{ '/boeken' | relative_url }}" class="cta-button">Ontdek het boek</a>
+        <a href="{{ '/bestel/?boek=bronzen-bijl' | relative_url }}" class="cta-button primary">Bestel nu</a>
     </div>
-</body>
-</html>
+</div>
+
+<style>
+    .cta-container {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .cta-button {
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+        transition: all 0.3s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .cta-button:first-child {
+        background-color: white;
+        color: #8B4513;
+        border: 2px solid #8B4513;
+    }
+    
+    .cta-button.primary {
+        background-color: #8B4513;
+        color: white;
+    }
+    
+    .cta-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+    
+    .cta-button:first-child:hover {
+        background-color: #FFA500;
+        color: white;
+        border-color: #FFA500;
+    }
+    
+    .cta-button.primary:hover {
+        background-color: #FFA500;
+    }
+</style>

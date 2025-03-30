@@ -1,0 +1,588 @@
+---
+layout: default
+title: Metaaldetector Quiz
+---
+
+<h1 class="title-text">Metaaldetector Quiz</h1>
+
+<div class="quiz-container">
+    <div class="intro-text">
+        <p>Test je kennis over metaaldetectie en archeologie uit de bronstijd! Beantwoord de vragen en ontdek of jij een echte expert bent.</p>
+    </div>
+    
+    <div class="quiz-card">
+        <div id="quiz-content">
+            <div id="start-screen" class="quiz-screen active">
+                <h2>Ben jij klaar voor de uitdaging?</h2>
+                <p>Deze quiz bevat 10 vragen over metaaldetectie, de bronstijd en archeologie. Voor elke goede vraag krijg je punten. Haal je meer dan 7 punten? Dan ben je een echte expert!</p>
+                <button id="start-button" class="quiz-button">Start de quiz!</button>
+            </div>
+            
+            <div id="question-screen" class="quiz-screen">
+                <div class="question-counter">Vraag <span id="current-question">1</span> van 10</div>
+                <h2 id="question-text">Vraag tekst komt hier</h2>
+                
+                <div class="options-container">
+                    <div class="option">
+                        <input type="radio" name="answer" id="option1" value="0">
+                        <label for="option1" id="option1-text">Optie 1</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="answer" id="option2" value="1">
+                        <label for="option2" id="option2-text">Optie 2</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="answer" id="option3" value="2">
+                        <label for="option3" id="option3-text">Optie 3</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="answer" id="option4" value="3">
+                        <label for="option4" id="option4-text">Optie 4</label>
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button id="prev-button" class="quiz-button secondary">Vorige vraag</button>
+                    <button id="next-button" class="quiz-button">Volgende vraag</button>
+                </div>
+            </div>
+            
+            <div id="result-screen" class="quiz-screen">
+                <h2>Quiz afgerond!</h2>
+                <div class="result-message">
+                    <p>Je hebt <span id="score">0</span> van de 10 vragen goed beantwoord.</p>
+                    <div id="expert-message" class="hidden">
+                        <p>Gefeliciteerd! Je bent een echte metaaldetectie expert! Je kent de bronstijd als je broekzak.</p>
+                    </div>
+                    <div id="good-message" class="hidden">
+                        <p>Goed gedaan! Je weet al behoorlijk veel over metaaldetectie en de bronstijd.</p>
+                    </div>
+                    <div id="average-message" class="hidden">
+                        <p>Niet slecht! Je hebt basiskennis over metaaldetectie, maar er valt nog meer te leren.</p>
+                    </div>
+                    <div id="beginner-message" class="hidden">
+                        <p>Je kunt nog veel leren over metaaldetectie en de bronstijd. Lees het boek nog eens!</p>
+                    </div>
+                </div>
+                
+                <button id="show-answers-button" class="quiz-button">Bekijk de juiste antwoorden</button>
+                <button id="restart-button" class="quiz-button secondary">Opnieuw proberen</button>
+                <a href="{{ '/interactief' | relative_url }}" class="back-button">Terug naar interactieve activiteiten</a>
+            </div>
+            
+            <div id="answers-screen" class="quiz-screen">
+                <h2>Juiste antwoorden</h2>
+                <div id="answers-container" class="answers-container">
+                    <!-- Hier worden de antwoorden dynamisch ingevuld -->
+                </div>
+                <button id="back-to-results-button" class="quiz-button">Terug naar resultaten</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .quiz-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .intro-text {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+    }
+    
+    .quiz-card {
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 15px rgba(139, 69, 19, 0.15);
+    }
+    
+    .quiz-screen {
+        display: none;
+    }
+    
+    .quiz-screen.active {
+        display: block;
+    }
+    
+    .question-counter {
+        background-color: #8B4513;
+        color: white;
+        display: inline-block;
+        padding: 5px 15px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    
+    .options-container {
+        margin: 30px 0;
+    }
+    
+    .option {
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        transition: all 0.3s;
+    }
+    
+    .option:hover {
+        border-color: #8B4513;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .option input {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    
+    .option label {
+        cursor: pointer;
+        font-size: 1.1rem;
+        display: inline-block;
+        width: calc(100% - 30px);
+    }
+    
+    .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    
+    .quiz-button {
+        background-color: #8B4513;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .quiz-button.secondary {
+        background-color: transparent;
+        border: 2px solid #8B4513;
+        color: #8B4513;
+    }
+    
+    .quiz-button:hover {
+        background-color: #FFA500;
+        transform: translateY(-2px);
+    }
+    
+    .quiz-button.secondary:hover {
+        background-color: #8B4513;
+        color: white;
+    }
+    
+    .quiz-button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+        transform: none;
+        border-color: #cccccc;
+        color: #666666;
+    }
+    
+    .result-message {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+        margin: 30px 0;
+        text-align: center;
+    }
+    
+    .result-message p {
+        font-size: 1.2rem;
+    }
+    
+    #score {
+        font-weight: bold;
+        font-size: 1.4rem;
+        color: #8B4513;
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .back-button {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        color: #8B4513;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+    .back-button:hover {
+        text-decoration: underline;
+    }
+    
+    /* Stijlen voor het antwoordenoverzicht */
+    .answers-container {
+        margin: 20px 0;
+    }
+    
+    .answer-item {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-left: 5px solid #8B4513;
+    }
+    
+    .answer-item h3 {
+        margin-top: 0;
+        color: #8B4513;
+    }
+    
+    .answer-options {
+        margin: 10px 0;
+    }
+    
+    .answer-option {
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 4px;
+    }
+    
+    .option-correct {
+        background-color: rgba(76, 175, 80, 0.2);
+        border-left: 3px solid #4CAF50;
+    }
+    
+    .option-incorrect {
+        background-color: rgba(244, 67, 54, 0.1);
+        border-left: 3px solid #F44336;
+    }
+    
+    .option-selected {
+        font-weight: bold;
+    }
+    
+    .answer-explanation {
+        margin-top: 15px;
+        font-style: italic;
+        color: #555;
+    }
+    
+    #show-answers-button, #restart-button {
+        margin: 10px auto;
+    }
+    
+    #back-to-results-button {
+        margin: 20px auto;
+    }
+    
+    @media (max-width: 768px) {
+        .navigation-buttons {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .quiz-button {
+            width: 100%;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const quizData = [
+            {
+                question: "Uit welke periode komt de bronzen bijl in het boek?",
+                options: ["IJzertijd", "Bronstijd", "Steentijd", "Middeleeuwen"],
+                correct: 1,
+                explanation: "De bijl in het boek komt uit de Bronstijd, een periode die ongeveer 4000 jaar geleden was in Nederland."
+            },
+            {
+                question: "Welk metaal wordt gebruikt voor het maken van een bronzen bijl?",
+                options: ["Alleen koper", "Koper en tin", "IJzer en koper", "Goud en zilver"],
+                correct: 1,
+                explanation: "Brons is een legering (mengsel) van koper en tin, wat het sterker maakt dan puur koper."
+            },
+            {
+                question: "Wat is een belangrijk kenmerk van een metaaldetector?",
+                options: ["Hij kan alleen goud vinden", "Hij kan alle voorwerpen onder de grond vinden", "Hij reageert op metalen voorwerpen", "Hij werkt alleen in de zomer"],
+                correct: 2,
+                explanation: "Een metaaldetector werkt door elektromagnetische velden en reageert alleen op metalen voorwerpen in de grond."
+            },
+            {
+                question: "Welke van deze materialen kan een metaaldetector NIET vinden?",
+                options: ["IJzer", "Zilver", "Plastic", "Brons"],
+                correct: 2,
+                explanation: "Plastic bevat geen metaal en zal daarom niet worden gedetecteerd door een metaaldetector."
+            },
+            {
+                question: "Wat moet je doen als je een bijzondere vondst doet?",
+                options: ["Direct verkopen", "Voor jezelf houden", "Melden bij archeologische dienst", "Dieper begraven"],
+                correct: 2,
+                explanation: "Bijzondere vondsten moeten worden gemeld bij de archeologische dienst om hun historische waarde te kunnen bepalen."
+            },
+            {
+                question: "Waarvoor werden bronzen bijlen in de bronstijd gebruikt?",
+                options: ["Alleen voor ceremonies", "Als wapen en gereedschap", "Alleen als sieraad", "Alleen om mee te handelen"],
+                correct: 1,
+                explanation: "Bronzen bijlen waren multifunctioneel en werden zowel als wapen gebruikt als voor praktische doeleinden zoals houthakken."
+            },
+            {
+                question: "Wat is de beste plek om met een metaaldetector te zoeken?",
+                options: ["In bossen", "Op het strand", "Op privéterrein zonder toestemming", "Op een akker met toestemming van de eigenaar"],
+                correct: 3,
+                explanation: "Het is belangrijk om altijd toestemming te hebben van de grondeigenaar voordat je gaat zoeken met een metaaldetector."
+            },
+            {
+                question: "Hoeveel jaar geleden begon de bronstijd ongeveer in Nederland?",
+                options: ["1000 jaar", "2000 jaar", "4000 jaar", "10.000 jaar"],
+                correct: 2,
+                explanation: "De bronstijd begon in Nederland ongeveer 4000 jaar geleden (rond 2000 v.Chr.) en duurde tot ongeveer 800 v.Chr."
+            },
+            {
+                question: "Wat is een grondradar?",
+                options: ["Een ander woord voor metaaldetector", "Een apparaat dat de diepte van metaal kan bepalen", "Een apparaat dat structuren onder de grond in kaart brengt", "Een GPS voor archeologen"],
+                correct: 2,
+                explanation: "Een grondradar (GPR - Ground Penetrating Radar) gebruikt radiogolven om structuren en objecten onder de grond te detecteren en in kaart te brengen."
+            },
+            {
+                question: "Wat is NIET waar over archeologie?",
+                options: ["Archeologen bestuderen menselijke geschiedenis via materiële overblijfselen", "Archeologen graven alleen naar schatten en goud", "Archeologen documenteren zorgvuldig waar ze vondsten doen", "Archeologie helpt ons het verleden beter te begrijpen"],
+                correct: 1,
+                explanation: "Archeologen bestuderen alle aspecten van menselijke geschiedenis via materiële overblijfselen, niet alleen waardevolle objecten zoals schatten en goud."
+            }
+        ];
+        
+        let currentQuestion = 0;
+        let score = 0;
+        let userAnswers = new Array(quizData.length).fill(null);
+        
+        const startScreen = document.getElementById('start-screen');
+        const questionScreen = document.getElementById('question-screen');
+        const resultScreen = document.getElementById('result-screen');
+        const answersScreen = document.getElementById('answers-screen');
+        
+        const startButton = document.getElementById('start-button');
+        const nextButton = document.getElementById('next-button');
+        const prevButton = document.getElementById('prev-button');
+        const restartButton = document.getElementById('restart-button');
+        const showAnswersButton = document.getElementById('show-answers-button');
+        const backToResultsButton = document.getElementById('back-to-results-button');
+        
+        // Start quiz
+        startButton.addEventListener('click', function() {
+            startScreen.classList.remove('active');
+            questionScreen.classList.add('active');
+            loadQuestion();
+            updateNavigationButtons();
+        });
+        
+        // Volgende vraag
+        nextButton.addEventListener('click', function() {
+            saveAnswer();
+            
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                loadQuestion();
+                updateNavigationButtons();
+            } else {
+                showResult();
+            }
+        });
+        
+        // Vorige vraag
+        prevButton.addEventListener('click', function() {
+            saveAnswer();
+            
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion();
+                updateNavigationButtons();
+            }
+        });
+        
+        // Quiz opnieuw starten
+        restartButton.addEventListener('click', function() {
+            currentQuestion = 0;
+            score = 0;
+            userAnswers = new Array(quizData.length).fill(null);
+            resultScreen.classList.remove('active');
+            questionScreen.classList.add('active');
+            loadQuestion();
+            updateNavigationButtons();
+        });
+        
+        // Toon antwoorden
+        showAnswersButton.addEventListener('click', function() {
+            resultScreen.classList.remove('active');
+            answersScreen.classList.add('active');
+            showAnswers();
+        });
+        
+        // Terug naar resultaten
+        backToResultsButton.addEventListener('click', function() {
+            answersScreen.classList.remove('active');
+            resultScreen.classList.add('active');
+        });
+        
+        // Huidige antwoord opslaan
+        function saveAnswer() {
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+            if (selectedOption) {
+                userAnswers[currentQuestion] = parseInt(selectedOption.value);
+            }
+        }
+        
+        // Vraag laden
+        function loadQuestion() {
+            const questionText = document.getElementById('question-text');
+            const option1Text = document.getElementById('option1-text');
+            const option2Text = document.getElementById('option2-text');
+            const option3Text = document.getElementById('option3-text');
+            const option4Text = document.getElementById('option4-text');
+            const currentQuestionElement = document.getElementById('current-question');
+            
+            // Alle radiobuttons uitschakelen
+            const radioButtons = document.querySelectorAll('input[name="answer"]');
+            radioButtons.forEach(radio => radio.checked = false);
+            
+            // Als er een antwoord is gegeven, selecteer dat
+            if (userAnswers[currentQuestion] !== null) {
+                radioButtons[userAnswers[currentQuestion]].checked = true;
+            }
+            
+            // Laad nieuwe vraag
+            questionText.textContent = quizData[currentQuestion].question;
+            option1Text.textContent = quizData[currentQuestion].options[0];
+            option2Text.textContent = quizData[currentQuestion].options[1];
+            option3Text.textContent = quizData[currentQuestion].options[2];
+            option4Text.textContent = quizData[currentQuestion].options[3];
+            currentQuestionElement.textContent = currentQuestion + 1;
+        }
+        
+        // Navigatieknoppen bijwerken
+        function updateNavigationButtons() {
+            prevButton.disabled = (currentQuestion === 0);
+            
+            if (currentQuestion === quizData.length - 1) {
+                nextButton.textContent = "Voltooien";
+            } else {
+                nextButton.textContent = "Volgende vraag";
+            }
+            
+            // Controleer of de vraag is beantwoord
+            const selectedOption = document.querySelector('input[name="answer"]:checked');
+            if (!selectedOption && userAnswers[currentQuestion] === null) {
+                nextButton.disabled = true;
+            } else {
+                nextButton.disabled = false;
+            }
+        }
+        
+        // Controleer of een antwoord is geselecteerd en schakel de volgende-knop in
+        document.addEventListener('change', function(event) {
+            if (event.target.name === 'answer') {
+                nextButton.disabled = false;
+            }
+        });
+        
+        // Resultaten tonen
+        function showResult() {
+            // Bereken de score
+            score = 0;
+            userAnswers.forEach((answer, index) => {
+                if (answer === quizData[index].correct) {
+                    score++;
+                }
+            });
+            
+            questionScreen.classList.remove('active');
+            resultScreen.classList.add('active');
+            
+            document.getElementById('score').textContent = score;
+            
+            // Verberg alle berichten
+            document.getElementById('expert-message').classList.add('hidden');
+            document.getElementById('good-message').classList.add('hidden');
+            document.getElementById('average-message').classList.add('hidden');
+            document.getElementById('beginner-message').classList.add('hidden');
+            
+            // Toon passend bericht
+            if (score >= 8) {
+                document.getElementById('expert-message').classList.remove('hidden');
+            } else if (score >= 6) {
+                document.getElementById('good-message').classList.remove('hidden');
+            } else if (score >= 4) {
+                document.getElementById('average-message').classList.remove('hidden');
+            } else {
+                document.getElementById('beginner-message').classList.remove('hidden');
+            }
+        }
+        
+        // Antwoorden tonen
+        function showAnswers() {
+            const answersContainer = document.getElementById('answers-container');
+            answersContainer.innerHTML = '';
+            
+            quizData.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                const correctAnswer = question.correct;
+                
+                // Maak een element voor elke vraag
+                const answerItem = document.createElement('div');
+                answerItem.className = 'answer-item';
+                
+                // Vraag toevoegen
+                const questionTitle = document.createElement('h3');
+                questionTitle.textContent = `Vraag ${index + 1}: ${question.question}`;
+                answerItem.appendChild(questionTitle);
+                
+                // Opties toevoegen
+                const optionsContainer = document.createElement('div');
+                optionsContainer.className = 'answer-options';
+                
+                question.options.forEach((option, optionIndex) => {
+                    const optionElement = document.createElement('div');
+                    optionElement.className = 'answer-option';
+                    
+                    // Voeg klasse toe op basis van correct/incorrect en gebruikersselectie
+                    if (optionIndex === correctAnswer) {
+                        optionElement.classList.add('option-correct');
+                    } else if (userAnswer === optionIndex) {
+                        optionElement.classList.add('option-incorrect');
+                    }
+                    
+                    if (userAnswer === optionIndex) {
+                        optionElement.classList.add('option-selected');
+                    }
+                    
+                    // Optietekst
+                    const optionText = document.createElement('p');
+                    optionText.innerHTML = `${optionIndex === userAnswer ? '✓ ' : ''}${option}${optionIndex === correctAnswer ? ' <strong>(Juiste antwoord)</strong>' : ''}`;
+                    optionElement.appendChild(optionText);
+                    
+                    optionsContainer.appendChild(optionElement);
+                });
+                
+                answerItem.appendChild(optionsContainer);
+                
+                // Uitleg toevoegen
+                const explanation = document.createElement('div');
+                explanation.className = 'answer-explanation';
+                explanation.textContent = question.explanation;
+                answerItem.appendChild(explanation);
+                
+                // Voeg toe aan container
+                answersContainer.appendChild(answerItem);
+            });
+        }
+    });
+</script>

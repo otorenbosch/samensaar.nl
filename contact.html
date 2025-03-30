@@ -1,0 +1,164 @@
+---
+layout: default
+title: Contact
+---
+
+<h1 class="title-text">Contact</h1>
+
+<div class="contact-container">
+    <div class="contact-info">
+        <h2>Neem contact op</h2>
+        <p>Heb je vragen over het boek, wil je een lezing boeken, of heb je andere vragen? Neem gerust contact met mij op!</p>
+        
+        <div class="contact-methods">
+            <div class="contact-method">
+                <h3>E-mail</h3>
+                <p><a href="mailto:info@samensaar.nl">info@samensaar.nl</a></p>
+            </div>
+            
+            <div class="contact-method">
+                <h3>Volg ons</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contact-form">
+        <h2>Stuur een bericht</h2>
+        <form id="contactForm" action="https://formsubmit.co/info@samensaar.nl" method="POST">
+            <div class="form-group">
+                <label for="name">Naam</label>
+                <input type="text" id="name" name="Naam" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="E-mailadres" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Onderwerp</label>
+                <input type="text" id="subject" name="Onderwerp" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Bericht</label>
+                <textarea id="message" name="Bericht" rows="5" required></textarea>
+            </div>
+            
+            <!-- Anti-spam veld (niet zichtbaar voor gebruikers) -->
+            <input type="text" name="_honey" style="display:none">
+            
+            <!-- Doorsturen naar eigen bedankpagina -->
+            <!--input type="hidden" name="_next" value="http://127.0.0.1:4000/bedankt"> -->
+            <input type="hidden" name="_next" value="https://www.samensaar.nl/bedankt">
+            <!-- <input type="hidden" name="_next" value="{{ '/bedankt' | relative_url }}"> -->            
+            
+            <!-- Disable captcha -->
+            <input type="hidden" name="_captcha" value="false">
+            
+            <!-- Template voor e-mail onderwerp -->
+            <input type="hidden" name="_subject" value="Nieuw contactformulier bericht van samensaar.nl">
+
+            <!-- Taalinstelling -->
+            <input type="hidden" name="_language" value="nl">
+            
+            <button type="submit" class="submit-button">Versturen</button>
+        </form>
+    </div>
+</div>
+
+<style>
+    .contact-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 30px;
+        text-align: left;
+    }
+    
+    .contact-info, .contact-form {
+        flex: 1;
+        min-width: 300px;
+    }
+    
+    .contact-methods {
+        margin-top: 30px;
+    }
+    
+    .contact-method {
+        margin-bottom: 25px;
+    }
+    
+    .contact-method h3 {
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+    
+    .social-links {
+        display: flex;
+        gap: 15px;
+    }
+    
+    .social-link {
+        color: #8B4513;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    
+    .social-link:hover {
+        color: #FFA500;
+    }
+    
+    /* Form styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #8B4513;
+    }
+    
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.7);
+        font-family: inherit;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    .submit-button {
+        background-color: #8B4513;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: all 0.3s;
+    }
+    
+    .submit-button:hover {
+        background-color: #FFA500;
+    }
+    
+    @media (max-width: 768px) {
+        .contact-container {
+            flex-direction: column;
+        }
+    }
+</style>

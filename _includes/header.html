@@ -1,0 +1,112 @@
+<header>
+    <style>
+        /* Navigatie menu */
+        header {
+            padding: 15px 20px;
+        }
+
+        .menu-container {
+            text-align: right;
+            position: relative;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            transition: all 0.3s;
+        }
+
+        .menu a:hover {
+            background-color: #FFA500;
+            color: white;
+            text-decoration: underline;
+        }
+
+        .menu a.active {
+            color: #FFA500;
+            font-weight: bold;
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #8B4513;
+            position: absolute;
+            right: 10px;
+            top: 0;
+        }
+        
+        /* Responsieve stijlen voor het menu */
+        @media (max-width: 992px) {
+            .menu li {
+                margin-left: 15px;
+            }
+            
+            .menu a {
+                padding: 5px 8px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .menu-container {
+                text-align: center;
+            }
+            
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .menu li {
+                margin: 5px 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .menu {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
+            }
+            
+            .menu li {
+                margin: 2px 5px;
+            }
+            
+            .menu a {
+                padding: 4px 6px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <div class="menu-container">
+        <ul class="menu">
+            {% assign current_page = page.url | remove: '.html' %}
+            {% for item in site.data.navigation %}
+            <li>
+                <a href="{{ item.link }}" {% if current_page == item.link %}class="active"{% endif %}>
+                    {{ item.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</header>

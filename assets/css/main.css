@@ -1,0 +1,99 @@
+/* Algemene stijlen */
+body {
+    background-color: #FFDDB0;
+    font-family: 'Comic Neue', 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #654321;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #8B4513;
+}
+
+/* Content stijlen */
+.center-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title-text {
+    color: #8B4513;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.body-text {
+    text-align: center;
+}
+
+/* Afbeeldingen */
+.illustration {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    display: block;
+}
+
+/* Home pagina specifieke stijlen */
+.home-intro {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* Boeken pagina stijlen */
+.book-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.book-cover {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+}
+
+/* Over mij pagina stijlen */
+.author-photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-text {
+    text-align: left;
+    line-height: 1.8;
+}
+
+/* Responsieve aanpassingen */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .menu li {
+        margin-left: 10px;
+    }
+}

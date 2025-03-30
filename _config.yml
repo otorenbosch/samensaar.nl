@@ -1,0 +1,15 @@
+# Site instellingen
+title: Sam en Saar
+description: Het geheim van de bronzen bijl
+url: "https://www.samensaar.nl"
+baseurl: ""
+
+# Build instellingen
+markdown: kramdown
+permalink: pretty
+
+# Collecties (later toe te voegen)
+# collections:
+#   books:
+#     output: true
+#     permalink: /boeken/:path/

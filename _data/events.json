@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Nog geen evenementen gepland",
+    "date": "now",
+    "start_time": "10:00",
+    "end_time": "17:00",
+    "location": "Diverse locaties",
+    "description": "Op dit moment zijn er nog geen evenementen gepland. Houd deze pagina in de gaten voor toekomstige boekpresentaties, signeersessies en workshops!",
+    "type": "info",
+    "url": "#",
+    "visible": true
+  },
+  {
+    "title": "Boekpresentatie & Signeersessie",
+    "date": "2025-03-15",
+    "start_time": "14:00",
+    "end_time": "16:00",
+    "location": "Boekhandel Van der Velde, Leeuwarden",
+    "description": "Feestelijke presentatie van \"Het geheim van de bronzen bijl\". Otto Torenbosch vertelt over het ontstaan van het boek en signeert exemplaren.",
+    "type": "signeersessie",
+    "url": "#",
+    "registration_url": "#",
+    "visible": false
+  },
+  {
+    "title": "Workshop - Zoeken met een metaaldetector",
+    "date": "2025-03-22",
+    "start_time": "10:00",
+    "end_time": "12:30",
+    "location": "Openluchtmuseum, Arnhem",
+    "description": "Leer de basis van het zoeken met een metaaldetector. Otto Torenbosch deelt zijn kennis en ervaring. Geschikt voor kinderen vanaf 10 jaar (onder begeleiding).",
+    "type": "workshop",
+    "url": "#",
+    "ticket_url": "#",
+    "visible": false
+  },
+  {
+    "title": "Lezing - Vondsten uit de Bronstijd",
+    "date": "2025-04-05",
+    "start_time": "19:30",
+    "end_time": "21:00",
+    "location": "Bibliotheek Centrum, Utrecht",
+    "description": "Otto Torenbosch vertelt over archeologische vondsten uit de Bronstijd en de verhalen erachter. Na de lezing is er gelegenheid om het boek te laten signeren.",
+    "type": "lezing",
+    "url": "#",
+    "registration_url": "#",
+    "visible": false
+  },
+  {
+    "title": "Signeersessie tijdens Boekenmarkt",
+    "date": "2025-04-19",
+    "start_time": "11:00",
+    "end_time": "15:00",
+    "location": "Grote Markt, Groningen",
+    "description": "Tijdens de jaarlijkse boekenmarkt in Groningen is Otto Torenbosch aanwezig om boeken te signeren en vragen te beantwoorden over \"Het geheim van de bronzen bijl\".",
+    "type": "signeersessie",
+    "visible": false
+  }
+]
