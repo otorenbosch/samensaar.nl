@@ -8,6 +8,9 @@ baseurl: ""
 markdown: kramdown
 permalink: pretty
 
+# Tijdzone
+timezone: Europe/Amsterdam
+
 # Collecties (later toe te voegen)
 # collections:
 #   books:
