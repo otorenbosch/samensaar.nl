@@ -24,7 +24,7 @@ title: Agenda
         
         <div class="events-timeline">
             {% for event in visible_events %}
-                <div class="event-card" data-type="{{ event.type }}">
+                <div class="event-card" data-type="{{ event.type }}" data-date="{{ event.date | date: '%Y-%m-%d' }}">
                     <div class="event-date">
                         <span class="event-day">{{ event.date | date: "%-d" }}</span>
                         <span class="event-month">
@@ -288,8 +288,53 @@ title: Agenda
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const filterButtons = document.querySelectorAll('.filter-button');
+        // 1. Filteren op datum (verwijder verlopen evenementen)
+        // Huidige datum ophalen in YYYY-MM-DD formaat
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        const todayStr = `${year}-${month}-${day}`;
+        
+        // Debug informatie
+        console.log('Huidige datum (client-side):', todayStr);
+        
+        // Evenementen filteren op basis van datum
         const eventCards = document.querySelectorAll('.event-card');
+        let visibleEvents = 0;
+        
+        eventCards.forEach(eventCard => {
+            const eventDateStr = eventCard.getAttribute('data-date');
+            
+            // Debug informatie
+            console.log('Evenement datum:', eventDateStr);
+            
+            if (eventDateStr < todayStr) {
+                // Verberg verlopen evenementen
+                eventCard.style.display = 'none';
+            } else {
+                visibleEvents++;
+            }
+        });
+        
+        // Als er geen zichtbare evenementen zijn, toon een bericht
+        if (visibleEvents === 0 && eventCards.length > 0) {
+            const noEventsMessage = document.createElement('div');
+            noEventsMessage.className = 'no-events-container';
+            noEventsMessage.innerHTML = `
+                <h2>Geen komende evenementen</h2>
+                <p>Er zijn op dit moment geen geplande evenementen. Kom later terug voor updates of neem contact op voor informatie over boekingen.</p>
+            `;
+            
+            // Voeg het bericht toe na de event-filter sectie
+            const eventsTimeline = document.querySelector('.events-timeline');
+            if (eventsTimeline) {
+                eventsTimeline.appendChild(noEventsMessage);
+            }
+        }
+
+        // 2. Bestaande filtering op type evenement
+        const filterButtons = document.querySelectorAll('.filter-button');
         
         if(filterButtons.length > 0 && eventCards.length > 0) {
             filterButtons.forEach(button => {
@@ -300,13 +345,38 @@ title: Agenda
                     
                     const filter = this.getAttribute('data-filter');
                     
+                    let visibleAfterTypeFilter = 0;
+                    
                     eventCards.forEach(card => {
-                        if (filter === 'all' || card.getAttribute('data-type') === filter) {
-                            card.style.display = 'flex';
-                        } else {
-                            card.style.display = 'none';
+                        // Alleen filteren op type als het evenement niet al verborgen is vanwege de datum
+                        if (card.style.display !== 'none') {
+                            if (filter === 'all' || card.getAttribute('data-type') === filter) {
+                                card.style.display = 'flex';
+                                visibleAfterTypeFilter++;
+                            } else {
+                                card.style.display = 'none';
+                            }
                         }
                     });
+                    
+                    // Controleer of er nog evenementen zichtbaar zijn na het filteren op type
+                    const noEventsMessage = document.querySelector('.no-events-container');
+                    if (visibleAfterTypeFilter === 0 && !noEventsMessage) {
+                        const newNoEventsMessage = document.createElement('div');
+                        newNoEventsMessage.className = 'no-events-container';
+                        newNoEventsMessage.innerHTML = `
+                            <h2>Geen evenementen gevonden</h2>
+                            <p>Er zijn geen evenementen gevonden die aan je zoekcriteria voldoen. Probeer een andere categorie.</p>
+                        `;
+                        
+                        const eventsTimeline = document.querySelector('.events-timeline');
+                        if (eventsTimeline) {
+                            eventsTimeline.appendChild(newNoEventsMessage);
+                        }
+                    } else if (visibleAfterTypeFilter > 0 && noEventsMessage) {
+                        // Verwijder het "geen evenementen" bericht als er wel evenementen zichtbaar zijn
+                        noEventsMessage.remove();
+                    }
                 });
             });
         }
