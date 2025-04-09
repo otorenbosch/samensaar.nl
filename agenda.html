@@ -10,7 +10,7 @@ title: Agenda
         <p>Op deze pagina vind je alle komende evenementen, boekpresentaties, workshops en signeersessies rondom "Sam en Saar - Het geheim van de bronzen bijl". Kom langs en ontmoet de auteur!</p>
     </div>
     
-    {% assign current_date = site.time | date: '%s' %}
+    {% assign current_date = site.time | date: '%Y-%m-%d' %}
     {% assign visible_events = site.data.events | where: "visible", true %}
     {% assign months = "januari,februari,maart,april,mei,juni,juli,augustus,september,oktober,november,december" | split: "," %}
     
@@ -24,14 +24,30 @@ title: Agenda
         
         <div class="events-timeline">
             {% for event in visible_events %}
-                <div class="event-card" data-type="{{ event.type }}" data-date="{{ event.date | date: '%Y-%m-%d' }}">
+                {% if event.date == "now" %}
+                    {% assign event_date = current_date %}
+                {% else %}
+                    {% assign event_date = event.date %}
+                {% endif %}
+                
+                <div class="event-card" data-type="{{ event.type }}" data-date="{{ event_date }}">
                     <div class="event-date">
-                        <span class="event-day">{{ event.date | date: "%-d" }}</span>
+                        {% if event.date == "now" %}
+                            {% assign day = site.time | date: "%-d" %}
+                            {% assign month_index = site.time | date: "%-m" | minus: 1 %}
+                            {% assign year = site.time | date: "%Y" %}
+                        {% else %}
+                            {% assign date_parts = event.date | split: "-" %}
+                            {% assign day = date_parts[2] | plus: 0 %}
+                            {% assign month_index = date_parts[1] | minus: 1 | plus: 0 %}
+                            {% assign year = date_parts[0] | plus: 0 %}
+                        {% endif %}
+                        
+                        <span class="event-day">{{ day }}</span>
                         <span class="event-month">
-                            {% assign month_index = event.date | date: "%-m" | minus: 1 %}
                             {{ months[month_index] }}
                         </span>
-                        <span class="event-year">{{ event.date | date: "%Y" }}</span>
+                        <span class="event-year">{{ year }}</span>
                     </div>
                     <div class="event-details">
                         <h2>{{ event.title }}</h2>
@@ -67,6 +83,9 @@ title: Agenda
     /* Bestaande stijlen behouden */
     .agenda-content {
         text-align: left;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 20px;
     }
     
     .intro-text {
@@ -114,14 +133,14 @@ title: Agenda
         left: 120px;
         width: 3px;
         background-color: #FFA500;
-        z-index: 0; /* Deze toevoegen */
+        z-index: 0;
     }
     
     .event-card {
         display: flex;
         margin-bottom: 30px;
         position: relative;
-        z-index: 1; /* Toevoegen: zorgt dat kaarten boven de tijdlijn komen */
+        z-index: 1;
     }
     
     .event-date {
@@ -147,7 +166,7 @@ title: Agenda
     .event-month {
         display: block;
         font-size: 1rem;
-        text-transform: uppercase;
+        text-transform: lowercase;
     }
     
     .event-year {
@@ -263,14 +282,14 @@ title: Agenda
         
         .event-card {
             flex-direction: column;
-            padding-left: 30px; /* Toevoegen: geeft ruimte voor de tijdlijn */
+            padding-left: 30px;
         }
         
         .event-date {
             width: auto;
             margin-right: 0;
             margin-bottom: 20px;
-            margin-left: -10px; /* Aanpassen: was 50px, nu uitgelijnd met tijdlijn */
+            margin-left: -10px;
         }
     }
 
@@ -304,7 +323,12 @@ title: Agenda
         let visibleEvents = 0;
         
         eventCards.forEach(eventCard => {
-            const eventDateStr = eventCard.getAttribute('data-date');
+            let eventDateStr = eventCard.getAttribute('data-date');
+            
+            // Speciale behandeling voor "now"
+            if (eventDateStr === "now") {
+                eventDateStr = todayStr;
+            }
             
             // Debug informatie
             console.log('Evenement datum:', eventDateStr);
