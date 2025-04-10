@@ -1,16 +1,5 @@
 [
   {
-    "title": "Nog geen evenementen gepland",
-    "date": "now",
-    "start_time": "10:00",
-    "end_time": "17:00",
-    "location": "Diverse locaties",
-    "description": "Op dit moment zijn er nog geen evenementen gepland. Houd deze pagina in de gaten voor toekomstige boekpresentaties, signeersessies en workshops!",
-    "type": "info",
-    "url": "#",
-    "visible": true
-  },
-  {
     "title": "Boekpresentatie & Signeersessie",
     "date": "2025-04-11",
     "start_time": "14:00",

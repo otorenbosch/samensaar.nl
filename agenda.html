@@ -14,40 +14,25 @@ title: Agenda
     {% assign visible_events = site.data.events | where: "visible", true %}
     {% assign months = "januari,februari,maart,april,mei,juni,juli,augustus,september,oktober,november,december" | split: "," %}
     
-    {% if visible_events.size > 0 %}
-        <div class="event-filter">
-            <button class="filter-button active" data-filter="all">Alle evenementen</button>
-            <button class="filter-button" data-filter="signeersessie">Signeersessies</button>
-            <button class="filter-button" data-filter="lezing">Lezingen</button>
-            <button class="filter-button" data-filter="workshop">Workshops</button>
-        </div>
-        
-        <div class="events-timeline">
+    <div class="event-filter">
+        <button class="filter-button active" data-filter="all">Alle evenementen</button>
+        <button class="filter-button" data-filter="signeersessie">Signeersessies</button>
+        <button class="filter-button" data-filter="lezing">Lezingen</button>
+        <button class="filter-button" data-filter="workshop">Workshops</button>
+    </div>
+    
+    <div class="events-timeline">
+        {% if visible_events.size > 0 %}
             {% for event in visible_events %}
-                {% if event.date == "now" %}
-                    {% assign event_date = current_date %}
-                {% else %}
-                    {% assign event_date = event.date %}
-                {% endif %}
-                
-                <div class="event-card" data-type="{{ event.type }}" data-date="{{ event_date }}">
+                <div class="event-card" data-type="{{ event.type }}">
                     <div class="event-date">
-                        {% if event.date == "now" %}
-                            {% assign day = site.time | date: "%-d" %}
-                            {% assign month_index = site.time | date: "%-m" | minus: 1 %}
-                            {% assign year = site.time | date: "%Y" %}
-                        {% else %}
-                            {% assign date_parts = event.date | split: "-" %}
-                            {% assign day = date_parts[2] | plus: 0 %}
-                            {% assign month_index = date_parts[1] | minus: 1 | plus: 0 %}
-                            {% assign year = date_parts[0] | plus: 0 %}
-                        {% endif %}
-                        
-                        <span class="event-day">{{ day }}</span>
+                        {% assign date_parts = event.date | split: "-" %}
+                        <span class="event-day">{{ date_parts[2] | plus: 0 }}</span>
                         <span class="event-month">
+                            {% assign month_index = date_parts[1] | minus: 1 %}
                             {{ months[month_index] }}
                         </span>
-                        <span class="event-year">{{ year }}</span>
+                        <span class="event-year">{{ date_parts[0] }}</span>
                     </div>
                     <div class="event-details">
                         <h2>{{ event.title }}</h2>
@@ -69,8 +54,13 @@ title: Agenda
                     </div>
                 </div>
             {% endfor %}
-        </div>
-    {% endif %}
+        {% else %}
+            <div class="no-events-container">
+                <h2>Geen komende evenementen</h2>
+                <p>Er zijn op dit moment geen geplande evenementen. Kom later terug voor updates of neem contact op voor informatie over boekingen.</p>
+            </div>
+        {% endif %}
+    </div>
     
     <div class="custom-event">
         <h2>Boek een evenement</h2>
@@ -300,124 +290,61 @@ title: Agenda
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // 1. Filteren op datum (verwijder verlopen evenementen)
-        // Huidige datum ophalen in YYYY-MM-DD formaat
-        const today = new Date();
-        const year = today.getFullYear();
-        const month = String(today.getMonth() + 1).padStart(2, '0');
-        const day = String(today.getDate()).padStart(2, '0');
-        const todayStr = `${year}-${month}-${day}`;
-        
-        // Debug informatie
-        console.log('Huidige datum (client-side):', todayStr);
-        
-        // Evenementen filteren op basis van datum
-        const eventCards = document.querySelectorAll('.event-card');
-        let visibleEvents = 0;
-        
-        eventCards.forEach(eventCard => {
-            let eventDateStr = eventCard.getAttribute('data-date');
-            
-            // Speciale behandeling voor "now"
-            if (eventDateStr === "now") {
-                eventDateStr = todayStr;
-            }
-            
-            // Debug informatie
-            console.log('Evenement datum:', eventDateStr);
-            
-            if (eventDateStr < todayStr) {
-                // Verberg verlopen evenementen
-                eventCard.style.display = 'none';
-                eventCard.setAttribute('data-visible', 'false');
-            } else {
-                visibleEvents++;
-                eventCard.setAttribute('data-visible', 'true');
-            }
-        });
-        
-        // Als er geen zichtbare evenementen zijn, toon een bericht
-        if (visibleEvents === 0 && eventCards.length > 0) {
-            showNoEventsMessage('Geen komende evenementen', 'Er zijn op dit moment geen geplande evenementen. Kom later terug voor updates of neem contact op voor informatie over boekingen.');
-        }
-
-        // 2. Bestaande filtering op type evenement
-        const filterButtons = document.querySelectorAll('.filter-button');
-        
-        if(filterButtons.length > 0 && eventCards.length > 0) {
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Verwijder eerst eventuele "geen evenementen" berichten
-                    removeNoEventsMessage();
-                    
-                    // Update active button
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const filter = this.getAttribute('data-filter');
-                    
-                    let visibleAfterTypeFilter = 0;
-                    
-                    // Tel eerst hoeveel evenementen zichtbaar zijn vóór het filteren op type
-                    let visibleBeforeTypeFilter = 0;
-                    eventCards.forEach(card => {
-                        if (card.getAttribute('data-visible') === 'true') {
-                            visibleBeforeTypeFilter++;
-                        }
-                    });
-                    
-                    // Als er geen evenementen zichtbaar zijn voor het filteren, 
-                    // toon een algemeen "geen evenementen" bericht en stop
-                    if (visibleBeforeTypeFilter === 0) {
-                        showNoEventsMessage('Geen komende evenementen', 'Er zijn op dit moment geen geplande evenementen. Kom later terug voor updates of neem contact op voor informatie over boekingen.');
-                        return;
-                    }
-                    
-                    // Filter op type
-                    eventCards.forEach(card => {
-                        // Alleen filteren op type als het evenement niet verborgen is vanwege de datum
-                        if (card.getAttribute('data-visible') === 'true') {
-                            if (filter === 'all' || card.getAttribute('data-type') === filter) {
-                                card.style.display = 'flex';
-                                visibleAfterTypeFilter++;
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        }
-                    });
-                    
-                    // Controleer of er nog evenementen zichtbaar zijn na het filteren op type
-                    if (visibleAfterTypeFilter === 0) {
-                        showNoEventsMessage('Geen evenementen gevonden', 'Er zijn geen evenementen gevonden die aan je zoekcriteria voldoen. Probeer een andere categorie.');
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const eventCards = document.querySelectorAll('.event-card');
+    
+    if(filterButtons.length > 0 && eventCards.length > 0) {
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                let visibleCount = 0;
+                
+                // Filter op type
+                eventCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-type') === filter) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
                     }
                 });
+                
+                // Controleer of er nog evenementen zichtbaar zijn na filtering
+                if (visibleCount === 0 && eventCards.length > 0) {
+                    showNoEventsMessage('Geen evenementen gevonden', 'Er zijn geen evenementen gevonden die aan je zoekcriteria voldoen. Probeer een andere categorie.');
+                } else {
+                    removeNoEventsMessage();
+                }
             });
-        }
+        });
+    }
+    
+    // Hulpfuncties voor het tonen/verbergen van "geen evenementen" bericht
+    function showNoEventsMessage(title, message) {
+        removeNoEventsMessage();
         
-        // Hulpfunctie voor het tonen van "geen evenementen" bericht
-        function showNoEventsMessage(title, message) {
-            // Verwijder eerst eventuele bestaande berichten
-            removeNoEventsMessage();
-            
-            const newNoEventsMessage = document.createElement('div');
-            newNoEventsMessage.className = 'no-events-container';
-            newNoEventsMessage.innerHTML = `
-                <h2>${title}</h2>
-                <p>${message}</p>
-            `;
-            
-            const eventsTimeline = document.querySelector('.events-timeline');
-            if (eventsTimeline) {
-                eventsTimeline.appendChild(newNoEventsMessage);
-            }
-        }
+        const newNoEventsMessage = document.createElement('div');
+        newNoEventsMessage.className = 'no-events-container';
+        newNoEventsMessage.innerHTML = `
+            <h2>${title}</h2>
+            <p>${message}</p>
+        `;
         
-        // Hulpfunctie voor het verwijderen van "geen evenementen" bericht
-        function removeNoEventsMessage() {
-            const noEventsMessage = document.querySelector('.no-events-container');
-            if (noEventsMessage) {
-                noEventsMessage.remove();
-            }
+        const eventsTimeline = document.querySelector('.events-timeline');
+        if (eventsTimeline) {
+            eventsTimeline.appendChild(newNoEventsMessage);
         }
-    });
+    }
+    
+    function removeNoEventsMessage() {
+        const noEventsMessage = document.querySelector('.no-events-container:not([data-original])');
+        if (noEventsMessage) {
+            noEventsMessage.remove();
+        }
+    }
+});
 </script>
