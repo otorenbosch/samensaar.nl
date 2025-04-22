@@ -31,6 +31,12 @@ title: Bestel
                 <p><strong>ISBN:</strong> {{ boek.isbn }}</p>
                 <p><strong>Prijs:</strong> {{ boek.price }}</p>
                 <p><strong>Verzendkosten:</strong> {{ boek.verzendkosten }}</p>
+
+                <div class="kor-notice">
+                    <p><strong>BTW informatie:</strong></p>
+                    <p>Bij bestelling rechtstreeks via de auteur: BTW-vrij volgens de Kleine Ondernemers Regeling (KOR).</p>
+                    <p>Bij bestelling via Boekengilde: De prijs is inclusief 9% BTW.</p>
+                </div>
             </div>
         </div>
 
@@ -48,6 +54,7 @@ title: Bestel
                     <li>Diverse betaalmethoden</li>
                     <li>Automatische verzendbevestiging</li>
                     <li>Snelle levering</li>
+                    <li>Inclusief 9% BTW</li>
                 </ul>
                 
                 <a href="https://www.boekengilde.nl/boekenshop/onzinnige-zinnen-1/" class="order-button" target="_blank" rel="noopener noreferrer">BESTEL NU VIA BOEKENGILDE</a>
@@ -123,6 +130,14 @@ title: Bestel
     
     .book-info p {
         margin: 10px 0;
+    }
+
+    .kor-notice {
+        background-color: rgba(255, 250, 205, 0.7);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+        font-size: 0.9rem;
     }
     
     /* Aangepaste CSS voor opties naast elkaar - met !important om conflicten te overschrijven */

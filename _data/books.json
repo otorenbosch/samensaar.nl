@@ -8,7 +8,7 @@
       "age_group": "10+",
       "pages": 120,
       "isbn": "978 94 64 91997 4",
-      "price": "€19,95 excl. verzendkosten",
+      "price": "€19,95 (BTW-vrij volgens KOR)",
       "verzendkosten": "€4,25",
       "available": false,
       "direct_purchase": {
@@ -16,9 +16,10 @@
         "title": "VIA DE AUTEUR",
         "benefits": [
           "Persoonlijk gesigneerd exemplaar",
-          "Met handgeschreven opdracht",
+          "Met handgeschreven boodschap",
           "Direct de auteur steunen",
-          "Inclusief exclusieve boekenlegger"
+          "Inclusief exclusieve boekenlegger",
+          "BTW-vrij volgens KOR-regeling"
         ],
         "button_text": "BESTEL EEN GESIGNEERD EXEMPLAAR"
       }
