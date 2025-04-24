@@ -1,8 +1,14 @@
-<header>
+<header class="sticky-header">
     <style>
         /* Navigatie menu */
-        header {
+        .sticky-header {
             padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #8B4513;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
         }
 
         .menu-container {
@@ -24,7 +30,7 @@
 
         .menu a {
             text-decoration: none;
-            color: #333;
+            color: white;
             padding: 5px 10px;
             transition: all 0.3s;
         }
@@ -46,7 +52,7 @@
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: #8B4513;
+            color: white;
             position: absolute;
             right: 10px;
             top: 0;
