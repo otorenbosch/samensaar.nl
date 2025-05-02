@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Bestel
+title: Bestel - Het geheim van de bronzen bijl
 ---
 
-<h1 class="title-text">Bestel</h1>
+<h1 class="title-text">Bestel - Het geheim van de bronzen bijl</h1>
 
 <div class="bestel-container">
     <div id="loading-message">
@@ -19,51 +19,58 @@ title: Bestel
     {% for boek in site.data.books %}
     <div id="boek-{{ boek.id }}" class="boek-details" style="display: none;">
         <div class="title-section">
-            <h1>BESTEL NU "{{ boek.title | upcase }}"</h1>
-            <p class="subtitle">Een spannend avontuur vol geschiedenis, mysterie en onverwachte ontdekkingen!</p>
             
-            <img src="{{ '/assets/images/' | append: boek.cover | relative_url }}" alt="{{ boek.title }} - Cover" class="book-image">
-            
-            <div class="book-info">
-                <p><strong>Auteur:</strong> Otto Torenbosch</p>
-                <p><strong>Leeftijd:</strong> {{ boek.age_group }}</p>
-                <p><strong>Aantal pagina's:</strong> {{ boek.pages }}</p>
-                <p><strong>ISBN:</strong> {{ boek.isbn }}</p>
-                <p><strong>Prijs:</strong> {{ boek.price }}</p>
-                <p><strong>Verzendkosten:</strong> {{ boek.verzendkosten }}</p>
-
-                <div class="kor-notice">
-                    <p><strong>BTW informatie:</strong></p>
-                    <p>Bij bestelling rechtstreeks via de auteur: BTW-vrij volgens de Kleine Ondernemers Regeling (KOR).</p>
-                    <p>Bij bestelling via Boekengilde: De prijs is inclusief 9% BTW.</p>
+            <div class="two-column-layout">
+                <div class="book-image-column">
+                    <img src="{{ '/assets/images/' | append: boek.cover | relative_url }}" alt="{{ boek.title }} - Cover" class="book-image">
+                </div>
+                
+                <div class="book-info-column">
+                    <div class="book-info">
+                        <p><strong>Auteur:</strong> Otto Torenbosch</p>
+                        <p><strong>Leeftijd:</strong> {{ boek.age_group }}</p>
+                        <p><strong>Aantal pagina's:</strong> {{ boek.pages }}</p>
+                        <p><strong>ISBN:</strong> {{ boek.isbn }}</p>
+                        <p><strong>Prijs:</strong> {{ boek.price }}</p>
+                        <p><strong>Verzendkosten:</strong> {{ boek.verzendkosten }}</p>
+        
+                        <div class="kor-notice">
+                            <p><strong>BTW informatie:</strong></p>
+                            <p>Bij bestelling rechtstreeks via de auteur: BTW-vrij volgens de Kleine Ondernemers Regeling (KOR).</p>
+                            <p>Bij bestelling via Boekengilde: De prijs is inclusief 9% BTW.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
         <h2>Kies hoe je het boek wilt ontvangen:</h2>
+
+        <div class="personal-note">
+            <p>Kent u mij persoonlijk? Neem dan gerust rechtstreeks contact met mij op of stuur een mail naar <a href="mailto:info@samensaar.nl">info@samensaar.nl</a> voor een exemplaar zonder verzendkosten. Ik bezorg het graag persoonlijk bij u!</p>
+        </div>
         
         <!-- <div class="options-container" style="display: flex !important; flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 30px !important; margin-top: 30px !important;"> -->
-        <div class="options-container" style="display: flex; flex-direction: column; align-items: center; gap: 30px; margin-top: 30px;">    
+            <div class="options-container"> 
             <!-- Optie 1 is altijd beschikbaar (via Boekengilde) -->
             <!-- <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;"> -->
-            <div class="option-card" style="width: 100%; box-sizing: border-box; margin-bottom: 20px;">    
+            <div class="option-card">   
                 <div class="option-title">OPTIE 1: VIA BOEKENGILDE</div>
                 
                 <ul class="benefits-list">
                     <li>Snelle professionele afhandeling</li>
                     <li>Diverse betaalmethoden</li>
-                    <li>Automatische verzendbevestiging</li>
                     <li>Snelle levering</li>
                     <li>Inclusief 9% BTW</li>
                 </ul>
                 
-                <a href="https://www.boekengilde.nl/boekenshop/onzinnige-zinnen-1/" class="order-button" target="_blank" rel="noopener noreferrer">BESTEL NU VIA BOEKENGILDE</a>
+                <a href="https://www.boekengilde.nl/boekenshop/onzinnige-zinnen-1/" class="order-button" target="_blank" rel="noopener noreferrer">BESTEL NU VIA BOEKENGILDE.NL</a>
             </div>
             
             <!-- Optie 2 alleen tonen als directe aankoop beschikbaar is -->
             {% if boek.direct_purchase and boek.direct_purchase.available %}
             <!-- <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;"> -->
-            <div class="option-card" style="width: 100%; box-sizing: border-box; margin-bottom: 20px;">
+            <div class="option-card">
                 <div class="option-title">OPTIE 2: {{ boek.direct_purchase.title }}</div>
                 
                 <ul class="benefits-list">
@@ -77,7 +84,7 @@ title: Bestel
             {% else %}
             <!-- Fallback naar standaard optie 2 als er geen aangepaste directe aankoop is gespecificeerd -->
             <!-- <div class="option-card" style="width: calc(50% - 30px) !important; flex: 0 0 calc(50% - 30px) !important; box-sizing: border-box !important;"> -->
-            <div class="option-card" style="width: 100%; box-sizing: border-box; margin-bottom: 20px;">
+            <div class="option-card">
                 <div class="option-title">OPTIE 2: VIA DE AUTEUR</div>
                 
                 <ul class="benefits-list">
@@ -112,24 +119,46 @@ title: Bestel
         margin-bottom: 30px;
     }
     
+    .book-info p {
+        margin: 10px 0;
+    }
+
+    /* Twee-koloms layout */
+    .two-column-layout {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        align-items: flex-start;
+        margin: 20px 0 40px 0;
+        text-align: left;
+    }
+
+    .book-image-column {
+        flex: 0 0 300px;
+    }
+
+    .book-info-column {
+        flex: 1;
+        min-width: 300px;
+    }
+
     .book-image {
-        max-width: 300px;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        max-height: 365px; /* Beperkt de hoogte */
+        object-fit: contain; /* Behoudt de verhouding */
         border-radius: 8px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        margin: 20px auto;
+        margin: 0;
         display: block;
     }
-    
+
     .book-info {
         background-color: rgba(255, 255, 255, 0.5);
         padding: 20px;
         border-radius: 10px;
-        max-width: 600px;
-        margin: 0 auto 40px auto;
-    }
-    
-    .book-info p {
-        margin: 10px 0;
+        width: 100%;
+        margin: 0;
     }
 
     .kor-notice {
@@ -140,6 +169,32 @@ title: Bestel
         font-size: 0.9rem;
     }
     
+    /* Stijl voor persoonlijke noot */
+    .personal-note {
+        background-color: rgba(255, 250, 205, 0.8);
+        padding: 15px 20px;
+        border-radius: 5px;
+        margin: 0 auto 30px auto;
+        max-width: 700px;
+        text-align: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .personal-note p {
+        margin: 0;
+        font-size: 1.05rem;
+    }
+
+    .personal-note a {
+        color: #8B4513;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+    .personal-note a:hover {
+        color: #FFA500;
+    }
+
     /* Aangepaste CSS voor opties naast elkaar - met !important om conflicten te overschrijven */
     .options-container {
         display: flex !important;
@@ -279,8 +334,7 @@ title: Bestel
             boekElement.style.display = 'block';
             
             // Update de titel van de pagina
-            const boekTitel = boekElement.querySelector('h1').textContent.replace('BESTEL NU ', '').replace(/"/g, '');
-            document.title = 'Bestel ' + boekTitel + ' - Sam en Saar';
+            document.title = 'Bestel - Sam en Saar'; // Of gebruik een dataveld uit site.data.books
         } else {
             // Boek niet gevonden
             document.getElementById('loading-message').style.display = 'none';
