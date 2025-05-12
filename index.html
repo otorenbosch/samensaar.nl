@@ -5,7 +5,16 @@ title: Home
 
 <h1 class="title-text">Het geheim van de bronzen bijl</h1>
 
-<img src="{{ '/assets/images/het-geheim-van-de-bronzen-bijl.jpg' | relative_url }}" alt="Schetsmatige illustratie van een landschap uit de bronstijd en huidige tijd" class="illustration">
+<!-- Voeg een container toe rond de afbeelding voor positionering -->
+<div class="book-image-container">
+  <img src="{{ '/assets/images/het-geheim-van-de-bronzen-bijl.jpg' | relative_url }}" alt="Schetsmatige illustratie van een landschap uit de bronstijd en huidige tijd" class="illustration">
+  
+  <!-- Hier komt de badge -->
+  <a href="https://www.rtvdrenthe.nl/nieuws/17460278/schattenjager-otto-torenbosch-schrijft-kinderboek-over-oeroude-bijlvondst" class="media-badge" target="_blank">
+    <img src="{{ '/assets/images/media/logo-rtvdrenthe.png' | relative_url }}" alt="RTV Drenthe logo" class="media-logo">
+    <span class="media-text">Nu te zien op RTV Drenthe!</span>
+  </a>
+</div>
 
 <div class="body-text">
     <p class="home-intro">
@@ -27,6 +36,50 @@ title: Home
 </div>
 
 <style>
+    .book-image-container {
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    .media-badge {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 2px solid #8B4513;
+        border-radius: 20px;
+        padding: 7px 12px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 2;
+    }
+
+    .media-badge:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        background-color: #FFA500;
+    }
+
+    .media-badge:hover .media-text {
+        color: white;
+    }
+
+    .media-logo {
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    .media-text {
+        color: #8B4513;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: color 0.3s;
+    }
+
     .cta-container {
         margin-top: 30px;
         display: flex;
@@ -70,5 +123,20 @@ title: Home
     
     .cta-button.primary:hover {
         background-color: #FFA500;
+    }
+    
+    /* Responsive aanpassingen voor kleinere schermen */
+    @media (max-width: 600px) {
+        .media-badge {
+            padding: 5px 10px;
+        }
+        
+        .media-logo {
+            height: 20px;
+        }
+        
+        .media-text {
+            font-size: 0.9rem;
+        }
     }
 </style>

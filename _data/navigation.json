@@ -8,6 +8,10 @@
     "link": "/boeken/"
   },
   {
+    "name": "Nieuws",
+    "link": "/nieuws/"
+  },
+  {
     "name": "Interactief",
     "link": "/interactief/"
   },
