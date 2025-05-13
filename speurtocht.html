@@ -963,6 +963,10 @@ title: Speurtocht
             checkRiddle(riddle4Input, riddle4Answer, riddle4Feedback);
         });
         
+        riddle5Input.addEventListener('blur', function() {
+            checkRiddle(riddle5Input, riddle5Answer, riddle5Feedback);
+        });
+
         function checkRiddle(input, correctAnswer, feedbackElement) {
             const userAnswer = input.value.trim().toLowerCase();
             if (userAnswer === correctAnswer) {
