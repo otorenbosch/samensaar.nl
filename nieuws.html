@@ -14,6 +14,71 @@ title: Nieuws
     <div class="nieuws-grid">
         <!-- Nieuwste item bovenaan --> 
         <div class="nieuws-card">
+            <div class="nieuws-date">20 mei 2025</div>
+            <div class="nieuws-badge event">Dealernetwerk</div>
+            <h2>"Het geheim van de bronzen bijl" nu verkrijgbaar bij metaaldetector dealers</h2>
+            
+            <img src="{{ '/assets/images/media/dealers-banner.jpg' | relative_url }}" alt="Het boek Sam en Saar bij verschillende metaaldetector dealers" class="nieuws-image">
+            
+            <p>
+                Met veel plezier kondigen we aan dat "Het geheim van de bronzen bijl" vanaf nu verkrijgbaar is bij diverse gespecialiseerde metaaldetector dealers door heel Nederland. Dit is een belangrijke stap in de beschikbaarheid van het boek, vooral voor lezers die affiniteit hebben met metaaldetectie en archeologie.
+            </p>
+            
+            <div class="nieuws-quote">
+                "Het is geweldig om te zien dat de metaaldetector gemeenschap zo enthousiast is over dit boek. Via deze dealers bereiken we precies de doelgroep die de passie voor het ontdekken van geschiedenis deelt."
+            </div>
+            
+            <p>
+                De dealers die het boek nu in hun assortiment hebben opgenomen zijn stuk voor stuk specialisten in de wereld van metaaldetectie. Hun klanten zijn vaak de echte enthousiastelingen die, net als de vader van Sam en Saar in het boek, regelmatig op pad gaan om historische voorwerpen te ontdekken.
+            </p>
+            
+            <div class="dealers-container">
+                <div class="dealer-row">
+                    <div class="dealer-item">
+                        <img src="{{ '/assets/images/dealers/logo-detect.png' | relative_url }}" alt="Detect" class="dealer-logo">
+                        <a href="https://www.detect.nl" target="_blank" class="dealer-link">Detect</a>
+                    </div>
+                    
+                    <div class="dealer-item">
+                        <img src="{{ '/assets/images/dealers/logo-detectorandus.png' | relative_url }}" alt="Detectorandus" class="dealer-logo">
+                        <a href="https://www.detectorandus.nl" target="_blank" class="dealer-link">Detectorandus</a>
+                    </div>
+                    
+                    <div class="dealer-item">
+                        <img src="{{ '/assets/images/dealers/logo-detectorwereld.png' | relative_url }}" alt="Detector Wereld" class="dealer-logo">
+                        <a href="https://www.detectorwereld.nl" target="_blank" class="dealer-link">Detector Wereld</a>
+                    </div>
+                </div>
+                
+                <div class="dealer-row">
+                    <div class="dealer-item">
+                        <img src="{{ '/assets/images/dealers/logo-djlaan.png' | relative_url }}" alt="DJ Laan" class="dealer-logo">
+                        <a href="https://www.djlaan.nl" target="_blank" class="dealer-link">Detectiespecialist DJ Laan</a>
+                    </div>
+                    
+                    <div class="dealer-item">
+                        <img src="{{ '/assets/images/dealers/logo-pieterman.png' | relative_url }}" alt="Pieterman Metaaldetectors" class="dealer-logo">
+                        <a href="https://pieterman-detectors.nl/" target="_blank" class="dealer-link">Pieterman Metaaldetectors</a>
+                    </div>
+                    
+                    <div class="dealer-item">
+                        <img src="{{ '/assets/images/dealers/logo-kooistra.png' | relative_url }}" alt="Kooistra Detectors" class="dealer-logo">
+                        <a href="https://kooistra-detectors.eu/" target="_blank" class="dealer-link">Kooistra Metaaldetectors</a>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Het boek sluit perfect aan bij het assortiment van deze dealers, waar klanten niet alleen terecht kunnen voor detectors en accessoires, maar nu ook voor een spannend verhaal dat de fascinerende wereld van archeologische vondsten tot leven brengt voor jonge lezers.
+            </p>
+            
+            <p>
+                "Het geheim van de bronzen bijl" is een avontuurlijk kinderboek waarin de vondst van een 4000 jaar oude bronzen bijl leidt tot een spannend verhaal over twee kinderen die tussen droom en werkelijkheid een reis maken naar de bronstijd. Met de verkoop via metaaldetector dealers hoopt de auteur vooral jonge lezers te inspireren voor archeologie en geschiedenis.
+            </p>
+            
+            <a href="{{ '/bestel/?boek=bronzen-bijl' | relative_url }}" class="nieuws-button">Bestel het boek online</a>
+        </div> 
+        <div class="nieuws-card">
             <div class="nieuws-date">16 mei 2025</div>
             <div class="nieuws-badge museum">Museum</div>
             <h2>"Het geheim van de bronzen bijl" nu verkrijgbaar in het Rijksmuseum van Oudheden en Archeon</h2>
@@ -430,6 +495,61 @@ title: Nieuws
         font-style: italic;
         color: #666;
     }
+
+    .dealers-container {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        padding: 25px;
+        margin: 30px 0;
+    }
+    
+    .dealer-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+    
+    .dealer-row:last-child {
+        margin-bottom: 0;
+    }
+    
+    .dealer-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        min-width: 150px;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+    }
+    
+    .dealer-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .dealer-logo {
+        width: 120px;
+        height: 90px;
+        object-fit: contain;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    
+    .dealer-link {
+        color: #8B4513;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    
+    .dealer-link:hover {
+        color: #FFA500;
+        text-decoration: underline;
+    }
     
     /* Media query voor grotere schermen */
     @media (min-width: 768px) {
@@ -453,6 +573,18 @@ title: Nieuws
         
         .gallery-image {
             max-width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .dealer-row {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .dealer-item {
+            width: 80%;
+            margin-bottom: 25px;
         }
     }
 </style>
