@@ -14,6 +14,85 @@ title: Nieuws
     <div class="nieuws-grid">
             <!-- Nieuwste item bovenaan --> 
         <div class="nieuws-card">
+            <div class="nieuws-date">16 juni 2025</div>
+            <div class="nieuws-badge event">Lokale verkoop</div>
+            <h2>"Sam en Saar en het geheim van de bronzen bijl" nu ook te koop bij de Dagwinkel in Gasselternijveen</h2>
+            
+            <img src="{{ '/assets/images/media/dagwinkel-gasselternijveen.jpg' | relative_url }}" alt="Het boek Sam en Saar bij Dagwinkel in Gasselternijveen" class="nieuws-image">
+            
+            <p>
+                Goed nieuws voor de inwoners van Gasselternijveen en omgeving! "Sam en Saar en het geheim van de bronzen bijl" is nu ook verkrijgbaar bij de plaatselijke Dagwinkel. Dit betekent dat je het boek voortaan ook tijdens je dagelijkse boodschappen kunt aanschaffen.
+            </p>
+            
+            <div class="nieuws-quote">
+                "Het is geweldig om het boek ook in onze eigen buurt beschikbaar te hebben. Zo kunnen lokale lezers gemakkelijk een exemplaar meenemen bij hun gewone boodschappen."
+            </div>
+            
+            <p>
+                De Dagwinkel in Gasselternijveen is een vertrouwde naam in het dorp en biedt naast de dagelijkse boodschappen nu ook dit spannende kinderboek aan. Het is een mooie aanvulling op de groeiende lijst van verkooppunten, die inmiddels diverse musea, metaaldetector dealers en online winkels omvat.
+            </p>
+            
+            <p>
+                Voor inwoners van Gasselternijveen is dit een ideale manier om het boek te steunen en tegelijkertijd de lokale winkel te ondersteunen. Het boek kost €19,95 en is direct beschikbaar.
+            </p>
+            
+            <div class="dagwinkel-container">
+                <h3>Verkrijgbaar bij:</h3>
+                <div class="dagwinkel-item">
+                    <img src="{{ '/assets/images/media/dagwinkel-logo.png' | relative_url }}" alt="Dagwinkel Gasselternijveen logo" class="dagwinkel-logo">
+                    <a href="https://gasselternijveen.lekkermakkelijk.nl/" target="_blank" class="dagwinkel-link">Dagwinkel Gasselternijveen</a>
+                    <p class="dagwinkel-info">Gasselterweg 2 • €19,95</p>
+                </div>
+            </div>
+            
+            <a href="{{ '/bestel/?boek=bronzen-bijl' | relative_url }}" class="nieuws-button">Ook online bestellen</a>
+        </div>
+
+        <div class="nieuws-card">
+            <div class="nieuws-date">27 mei 2025</div>
+            <div class="nieuws-badge event">Online verkoop</div>
+            <h2>"Het geheim van de bronzen bijl" nu ook verkrijgbaar via bol.com</h2>
+            
+            <img src="{{ '/assets/images/media/bol-com-verkoop.jpg' | relative_url }}" alt="Het boek Sam en Saar op bol.com" class="nieuws-image">
+            
+            <p>
+                Een belangrijke mijlpaal voor "Het geheim van de bronzen bijl": het boek is nu ook verkrijgbaar via bol.com, de grootste online boekwinkel van Nederland. Dit betekent een enorme uitbreiding van de bereikbaarheid voor lezers door het hele land.
+            </p>
+            
+            <div class="nieuws-quote">
+                "Het is fantastisch om te zien dat het boek nu ook via dit grote platform verkrijgbaar is. Hiermee bereiken we een veel breder publiek en maken we het boek toegankelijk voor iedereen die online winkelt."
+            </div>
+            
+            <p>
+                Via bol.com kunnen klanten het boek bestellen met de bekende snelle levering en betrouwbare service waar zij aan gewend zijn. Het boek wordt aangeboden tegen de reguliere verkoopprijs van €19,95 en profiteert van de uitgebreide zoekfunctionaliteit en aanbevelingssystemen van het platform.
+            </p>
+            
+            <p>
+                Deze stap naar bol.com is een belangrijke uitbreiding naast de bestaande verkoopkanalen zoals museumwinkels (Rijksmuseum van Oudheden, Archeon, Drents Museum), metaaldetector dealers en de directe verkoop via de auteur. Samen zorgen deze kanalen ervoor dat "Het geheim van de bronzen bijl" voor iedereen gemakkelijk verkrijgbaar is.
+            </p>
+            
+            <p>
+                Op bol.com kunnen klanten ook recensies lezen en achterlaten, wat helpt bij het ontdekken van het boek door nieuwe lezers die op zoek zijn naar spannende kinderboeken over geschiedenis en archeologie.
+            </p>
+            
+            <div class="verkoop-info">
+                <h3>Verkrijgbaar via:</h3>
+                <ul>
+                    <li>✓ bol.com (nieuw!)</li>
+                    <li>✓ Directe verkoop via auteur (gesigneerd exemplaar)</li>
+                    <li>✓ Museumwinkels (RMO, Archeon, Drents Museum)</li>
+                    <li>✓ Metaaldetector dealers</li>
+                    <li>✓ Lokale winkels</li>
+                </ul>
+            </div>
+            
+            <div class="cta-container" style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="https://www.bol.com/nl/nl/p/sam-en-saar-en-het-geheim-van-de-bronzen-bijl/9300000231742289/?bltgh=mk8105kgUqAGczrHG-hImQ.4_8.9.ProductTitle" target="_blank" class="nieuws-button" style="display: inline-block;">Bekijk op bol.com</a>
+                <a href="{{ '/bestel/?boek=bronzen-bijl' | relative_url }}" class="nieuws-button" style="display: inline-block; background-color: #FFA500;">Alle bestelmogelĳkheden</a>
+            </div>
+        </div>
+
+        <div class="nieuws-card">
             <div class="nieuws-date">21 mei 2025</div>
             <div class="nieuws-badge print">Recensie</div>
             <h2>Lovende recensie van "Het geheim van de bronzen bijl" op geschiedenis.nl</h2>
@@ -399,7 +478,8 @@ title: Nieuws
     }
     
     .nieuws-image {
-        width: 100%;
+        width: 80%;
+        max-width: 500px;
         height: auto;
         border-radius: 8px;
         margin-bottom: 20px;
@@ -581,6 +661,89 @@ title: Nieuws
     .dealer-link:hover {
         color: #FFA500;
         text-decoration: underline;
+    }
+
+    .dagwinkel-container {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 8px;
+        padding: 25px;
+        margin: 30px 0;
+        text-align: center;
+    }
+    
+    .dagwinkel-container h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        color: #8B4513;
+    }
+    
+    .dagwinkel-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s;
+    }
+    
+    .dagwinkel-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .dagwinkel-logo {
+        width: 120px;
+        height: 90px;
+        object-fit: contain;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    
+    .dagwinkel-link {
+        color: #8B4513;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+        margin-bottom: 5px;
+    }
+    
+    .dagwinkel-link:hover {
+        color: #FFA500;
+        text-decoration: underline;
+    }
+    
+    .dagwinkel-info {
+        margin: 0;
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+    .verkoop-info {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+    }
+
+    .verkoop-info h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #8B4513;
+    }
+
+    .verkoop-info ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .verkoop-info li {
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+    }
+
+    .verkoop-info li:last-child {
+        border-bottom: none;
     }
     
     /* Media query voor grotere schermen */
