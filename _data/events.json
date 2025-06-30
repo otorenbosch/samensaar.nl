@@ -1,5 +1,29 @@
 [
   {
+    "title": "Zoekdag de Detectorshop Zeeland",
+    "date": "2025-08-30",
+    "start_time": "09:00",
+    "end_time": "17:00",
+    "location": "De Detectorshop Zeeland, Zeeland",
+    "description": "Otto Torenbosch is aanwezig op de jaarlijkse zoekdag van de Detectorshop Zeeland. Een unieke kans om de auteur persoonlijk te ontmoeten, boeken te laten signeren en te praten over archeologie en metaaldetectie. Het boek is ook verkrijgbaar tijdens het evenement.",
+    "type": "evenement",
+    "url": "#",
+    "registration_url": "#",
+    "visible": true
+  },
+  {
+    "title": "Radiointerview Otto Torenbosch RTVEEN",
+    "date": "2025-07-12",
+    "start_time": "08:00",
+    "end_time": "09:00",
+    "location": "Radio uitzending",
+    "description": "Uitgebreid radiointerview met Otto Torenbosch over \"Sam en Saar en het geheim van de bronzen bijl\". Het gesprek gaat over het ontstaan van het boek, de inspiratie achter het verhaal en de fascinerende wereld van metaaldetectie en archeologische vondsten.",
+    "type": "radio",
+    "url": "#",
+    "registration_url": "#",
+    "visible": true
+  },
+  {
     "title": "Boekpresentatie",
     "date": "2025-05-09",
     "start_time": "13:30",
@@ -9,7 +33,7 @@
     "type": "lezing",
     "url": "#",
     "registration_url": "#",
-    "visible": true
+    "visible": false
   },
   {
     "title": "Workshop - Zoeken met een metaaldetector",
