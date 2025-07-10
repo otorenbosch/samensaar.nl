@@ -12,7 +12,83 @@ title: Nieuws
     </div>
     
     <div class="nieuws-grid">
-            <!-- Nieuwste item bovenaan --> 
+            <!-- Nieuwste item bovenaan -->
+        <div class="nieuws-card">
+            <div class="nieuws-date">11 juli 2025</div>
+            <div class="nieuws-badge radio">Radio</div>
+            <h2>Otto Torenbosch te gast bij RTV1 over "Het geheim van de bronzen bijl"</h2>
+            
+            <img src="{{ '/assets/images/media/rtv1-studio.jpg' | relative_url }}" alt="Otto Torenbosch in de studio van RTV1" class="nieuws-image">
+            
+            <p>
+                Otto Torenbosch was gisteren te gast in de studio van RTV1 om te praten over zijn kinderboek "Sam en Saar en het geheim van de bronzen bijl". 
+                In een uitgebreid radio-interview vertelde hij over de inspiratie achter het boek, de fascinerende wereld van metaaldetectie en 
+                hoe een echte vondst van 4000 jaar oud uitgroeide tot een spannend verhaal voor kinderen.
+            </p>
+            
+            <div class="nieuws-quote">
+                "Het was geweldig om in de RTV1 studio te zijn en uitgebreid te kunnen vertellen over het boek en de passie voor archeologie. 
+                Radio geeft zo'n mooie gelegenheid om echt het verhaal achter het verhaal te delen."
+            </div>
+            
+            <p>
+                De uitzending is aanstaande zaterdag te beluisteren via RTV1. De regionale radiozender is een bekende stem in 
+                Zuidoost-Groningen en omgeving, en bereikt veel luisteraars die geïnteresseerd zijn in lokale verhalen en bijzondere projecten.
+            </p>
+            
+            <p>
+                In het interview ging Otto dieper in op hoe de vondst van een bronzen bijl bij Bronneger hem inspireerde tot het schrijven 
+                van dit kinderboek. Hij vertelde over het onderzoek dat hij deed naar de bronstijd, de samenwerking met illustrator Mujan Art, 
+                en hoe het boek inmiddels zijn weg heeft gevonden naar musea door heel Nederland.
+            </p>
+            
+            <div class="radio-info">
+                <h3>Luister naar de uitzending op zaterdag</h3>
+                <p><strong>RTV1 is te ontvangen via:</strong></p>
+                <ul class="frequency-list">
+                    <li><strong>105.3 FM</strong> - gemeente Stadskanaal en Zuidoost Groningen</li>
+                    <li><strong>106.2 FM</strong> - gemeente Veendam, Ommelanderwijk / Alteveer</li>
+                    <li><strong>106.9 FM</strong> - gemeente Veendam, Ommelanderwijk / Alteveer</li>
+                    <li><strong>106.0 FM</strong> - gemeente Borger-Odoorn</li>
+                    <li><strong>DAB+ kanaal 8C</strong> - digitale radio</li>
+                </ul>
+            </div>
+            
+            <!-- Deze sectie is nu verborgen, wordt zichtbaar na zaterdag -->
+            <div class="audio-player-section" style="display: none;">
+                <h3>🎧 Beluister het interview terug</h3>
+                <p>Gemist? Je kunt het volledige interview hier terugluisteren:</p>
+                
+                <div class="custom-audio-player">
+                    <button id="playButton" class="play-button">
+                        <span class="play-icon">▶️</span>
+                        <span class="play-text">Start het RTV1 interview</span>
+                    </button>
+                    <audio id="audioPlayer" preload="metadata">
+                        <source src="{{ '/assets/audio/rtv1-interview-web.mp3' | relative_url }}" type="audio/mpeg">
+                        Je browser ondersteunt geen audio. <a href="{{ '/assets/audio/rtv1-interview-web.mp3' | relative_url }}">Download het interview</a>
+                    </audio>
+                    <div id="audioControls" class="audio-controls" style="display: none;">
+                        <div class="progress-container">
+                            <div class="progress-bar" id="progressBar"></div>
+                        </div>
+                        <div class="time-display">
+                            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Deze radio-uitzending voegt zich bij een groeiende lijst van media-aandacht voor "Het geheim van de bronzen bijl", 
+                waaronder eerdere interviews bij RTV Drenthe en NPO2. Het laat zien hoe het verhaal van Sam en Saar mensen 
+                van alle leeftijden weet te fascineren en de interesse in archeologie en lokale geschiedenis weet aan te wakkeren.
+            </p>
+            
+            <a href="{{ '/bestel/?boek=bronzen-bijl' | relative_url }}" class="nieuws-button">Bestel het boek</a>
+            <a href="https://www.rtveen.nl/" target="_blank" class="nieuws-button">Bezoek RTV1</a>
+        </div>     
+            
         <div class="nieuws-card">
             <div class="nieuws-date">Juli 2025</div>
             <div class="nieuws-badge museum">Museum</div>
@@ -923,4 +999,212 @@ title: Nieuws
         font-weight: bold;
         margin-left: 10px;
     }
+
+   .nieuws-badge.radio {
+    background-color: #FF5722;
+    }
+
+    .radio-info {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+    }
+
+    .radio-info h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #8B4513;
+    }
+
+    .frequency-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .frequency-list li {
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+    }
+
+    .frequency-list li:last-child {
+        border-bottom: none;
+    }
+
+    .frequency-list li:before {
+        content: "📻";
+        margin-right: 10px;
+    }
+
+    /* Audio player styles (voor later) */
+    .audio-player-section {
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 8px;
+        padding: 20px;
+        margin: 25px 0;
+    }
+
+    .custom-audio-player {
+        text-align: center;
+    }
+
+    .play-button {
+        background-color: #8B4513;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 25px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 0 auto;
+    }
+
+    .play-button:hover {
+        background-color: #FFA500;
+        transform: translateY(-2px);
+    }
+
+    .play-button.playing {
+        background-color: #4CAF50;
+    }
+
+    .audio-controls {
+        margin-top: 15px;
+    }
+
+    .progress-container {
+        width: 100%;
+        height: 6px;
+        background-color: #ddd;
+        border-radius: 3px;
+        margin: 10px 0;
+        cursor: pointer;
+    }
+
+    .progress-bar {
+        height: 100%;
+        background-color: #8B4513;
+        border-radius: 3px;
+        width: 0%;
+        transition: width 0.1s;
+    }
+
+    .time-display {
+        font-size: 0.9rem;
+        color: #666;
+    }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioControls = document.getElementById('audioControls');
+        const progressBar = document.getElementById('progressBar');
+        const currentTimeDisplay = document.getElementById('currentTime');
+        const durationDisplay = document.getElementById('duration');
+        const playIcon = document.querySelector('.play-icon');
+        const playText = document.querySelector('.play-text');
+        
+        if (!playButton || !audioPlayer) {
+            console.log('PlayButton or AudioPlayer not found');
+            return;
+        }
+        
+        console.log('Audio player initialized');
+        
+        // Force metadata loading bij pagina load
+        audioPlayer.load();
+        
+        // Error handling
+        audioPlayer.addEventListener('error', function(e) {
+            console.log('Audio error:', e);
+            console.log('Audio error details:', audioPlayer.error);
+        });
+        
+        playButton.addEventListener('click', function() {
+            console.log('Play button clicked');
+            
+            if (audioPlayer.paused) {
+                audioPlayer.play().then(function() {
+                    console.log('Audio resumed/started successfully');
+                    playIcon.textContent = '⏸️';
+                    playText.textContent = 'Pauzeer interview';
+                    playButton.classList.add('playing');
+                    audioControls.style.display = 'block';
+                }).catch(function(error) {
+                    console.log('Audio play failed:', error);
+                    alert('Kan audio niet afspelen: ' + error.message);
+                });
+            } else {
+                audioPlayer.pause();
+                console.log('Audio paused');
+                playIcon.textContent = '▶️';
+                playText.textContent = 'Hervat interview';
+                playButton.classList.remove('playing');
+            }
+        });
+        
+        audioPlayer.addEventListener('loadedmetadata', function() {
+            console.log('Metadata loaded, duration:', audioPlayer.duration);
+            if (durationDisplay) {
+                durationDisplay.textContent = formatTime(audioPlayer.duration);
+                console.log('Duration display updated to:', formatTime(audioPlayer.duration));
+            }
+        });
+        
+        // Extra check - soms is metadata al geladen
+        if (audioPlayer.duration && !isNaN(audioPlayer.duration)) {
+            console.log('Duration already available:', audioPlayer.duration);
+            if (durationDisplay) {
+                durationDisplay.textContent = formatTime(audioPlayer.duration);
+            }
+        }
+        
+        audioPlayer.addEventListener('timeupdate', function() {
+            if (progressBar && currentTimeDisplay) {
+                const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+                progressBar.style.width = progress + '%';
+                currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
+            }
+        });
+        
+        audioPlayer.addEventListener('ended', function() {
+            console.log('Audio ended');
+            playIcon.textContent = '▶️';
+            playText.textContent = 'Start het RTV1 interview';
+            playButton.classList.remove('playing');
+            if (progressBar) progressBar.style.width = '0%';
+        });
+        
+        // Progress bar als display-only
+        const progressContainer = document.querySelector('.progress-container');
+        if (progressContainer) {
+            progressContainer.style.cursor = 'default';
+            progressContainer.title = 'Voortgang interview';
+            console.log('Progress bar set to display-only mode');
+        }
+        
+        function formatTime(seconds) {
+            if (isNaN(seconds)) return '0:00';
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return mins + ':' + (secs < 10 ? '0' : '') + secs;
+        }
+        
+        // Fallback: probeer metadata na 2 seconden opnieuw te laden
+        setTimeout(function() {
+            if (!audioPlayer.duration || isNaN(audioPlayer.duration)) {
+                console.log('Retrying metadata load...');
+                audioPlayer.load();
+            }
+        }, 2000);
+    });
+</script>
