@@ -14,6 +14,78 @@ title: Nieuws
     <div class="nieuws-grid">
             <!-- Nieuwste item bovenaan -->
         <div class="nieuws-card">
+            <div class="nieuws-date">17 juli 2025</div>
+            <div class="nieuws-badge museum">Museum</div>
+            <h2>"Sam en Saar en het geheim van de bronzen bijl" nu ook verkrijgbaar in het OERmuseum</h2>
+            
+            <img src="{{ '/assets/images/media/oer-museum-bijl.jpg' | relative_url }}" alt="Bronzen bijl uit de collectie van het OERmuseum" class="nieuws-image">
+            
+            <p>
+                Met veel plezier kunnen we melden dat "Het geheim van de bronzen bijl" vanaf vandaag ook verkrijgbaar is in de 
+                museumwinkel van het OERmuseum in Diever. Dit bijzondere museum, dat zich toelegt op de oergeschiedenis van Drenthe, 
+                vormt een perfecte match met het verhaal van Sam en Saar.
+            </p>
+            
+            <div class="nieuws-quote">
+                "Het OERmuseum heeft prachtige voorwerpen uit de bronstijd in hun collectie, inclusief authentieke bronzen bijlen 
+                die lijken op die uit ons verhaal. Het is geweldig dat bezoekers na het zien van deze echte archeologische schatten 
+                ook het avontuurlijke verhaal eromheen mee naar huis kunnen nemen."
+            </div>
+            
+            <p>
+                Het OERmuseum in Diever is gespecialiseerd in de oergeschiedenis van Drenthe en herbergt een indrukwekkende collectie 
+                archeologische vondsten uit verschillende tijdperken. Hun collectie bronzen voorwerpen, waaronder bijlen die sterk 
+                lijken op de vondst die Sam en Saar's vader doet in het boek, maken dit museum tot een bijzondere locatie voor 
+                het kinderboek.
+            </p>
+            
+            <p>
+                Het museum ligt in het hart van Drenthe, een provincie die rijk is aan archeologische schatten. Van hunebedden 
+                tot bronstijdvondsten - Drenthe vertelt het verhaal van onze vroegste bewoners. "Het geheim van de bronzen bijl" 
+                sluit perfect aan bij deze rijke geschiedenis en brengt de fascinerende wereld van de bronstijd tot leven voor 
+                jonge lezers.
+            </p>
+            
+            <p>
+                De toevoeging van het OERmuseum brengt het totaal aantal museumlocaties waar het boek verkrijgbaar is op zeven. 
+                Hiermee is er nu een mooi netwerk van musea verspreid over heel Nederland, elk met hun eigen specialisatie maar 
+                allen verbonden door de passie voor archeologie en geschiedenis.
+            </p>
+            
+            <div class="museums-overview">
+                <h3>Overzicht museumlocaties:</h3>
+                <ul class="museums-list">
+                    <li><strong>Rijksmuseum van Oudheden</strong> (Leiden)</li>
+                    <li><strong>Archeon Archeologisch Themapark</strong> (Alphen aan den Rijn)</li>
+                    <li><strong>Drents Museum</strong> (Assen)</li>
+                    <li><strong>Hunebedcentrum</strong> (Borger)</li>
+                    <li><strong>Veenkoloniaal Museum</strong> (Veendam)</li>
+                    <li><strong>Limburgs Museum</strong> (Venlo)</li>
+                    <li><strong>OERmuseum</strong> (Diever) <span class="new-badge">nieuw!</span></li>
+                </ul>
+            </div>
+            
+            <p>
+                Bezoekers van het OERmuseum kunnen nu na het bewonderen van de echte bronzen voorwerpen uit de museumcollectie 
+                het spannende verhaal van Sam en Saar meenemen. Het boek vertelt hoe een vondst van 4000 jaar oud twee kinderen 
+                meeneemt op een avontuurlijke reis tussen heden en verleden, waarbij dromen en werkelijkheid soms verrassend 
+                dicht bij elkaar komen.
+            </p>
+            
+            <div class="museum-info">
+                <h3>🏛️ Bezoek het OERmuseum</h3>
+                <p><strong>Adres:</strong> Witteveen 4, 7981 LM Diever</p>
+                <p><strong>Website:</strong> <a href="https://www.oermuseum.nl" target="_blank" style="color: #8B4513; font-weight: bold;">www.oermuseum.nl</a></p>
+                <p><strong>Boekprijs:</strong> €19,95</p>
+            </div>
+            
+            <div class="cta-container" style="margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="https://www.oermuseum.nl" target="_blank" class="nieuws-button" style="display: inline-block;">Bezoek het OERmuseum</a>
+                <a href="{{ '/bestel/?boek=bronzen-bijl' | relative_url }}" class="nieuws-button" style="display: inline-block; background-color: #FFA500;">Bestel het boek online</a>
+            </div>
+        </div>
+
+        <div class="nieuws-card">
             <div class="nieuws-date">10 juli 2025</div>
             <div class="nieuws-badge radio">Radio</div>
             <h2>Otto Torenbosch te gast bij RTV1 over "Het geheim van de bronzen bijl"</h2>
@@ -957,6 +1029,34 @@ title: Nieuws
             width: 80%;
             margin-bottom: 25px;
         }
+    }
+
+    .museum-info {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+    border-left: 4px solid #9C27B0;
+    }
+
+    .museum-info h3 {
+        margin-top: 0;
+        margin-bottom: 15px;
+        color: #8B4513;
+    }
+
+    .museum-info p {
+        margin: 8px 0;
+    }
+
+    .museum-info a {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .museum-info a:hover {
+        color: #FFA500 !important;
+        text-decoration: underline;
     }
     /* Extra CSS voor dit nieuwsbericht */
     .museums-overview {
