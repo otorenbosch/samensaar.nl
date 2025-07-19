@@ -1,0 +1,66 @@
+<!-- _includes/nieuws/nieuws-card.html -->
+<div class="nieuws-card">
+    <div class="nieuws-date">{{ include.item.date }}</div>
+    <div class="nieuws-badge {{ include.item.badge }}">
+        {% case include.item.badge %}
+            {% when 'museum' %}Museum
+            {% when 'radio' %}Radio
+            {% when 'tv' %}TV
+            {% when 'print' %}Recensie
+            {% when 'event' %}Evenement
+            {% else %}{{ include.item.badge | capitalize }}
+        {% endcase %}
+    </div>
+    <h2>{{ include.item.title }}</h2>
+    
+    {% if include.item.image %}
+        <img src="{{ '/assets/images/media/' | append: include.item.image | relative_url }}" 
+             alt="{{ include.item.image_alt }}" 
+             class="nieuws-image">
+    {% endif %}
+    
+    <p>{{ include.item.intro }}</p>
+    
+    {% if include.item.quote %}
+        <div class="nieuws-quote">
+            "{{ include.item.quote }}"
+        </div>
+    {% endif %}
+    
+    {% for paragraph in include.item.content %}
+        <p>{{ paragraph }}</p>
+    {% endfor %}
+    
+    {% if include.item.components %}
+        {% for component in include.item.components %}
+            {% case component.type %}
+                {% when 'museum_list' %}
+                    {% include nieuws/museum-list.html component=component %}
+                {% when 'info_box' %}
+                    {% include nieuws/info-box.html component=component %}
+                {% when 'radio_info' %}
+                    {% include nieuws/radio-info.html component=component %}
+                {% when 'audio_player' %}
+                    {% include nieuws/audio-player.html component=component %}
+                {% when 'dealers_list' %}
+                    {% include nieuws/dealers-list.html component=component %}
+                {% when 'image_gallery' %}
+                    {% include nieuws/image-gallery.html component=component %}
+                {% else %}
+                    <!-- Debug: Unknown component type "{{ component.type }}" -->
+            {% endcase %}
+        {% endfor %}
+    {% endif %}
+    
+    {% if include.item.buttons %}
+        <div class="cta-container">
+            {% for button in include.item.buttons %}
+                <a href="{% if button.external %}{{ button.url }}{% else %}{{ button.url | relative_url }}{% endif %}" 
+                   class="nieuws-button {% if button.style %}{{ button.style }}{% endif %}"
+                   {% if button.external %}target="_blank"{% endif %}>
+                    {{ button.text }}
+                </a>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>

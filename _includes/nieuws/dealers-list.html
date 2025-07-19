@@ -1,0 +1,25 @@
+<!-- _includes/nieuws/dealers-list.html -->
+<div class="dealers-container">
+    <div class="dealer-row">
+        {% assign half = include.component.dealers.size | divided_by: 2 %}
+        {% for dealer in include.component.dealers limit: half %}
+            <div class="dealer-item">
+                <img src="{{ '/assets/images/dealers/' | append: dealer.logo | relative_url }}" 
+                     alt="{{ dealer.name }}" 
+                     class="dealer-logo">
+                <a href="{{ dealer.url }}" target="_blank" class="dealer-link">{{ dealer.name }}</a>
+            </div>
+        {% endfor %}
+    </div>
+    
+    <div class="dealer-row">
+        {% for dealer in include.component.dealers offset: half %}
+            <div class="dealer-item">
+                <img src="{{ '/assets/images/dealers/' | append: dealer.logo | relative_url }}" 
+                     alt="{{ dealer.name }}" 
+                     class="dealer-logo">
+                <a href="{{ dealer.url }}" target="_blank" class="dealer-link">{{ dealer.name }}</a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

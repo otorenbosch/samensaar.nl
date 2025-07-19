@@ -1,0 +1,35 @@
+<!-- _includes/nieuws/image-gallery.html -->
+{% if include.component.images.size == 1 %}
+    <!-- Enkele afbeelding -->
+    <div class="nieuws-gallery">
+        {% for image in include.component.images %}
+            <img src="{{ '/assets/images/media/' | append: image.src | relative_url }}" 
+                 alt="{{ image.alt }}" 
+                 class="gallery-image"
+                 style="max-width: 100%; width: auto;">
+        {% endfor %}
+    </div>
+{% elsif include.component.images.size == 2 %}
+    <!-- Twee afbeeldingen - museum layout -->
+    <div class="afbeeldingen-container">
+        {% for image in include.component.images %}
+            <figure class="museum-afbeelding">
+                <img src="{{ '/assets/images/media/' | append: image.src | relative_url }}" 
+                     alt="{{ image.alt }}" 
+                     class="museum-foto">
+                {% if image.caption and image.caption != "" %}
+                    <figcaption>{{ image.caption }}</figcaption>
+                {% endif %}
+            </figure>
+        {% endfor %}
+    </div>
+{% else %}
+    <!-- Drie of meer afbeeldingen - gallery layout -->
+    <div class="nieuws-gallery">
+        {% for image in include.component.images %}
+            <img src="{{ '/assets/images/media/' | append: image.src | relative_url }}" 
+                 alt="{{ image.alt }}" 
+                 class="gallery-image">
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,7 @@
+<!-- _includes/nieuws/info-box.html -->
+<div class="info-box {% if include.component.style %}{{ include.component.style }}{% else %}museum{% endif %}">
+    <h3>{{ include.component.title }}</h3>
+    {% for item in include.component.items %}
+        <p>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    {% endfor %}
+</div>

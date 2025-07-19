@@ -1,0 +1,19 @@
+<!-- _includes/nieuws/radio-info.html -->
+<div class="info-box radio">
+    <h3>{{ include.component.title }}</h3>
+    {% if include.component.subtitle %}
+        <p>{{ include.component.subtitle | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    {% endif %}
+    
+    {% if include.component.frequencies %}
+        <ul class="info-list frequencies">
+            {% for frequency in include.component.frequencies %}
+                <li>{{ frequency | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+    {% if include.component.extra %}
+        <p style="margin-top: 20px;">{{ include.component.extra | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+    {% endif %}
+</div>

@@ -1,0 +1,25 @@
+<!-- _includes/nieuws/audio-player.html -->
+<div class="audio-player-section">
+    <h3>{{ include.component.title }}</h3>
+    <p>{{ include.component.description }}</p>
+    
+    <div class="custom-audio-player">
+        <button id="playButton" class="play-button">
+            <span class="play-icon">▶️</span>
+            <span class="play-text">Start het RTV1 interview</span>
+        </button>
+        <audio id="audioPlayer" preload="metadata">
+            <source src="{{ '/assets/audio/' | append: include.component.audio_file | relative_url }}" type="audio/mpeg">
+            Je browser ondersteunt geen audio. 
+            <a href="{{ '/assets/audio/' | append: include.component.audio_file | relative_url }}">Download het interview</a>
+        </audio>
+        <div id="audioControls" class="audio-controls" style="display: none;">
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="time-display">
+                <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+            </div>
+        </div>
+    </div>
+</div>

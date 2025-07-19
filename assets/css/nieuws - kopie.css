@@ -1,0 +1,545 @@
+/* Nieuws pagina styling */
+.nieuws-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+.nieuws-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.nieuws-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.15);
+    position: relative;
+}
+
+.nieuws-date {
+    color: #8B4513;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.nieuws-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    color: white;
+}
+
+.nieuws-badge.tv {
+    background-color: #E91E63;
+}
+
+.nieuws-badge.print {
+    background-color: #2196F3;
+}
+
+.nieuws-badge.event {
+    background-color: #4CAF50;
+}
+
+.nieuws-badge.museum {
+    background-color: #9C27B0; 
+}   
+
+.nieuws-badge.radio {
+    background-color: #FF5722;
+}
+
+.nieuws-card h2 {
+    color: #654321;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.nieuws-image {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nieuws-card p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.nieuws-quote {
+    background-color: #FFF9E6;
+    border-left: 4px solid #FFA500;
+    padding: 15px 20px;
+    margin: 25px 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #654321;
+}
+
+.nieuws-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.gallery-image {
+    flex: 1;
+    min-width: 200px;
+    max-width: calc(33.333% - 10px);
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.nieuws-button {
+    display: inline-block;
+    background-color: #8B4513;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.nieuws-button:hover {
+    background-color: #FFA500;
+    transform: translateY(-2px);
+}
+
+.signup-section {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.signup-section h2 {
+    color: #8B4513;
+    margin-top: 0;
+}
+
+.signup-form {
+    max-width: 500px;
+    margin: 25px auto 0;
+    display: flex;
+    gap: 10px;
+}
+
+.signup-form input[type="email"] {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.signup-form button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    font-size: 1rem;
+}
+
+.signup-form button:hover {
+    background-color: #FFA500;
+}
+
+.afbeeldingen-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.museum-afbeelding {
+    margin: 0;
+}
+
+.museum-foto {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+figcaption {
+    margin-top: 10px;
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}
+
+.dealers-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px 0;
+}
+
+.dealer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.dealer-row:last-child {
+    margin-bottom: 0;
+}
+
+.dealer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    min-width: 150px;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.dealer-item:hover {
+    transform: translateY(-5px);
+}
+
+.dealer-logo {
+    width: 120px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.dealer-link {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.dealer-link:hover {
+    color: #FFA500;
+    text-decoration: underline;
+}
+
+.dagwinkel-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.dagwinkel-container h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #8B4513;
+}
+
+.dagwinkel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+.dagwinkel-item:hover {
+    transform: translateY(-5px);
+}
+
+.dagwinkel-logo {
+    width: 120px;
+    height: 90px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.dagwinkel-link {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    margin-bottom: 5px;
+}
+
+.dagwinkel-link:hover {
+    color: #FFA500;
+    text-decoration: underline;
+}
+
+.dagwinkel-info {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.verkoop-info {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.verkoop-info h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #8B4513;
+}
+
+.verkoop-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.verkoop-info li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.verkoop-info li:last-child {
+    border-bottom: none;
+}
+
+.museum-info {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+    border-left: 4px solid #9C27B0;
+}
+
+.museum-info h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #8B4513;
+}
+
+.museum-info p {
+    margin: 8px 0;
+}
+
+.museum-info a {
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.museum-info a:hover {
+    color: #FFA500 !important;
+    text-decoration: underline;
+}
+
+.museums-overview {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.museums-overview h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #8B4513;
+}
+
+.museums-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.museums-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+    position: relative;
+}
+
+.museums-list li:last-child {
+    border-bottom: none;
+}
+
+.museums-list li:before {
+    content: "🏛️";
+    margin-right: 10px;
+}
+
+.new-badge {
+    background-color: #4CAF50;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.radio-info {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.radio-info h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #8B4513;
+}
+
+.frequency-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.frequency-list li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.frequency-list li:last-child {
+    border-bottom: none;
+}
+
+.frequency-list li:before {
+    content: "📻";
+    margin-right: 10px;
+}
+
+/* Audio player styles */
+.audio-player-section {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.custom-audio-player {
+    text-align: center;
+}
+
+.play-button {
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.play-button:hover {
+    background-color: #FFA500;
+    transform: translateY(-2px);
+}
+
+.play-button.playing {
+    background-color: #4CAF50;
+}
+
+.audio-controls {
+    margin-top: 15px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 3px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #8B4513;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.1s;
+}
+
+.time-display {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .afbeeldingen-container {
+        flex-direction: row;
+    }
+    
+    .museum-afbeelding {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-form {
+        flex-direction: column;
+    }
+    
+    .signup-form input[type="email"] {
+        margin-bottom: 10px;
+    }
+    
+    .gallery-image {
+        max-width: 100%;
+    }
+    
+    .dealer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dealer-item {
+        width: 80%;
+        margin-bottom: 25px;
+    }
+}

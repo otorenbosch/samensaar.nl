@@ -1,0 +1,429 @@
+[
+  {
+    "date": "17 juli 2025",
+    "badge": "museum",
+    "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook verkrijgbaar in het OERmuseum",
+    "image": "oer-museum-bijl.jpg",
+    "image_alt": "Bronzen bijl uit de collectie van het OERmuseum",
+    "intro": "Met veel plezier kunnen we melden dat \"Het geheim van de bronzen bijl\" vanaf vandaag ook verkrijgbaar is in de museumwinkel van het OERmuseum in Diever. Dit bijzondere museum, dat zich toelegt op de oergeschiedenis van Drenthe, vormt een perfecte match met het verhaal van Sam en Saar.",
+    "quote": "Het OERmuseum heeft prachtige voorwerpen uit de bronstijd in hun collectie, inclusief authentieke bronzen bijlen die lijken op die uit ons verhaal. Het is geweldig dat bezoekers na het zien van deze echte archeologische schatten ook het avontuurlijke verhaal eromheen mee naar huis kunnen nemen.",
+    "content": [
+      "Het OERmuseum in Diever is gespecialiseerd in de oergeschiedenis van Drenthe en herbergt een indrukwekkende collectie archeologische vondsten uit verschillende tijdperken. Hun collectie bronzen voorwerpen, waaronder bijlen die sterk lijken op de vondst die Sam en Saar's vader doet in het boek, maken dit museum tot een bijzondere locatie voor het kinderboek.",
+      "Het museum ligt in het hart van Drenthe, een provincie die rijk is aan archeologische schatten. Van hunebedden tot bronstijdvondsten - Drenthe vertelt het verhaal van onze vroegste bewoners. \"Het geheim van de bronzen bijl\" sluit perfect aan bij deze rijke geschiedenis en brengt de fascinerende wereld van de bronstijd tot leven voor jonge lezers.",
+      "Bezoekers van het OERmuseum kunnen nu na het bewonderen van de echte bronzen voorwerpen uit de museumcollectie het spannende verhaal van Sam en Saar meenemen. Het boek vertelt hoe een vondst van 4000 jaar oud twee kinderen meeneemt op een avontuurlijke reis tussen heden en verleden, waarbij dromen en werkelijkheid soms verrassend dicht bij elkaar komen."
+    ],
+    "components": [
+      {
+        "type": "info_box",
+        "title": "🏛️ Bezoek het OERmuseum",
+        "items": [
+          "**Adres:** Witteveen 4, 7981 LM Diever",
+          "**Boekprijs:** €19,95"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bezoek het OERmuseum",
+        "url": "https://www.oermuseum.nl",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
+    "date": "10 juli 2025",
+    "badge": "radio",
+    "title": "Otto Torenbosch te gast bij RTV1 over \"Het geheim van de bronzen bijl\"",
+    "image": "rtv1-studio.jpg",
+    "image_alt": "Otto Torenbosch in de studio van RTV1",
+    "intro": "Otto Torenbosch was gisteren te gast in de studio van RTV1 om te praten over zijn kinderboek \"Sam en Saar en het geheim van de bronzen bijl\". In een uitgebreid radio-interview vertelde hij over de inspiratie achter het boek, de fascinerende wereld van metaaldetectie en hoe een echte vondst van 4000 jaar oud uitgroeide tot een spannend verhaal voor kinderen.",
+    "quote": "Het was geweldig om in de RTV1 studio te zijn en uitgebreid te kunnen vertellen over het boek en de passie voor archeologie. Radio geeft zo'n mooie gelegenheid om echt het verhaal achter het verhaal te delen.",
+    "content": [
+      "De uitzending is aanstaande zaterdag te beluisteren via RTV1. De regionale radiozender is een bekende stem in Zuidoost-Groningen en omgeving, en bereikt veel luisteraars die geïnteresseerd zijn in lokale verhalen en bijzondere projecten.",
+      "In het interview ging Otto dieper in op hoe de vondst van een bronzen bijl bij Bronneger hem inspireerde tot het schrijven van dit kinderboek. Hij vertelde over het onderzoek dat hij deed naar de bronstijd, de samenwerking met illustrator Mujan Art, en hoe het boek inmiddels zijn weg heeft gevonden naar musea door heel Nederland.",
+      "Deze radio-uitzending voegt zich bij een groeiende lijst van media-aandacht voor \"Het geheim van de bronzen bijl\", waaronder eerdere interviews bij RTV Drenthe en NPO2. Het laat zien hoe het verhaal van Sam en Saar mensen van alle leeftijden weet te fascineren en de interesse in archeologie en lokale geschiedenis weet aan te wakkeren."
+    ],
+    "components": [
+      {
+        "type": "radio_info",
+        "title": "Luister naar de uitzending op zaterdag 12 juli van 08:00 - 09:00",
+        "subtitle": "**RTV1 is te ontvangen via:**",
+        "frequencies": [
+          "**105.3 FM** - gemeente Stadskanaal en Zuidoost Groningen",
+          "**106.2 FM** - gemeente Veendam, Ommelanderwijk / Alteveer",
+          "**106.9 FM** - gemeente Veendam, Ommelanderwijk / Alteveer", 
+          "**106.0 FM** - gemeente Borger-Odoorn",
+          "**DAB+ kanaal 8C** - digitale radio"
+        ],
+        "extra": "**Gemist?** Je kunt de uitzending een week terug luisteren via [RTV Een uitzending gemist](https://rtveen.nl/uitzendinggemist-radio/)."
+      },
+      {
+        "type": "audio_player",
+        "title": "🎧 Beluister het interview terug",
+        "description": "Gemist? Je kunt het volledige interview hier terugluisteren:",
+        "audio_file": "rtv1-interview-web.mp3"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bezoek RTV1",
+        "url": "https://www.rtveen.nl/",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
+    "date": "Juli 2025",
+    "badge": "museum",
+    "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook verkrijgbaar in het Limburgs Museum",
+    "image": "limburgs-museum.jpg",
+    "image_alt": "Het boek in het Limburgs Museum",
+    "intro": "Met veel trots kunnen we melden dat \"Het geheim van de bronzen bijl\" vanaf nu ook verkrijgbaar is in de museumwinkel van het Limburgs Museum in Venlo. Dit betekent een belangrijke uitbreiding naar het zuiden van Nederland.",
+    "quote": "Het is fantastisch om te zien dat het boek nu ook een plek heeft gevonden in Limburg. Het Limburgs Museum bereikt een steeds breder publiek van geschiedenisliefhebbers.",
+    "content": [
+      "Het Limburgs Museum in Venlo is een toonaangevend museum dat zich richt op de rijke geschiedenis en cultuur van Limburg. Het museum herbergt een indrukwekkende archeologische collectie met vondsten uit verschillende perioden, waaronder ook voorwerpen uit de bronstijd die een directe link hebben met het verhaal van Sam en Saar.",
+      "Het Limburgs Museum sluit perfect aan bij de doelgroep van het boek. Bezoekers die geïnteresseerd zijn in de prehistorie en archeologie kunnen na het bekijken van de museumcollectie het avontuurlijke verhaal van Sam en Saar meenemen naar huis, waarin de wereld van archeologische vondsten tot leven komt voor jonge lezers.",
+      "\"Het geheim van de bronzen bijl\" vertelt het verhaal van twee kinderen die door de vondst van een 4000 jaar oude bronzen bijl op een reis gaan tussen heden en verleden. Het boek combineert spanning en avontuur met educatieve elementen over de bronstijd en archeologie."
+    ],
+    "buttons": [
+      {
+        "text": "Bezoek het Limburgs Museum",
+        "url": "https://www.limburgsmuseum.nl/",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
+    "date": "Juni 2025",
+    "badge": "museum",
+    "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook verkrijgbaar in het Veenkoloniaal Museum",
+    "image": "veenkoloniaal-museum.jpg",
+    "image_alt": "Het boek in het Veenkoloniaal Museum",
+    "intro": "Het Veenkoloniaal Museum in Veendam heeft \"Sam en Saar en het geheim van de bronzen bijl\" toegevoegd aan het assortiment van hun museumwinkel. Dit prachtige museum, dat de geschiedenis van de veenkoloniën vertelt, is een perfecte aanvulling op de lijst van verkooppunten.",
+    "quote": "Het Veenkoloniaal Museum heeft een rijke collectie over de lokale geschiedenis. Het is mooi om te zien dat het boek daar een plaats heeft gekregen naast de andere historische verhalen.",
+    "content": [
+      "Het Veenkoloniaal Museum vertelt het verhaal van de unieke geschiedenis van de veenkoloniën in Groningen en Drenthe. Met hun focus op lokale geschiedenis en erfgoed past \"Sam en Saar en het geheim van de bronzen bijl\" perfect in hun collectie, waarbij het verhaal van Sam en Saar een brug slaat tussen de prehistorie en de meer recente geschiedenis van de regio."
+    ],
+    "buttons": [
+      {
+        "text": "Bezoek het Veenkoloniaal Museum",
+        "url": "https://www.veenkoloniaalmuseum.nl/",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
+    "date": "16 juni 2025",
+    "badge": "event",
+    "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook te koop bij de Dagwinkel in Gasselternijveen",
+    "image": "dagwinkel-gasselternijveen.jpg",
+    "image_alt": "Het boek Sam en Saar bij Dagwinkel in Gasselternijveen",
+    "intro": "Goed nieuws voor de inwoners van Gasselternijveen en omgeving! \"Sam en Saar en het geheim van de bronzen bijl\" is nu ook verkrijgbaar bij de plaatselijke Dagwinkel. Dit betekent dat je het boek voortaan ook tijdens je dagelijkse boodschappen kunt aanschaffen.",
+    "quote": "Het is geweldig om het boek ook in onze eigen buurt beschikbaar te hebben. Zo kunnen lokale lezers gemakkelijk een exemplaar meenemen bij hun gewone boodschappen.",
+    "content": [
+      "De Dagwinkel in Gasselternijveen is een vertrouwde naam in het dorp en biedt naast de dagelijkse boodschappen nu ook dit spannende kinderboek aan. Voor inwoners van Gasselternijveen is dit een ideale manier om het boek te steunen en tegelijkertijd de lokale winkel te ondersteunen. Het boek kost €19,95 en is direct beschikbaar."
+    ],
+    "components": [
+      {
+        "type": "info_box",
+        "title": "Verkrijgbaar bij:",
+        "items": [
+          "**Dagwinkel Gasselternijveen**",
+          "**Adres:** Gasselterweg 2, 9514 BL Gasselternijveen",
+          "**Boekprijs:** €19,95"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bezoek de Dagwinkel",
+        "url": "https://gasselternijveen.lekkermakkelijk.nl/",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
+    "date": "27 mei 2025",
+    "badge": "event",
+    "title": "\"Het geheim van de bronzen bijl\" nu ook verkrijgbaar via bol.com",
+    "image": "bol-com-verkoop.jpg",
+    "image_alt": "Het boek Sam en Saar op bol.com",
+    "intro": "Een belangrijke mijlpaal voor \"Het geheim van de bronzen bijl\": het boek is nu ook verkrijgbaar via bol.com, de grootste online boekwinkel van Nederland. Dit betekent een enorme uitbreiding van de bereikbaarheid voor lezers door het hele land.",
+    "quote": "Het is fantastisch om te zien dat het boek nu ook via dit grote platform verkrijgbaar is. Hiermee bereiken we een veel breder publiek en maken we het boek toegankelijk voor iedereen die online winkelt.",
+    "content": [
+      "Via bol.com kunnen klanten het boek bestellen met de bekende snelle levering en betrouwbare service waar zij aan gewend zijn. Het boek wordt aangeboden tegen de reguliere verkoopprijs van €19,95 en profiteert van de uitgebreide zoekfunctionaliteit en aanbevelingssystemen van het platform.",
+      "Deze stap naar bol.com is een belangrijke uitbreiding naast de bestaande verkoopkanalen zoals museumwinkels, metaaldetector dealers en de directe verkoop via de auteur. Samen zorgen deze kanalen ervoor dat \"Het geheim van de bronzen bijl\" voor iedereen gemakkelijk verkrijgbaar is.",
+      "Op bol.com kunnen klanten ook recensies lezen en achterlaten, wat helpt bij het ontdekken van het boek door nieuwe lezers die op zoek zijn naar spannende kinderboeken over geschiedenis en archeologie."
+    ],
+    "buttons": [
+      {
+        "text": "Bekijk op bol.com",
+        "url": "https://www.bol.com/nl/nl/p/sam-en-saar-en-het-geheim-van-de-bronzen-bijl/9300000231742289/?bltgh=mk8105kgUqAGczrHG-hImQ.4_8.9.ProductTitle",
+        "external": true
+      },
+      {
+        "text": "Alle bestelmogelijkheden",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
+    "date": "21 mei 2025",
+    "badge": "print",
+    "title": "Lovende recensie van \"Het geheim van de bronzen bijl\" op geschiedenis.nl",
+    "image": "covernieuws.jpg",
+    "image_alt": "Omslag van het boek",
+    "intro": "Recensent Leon Mijderwijk heeft op geschiedenis.nl een prachtige recensie gepubliceerd over \"Sam en Saar en het geheim van de bronzen bijl\". De recensent prijst zowel de warme sfeer van het verhaal als de manier waarop het boek de grenzen tussen heden en verleden vervaagt.",
+    "quote": "Hoewel ik al even te oud ben om tot de doelgroep te behoren, raakten mij twee dingen tijdens het lezen. Allereerst, het is een sympathieke vertelling. De kinderen leven in een warm gezin waar de ouders gewoon 'papa' en 'mama' zijn. [...] Naast de aangename sfeer geeft het verhaal een gevoel dat de grenzen tussen onze tijd en het verleden in elkaar overlopen.",
+    "content": [
+      "Mijderwijk noemt dit gevoel \"één van de essenties van archeologie\" en beschrijft hoe het boek laat zien dat archeologische vondsten een verbindende factor zijn tussen ons en de mensen die vroeger leefden. \"De vondsten zijn een verbindende factor,\" schrijft hij.",
+      "Bijzondere lof is er ook voor de illustraties van Mujan Art. Over het omslag schrijft Mijderwijk: \"Deze dragen bij aan de sfeer. Dat geldt met name voor het omslag waarop een nietsvermoedende zoeker stap voor stap dichter bij het verre verleden komt. Zijn akker gaat over in een veld waar twee kinderen in het veld zijn. Een bijl – een offer? – ligt op de bodem van de rivier. De geschiedenis stroomt.\"",
+      "De recensent sluit af met praktische informatie over het verkrijgen van het boek, en vermeldt daarbij dat rechtstreekse bestellingen bij de auteur voorzien worden van een persoonlijke boodschap, handtekening en boekenlegger."
+    ],
+    "buttons": [
+      {
+        "text": "Lees de volledige recensie",
+        "url": "https://geschiedenis.nl/nieuws/artikel/4029/sam-en-saar-en-het-geheim-van-de-bronzen-bijl",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
+    "date": "20 mei 2025",
+    "badge": "event",
+    "title": "\"Het geheim van de bronzen bijl\" nu verkrijgbaar bij metaaldetector dealers",
+    "image": "dealers-banner.jpg",
+    "image_alt": "Het boek Sam en Saar bij verschillende metaaldetector dealers",
+    "intro": "Met veel plezier kondigen we aan dat \"Het geheim van de bronzen bijl\" vanaf nu verkrijgbaar is bij diverse gespecialiseerde metaaldetector dealers door heel Nederland. Dit is een belangrijke stap in de beschikbaarheid van het boek, vooral voor lezers die affiniteit hebben met metaaldetectie en archeologie.",
+    "quote": "Het is geweldig om te zien dat de metaaldetector gemeenschap zo enthousiast is over dit boek. Via deze dealers bereiken we precies de doelgroep die de passie voor het ontdekken van geschiedenis deelt.",
+    "content": [
+      "De dealers die het boek nu in hun assortiment hebben opgenomen zijn stuk voor stuk specialisten in de wereld van metaaldetectie. Hun klanten zijn vaak de echte enthousiastelingen die, net als de vader van Sam en Saar in het boek, regelmatig op pad gaan om historische voorwerpen te ontdekken.",
+      "Het boek sluit perfect aan bij het assortiment van deze dealers, waar klanten niet alleen terecht kunnen voor detectors en accessoires, maar nu ook voor een spannend verhaal dat de fascinerende wereld van archeologische vondsten tot leven brengt voor jonge lezers.",
+      "\"Het geheim van de bronzen bijl\" is een avontuurlijk kinderboek waarin de vondst van een 4000 jaar oude bronzen bijl leidt tot een spannend verhaal over twee kinderen die tussen droom en werkelijkheid een reis maken naar de bronstijd. Met de verkoop via metaaldetector dealers hoopt de auteur vooral jonge lezers te inspireren voor archeologie en geschiedenis."
+    ],
+    "components": [
+      {
+        "type": "dealers_list",
+        "dealers": [
+          {
+            "name": "Detect",
+            "logo": "logo-detect.png",
+            "url": "https://www.detect.nl"
+          },
+          {
+            "name": "Detectorandus",
+            "logo": "logo-detectorandus.png",
+            "url": "https://www.detectorandus.nl"
+          },
+          {
+            "name": "Detector Wereld",
+            "logo": "logo-detectorwereld.png",
+            "url": "https://www.detectorwereld.nl"
+          },
+          {
+            "name": "Detectiespecialist DJ Laan",
+            "logo": "logo-djlaan.png",
+            "url": "https://www.djlaan.nl"
+          },
+          {
+            "name": "Pieterman Metaaldetectors",
+            "logo": "logo-pieterman.png",
+            "url": "https://pieterman-detectors.nl/"
+          },
+          {
+            "name": "Kooistra Metaaldetectors",
+            "logo": "logo-kooistra.png",
+            "url": "https://kooistra-detectors.eu/"
+          }
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bestel het boek online",
+        "url": "/bestel/?boek=bronzen-bijl"
+      }
+    ]
+  },
+  {
+    "date": "16 mei 2025",
+    "badge": "museum",
+    "title": "\"Het geheim van de bronzen bijl\" nu verkrijgbaar in het Rijksmuseum van Oudheden en Archeon",
+    "image": "rijksmuseum-archeon.jpg",
+    "image_alt": "Het boek Sam en Saar bij het Rijksmuseum van Oudheden en Archeon",
+    "intro": "Met grote vreugde kunnen we melden dat \"Het geheim van de bronzen bijl\" vanaf nu ook verkrijgbaar is in de museumwinkels van het Rijksmuseum van Oudheden in Leiden en het Archeologisch Themapark Archeon in Alphen aan den Rijn. Afgelopen vrijdag 16 mei werden de boeken persoonlijk afgeleverd door Otto Torenbosch.",
+    "quote": "Het is een droom die uitkomt om mijn boek te zien liggen tussen al die fascinerende archeologische schatten in deze prachtige musea. De link met de collecties over de bronstijd maakt het een perfecte match.",
+    "content": [
+      "Het Rijksmuseum van Oudheden (RMO) is hét nationale archeologiemuseum van Nederland met een indrukwekkende collectie voorwerpen uit de Nederlandse prehistorie, waaronder vele bronstijdvondsten. Veel van de objecten die beschreven worden in het boek, zoals bronzen bijlen, speren en sieraden, zijn in het echt te bewonderen in de permanente tentoonstelling van het museum.",
+      "Archeon is een uniek openluchtmuseum waar bezoekers kunnen ervaren hoe het dagelijks leven in verschillende perioden uit de Nederlandse geschiedenis eruitzag, inclusief de bronstijd. In de prehistorische dorpen van Archeon worden bronstijdtechnieken gedemonstreerd die ook in het verhaal van Sam en Saar een rol spelen, zoals bronzen voorwerpen gieten en het gebruik van deze historische werktuigen.",
+      "De uitbreiding naar deze prestigieuze museumlocaties vergroot de zichtbaarheid van het boek bij het historisch geïnteresseerde publiek."
+    ],
+    "components": [
+      {
+        "type": "image_gallery",
+        "images": [
+          {
+            "src": "rmo.jpg",
+            "alt": "Het boek in het Rijksmuseum van Oudheden",
+            "caption": "Het boek in het Rijksmuseum van Oudheden in Leiden"
+          },
+          {
+            "src": "archeon.jpg",
+            "alt": "Het boek in Archeon",
+            "caption": "De boeken zijn nu ook te koop in het Archeologisch Themapark Archeon"
+          }
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bestel het boek online",
+        "url": "/bestel/?boek=bronzen-bijl"
+      }
+    ]
+  },
+  {
+    "date": "16 mei 2025",
+    "badge": "tv",
+    "title": "\"Het geheim van de bronzen bijl\" in de schijnwerpers op NPO2",
+    "image": "npo-regioned-screenshot.jpg",
+    "image_alt": "Otto Torenbosch in RegioNed op NPO2",
+    "intro": "Het verhaal van \"Het geheim van de bronzen bijl\" heeft nu ook nationale aandacht gekregen! In de uitzending van RegioNed op NPO2 wordt Otto Torenbosch geïnterviewd over zijn boek en de bijzondere vondst die de inspiratie vormde voor dit avontuurlijke kinderboek.",
+    "quote": "De sprong van een lokale vondst naar nationale televisie is bijzonder. Het laat zien hoeveel mensen gefascineerd zijn door de combinatie van archeologie, geschiedenis en een spannend verhaal voor kinderen.",
+    "content": [
+      "In het fragment, te zien vanaf minuut 2:30, vertelt Otto over het ontstaan van het boek en hoe de vondst van een echte bronzen bijl van 4000 jaar oud de inspiratie vormde voor het verhaal van Sam en Saar."
+    ],
+    "buttons": [
+      {
+        "text": "Bekijk de uitzending op NPO Start",
+        "url": "https://npo.nl/start/serie/regioned_2/seizoen-4/regioned_14131/afspelen",
+        "external": true
+      }
+    ]
+  },
+  {
+    "date": "9 mei 2025",
+    "badge": "tv",
+    "title": "Schattenjager Otto Torenbosch schrijft kinderboek over oeroude bijlvondst",
+    "image": "rtv-drenthe-interview.jpg",
+    "image_alt": "Otto Torenbosch geïnterviewd door RTV Drenthe",
+    "intro": "RTV Drenthe heeft een mooi artikel met video gepubliceerd over \"Het geheim van de bronzen bijl\". In het interview vertelt Otto Torenbosch over de inspiratie achter het kinderboek: een echte bronzen bijl die vijftien jaar geleden werd gevonden in een weiland bij Bronneger.",
+    "quote": "Bij het zoeken in de buurt van Bronneger vond hij een bronzen bijl. Die is wel vierduizend jaar oud. Zoiets vind je maar één keer in je leven.",
+    "content": [
+      "Het artikel beschrijft hoe metaaldetectie een rustgevende hobby is voor Torenbosch, en hoe de vondst van de bijl hem inspireerde tot het schrijven van dit kinderboek. Ook wordt vermeld dat het boek inmiddels verkrijgbaar is in diverse museumwinkels.",
+      "In de bijgevoegde video leest de auteur voor uit zijn boek en vertelt hij meer over het verhaal van Sam en Saar."
+    ],
+    "buttons": [
+      {
+        "text": "Lees het artikel en bekijk de video op RTV Drenthe",
+        "url": "https://www.rtvdrenthe.nl/nieuws/17460278/schattenjager-otto-torenbosch-schrijft-kinderboek-over-oeroude-bijlvondst",
+        "external": true
+      }
+    ]
+  },
+  {
+    "date": "9 mei 2025",
+    "badge": "event",
+    "title": "Geslaagde boekpresentatie op basisscholen in MFC De Spil",
+    "image": "boekpresentatie-scholen.jpg",
+    "image_alt": "Otto Torenbosch presenteert zijn boek aan schoolkinderen",
+    "intro": "Op vrijdag 9 mei vond in MFC De Spil een bijzondere boekpresentatie plaats voor de leerlingen van basisscholen CDK 't Kompas en OBS J. Emmens. Otto Torenbosch vertelde enthousiast over het ontstaan van \"Het geheim van de bronzen bijl\" en las een fragment voor uit het boek.",
+    "quote": "Het was geweldig om te zien hoe de kinderen reageerden op het verhaal en hoeveel interesse ze toonden in het boek én in de archeologie erachter.",
+    "content": [
+      "Na de presentatie was er tijd voor vragen. De kinderen stelden niet alleen vragen over het boek, maar waren ook nieuwsgierig naar persoonlijke details zoals de namen van Otto's huisdieren en zijn leeftijd. Deze oprechte interesse en enthousiasme maakten de presentatie extra speciaal.",
+      "Beide scholen ontvingen een exemplaar van het boek als cadeau om in de klas uit voor te lezen. Zo kunnen alle leerlingen kennismaken met de avonturen van Sam en Saar en hun ontdekkingen uit de bronstijd."
+    ],
+    "components": [
+      {
+        "type": "image_gallery",
+        "images": [
+          {
+            "src": "presentatie-1.jpg",
+            "alt": "Otto leest voor uit het boek",
+            "caption": ""
+          },
+          {
+            "src": "presentatie-2.jpg",
+            "alt": "Kinderen stellen vragen",
+            "caption": ""
+          },
+          {
+            "src": "presentatie-3.jpg",
+            "alt": "Overhandiging van het boek aan de scholen",
+            "caption": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "date": "8 mei 2025",
+    "badge": "museum",
+    "title": "\"Het geheim van de bronzen bijl\" nu verkrijgbaar in het Drents Museum",
+    "image": "drents-museum.jpg",
+    "image_alt": "Sam en Saar in de museumwinkel van het Drents Museum",
+    "intro": "Met trots kunnen we melden dat \"Het geheim van de bronzen bijl\" nu verkrijgbaar is in de museumwinkel van het Drents Museum in Assen. Het boek heeft een prachtige plek gekregen in de winkel, waar het aansluit bij de collectie over archeologie en prehistorie.",
+    "content": [
+      "Het Drents Museum is bekend om zijn bijzondere archeologische collectie, waaronder vondsten uit de bronstijd die ook in het verhaal van Sam en Saar voorkomen. Dit maakt de museumwinkel een perfecte locatie voor het boek, waar bezoekers na het zien van de echte bronzen voorwerpen uit die tijd, het avontuurlijke verhaal eromheen kunnen meenemen.",
+      "Naast het Drents Museum is het boek ook verkrijgbaar bij het Hunebedcentrum in Borger."
+    ],
+    "buttons": [
+      {
+        "text": "Bezoek de museumwinkel",
+        "url": "https://drentsmuseum.nl/museumshop",
+        "external": true
+      }
+    ]
+  },
+  {
+    "date": "7 mei 2025",
+    "badge": "print",
+    "title": "Otto Torenbosch schrijft Sam en Saar en het geheim van de bronzen bijl. 'Vrienden vragen of ze mee mogen naar het boekenbal'",
+    "image": "kanaalstreek-artikel.jpg",
+    "image_alt": "Artikel in de Kanaalstreek",
+    "intro": "De Kanaalstreek publiceerde een uitgebreid artikel over de lancering van \"Het geheim van de bronzen bijl\". Het artikel beschrijft hoe de datum 7 mei een bijzondere dag was voor Otto Torenbosch, met de levering van duizend exemplaren van het kinderboek en de officiële presentatie op vrijdag 9 mei in MFC De Spil.",
+    "quote": "Ik heb in eigen beheer duizend boeken laten drukken, vertelt de 49-jarige projectmanager ICT uit Gasselternijveen.",
+    "content": [
+      "Het artikel gaat dieper in op hoe het boek tot stand kwam, met mooie illustraties van Mujan Kruit, en de belangstelling van musea zoals het Rijksmuseum van Oudheden in Leiden, het Openluchtmuseum Archeon in Alphen aan de Rijn en het Drents Museum in Assen. Ook wordt vermeld dat het boek voor €19,95 verkrijgbaar is in diverse boekwinkels in de regio.",
+      "In het interview wordt ook het verhaal van het boek toegelicht, waarin Sam droomt over de herkomst van de gevonden bijl en een reis maakt door het verleden, waar dromen en werkelijkheid soms akelig dicht bij elkaar komen."
+    ],
+    "buttons": [
+      {
+        "text": "Lees het volledige artikel online",
+        "url": "https://krant.kanaalstreek.nl/reader/?epub=https://krant.kanaalstreek.nl/ndc-ws/kanaalstreek/issues/11173/&page=3&article=G8T33OF9L.1+G3G33VJPQ.1.html",
+        "external": true
+      }
+    ]
+  }
+]
