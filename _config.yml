@@ -11,8 +11,39 @@ permalink: pretty
 # Tijdzone
 timezone: Europe/Amsterdam
 
-# Collecties (later toe te voegen)
-# collections:
-#   books:
-#     output: true
-#     permalink: /boeken/:path/
+# Plugins voor betere functionaliteit
+plugins:
+  - jekyll-sitemap          # Automatische sitemap.xml
+  - jekyll-seo-tag         # Betere SEO meta tags  
+  - jekyll-feed            # RSS feed
+
+# Beveiligde markdown instellingen
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    disable: true           # Voorkomt XSS via code highlighting
+
+# CSS optimalisatie
+sass:
+  style: compressed         # Kleinere CSS bestanden
+
+# Exclude gevoelige bestanden
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - README.md
+  - LICENSE
+  - CHANGELOG.md
+  - package.json
+  - package-lock.json
+  - .git
+  - .gitignore
+  - .DS_Store

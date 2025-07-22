@@ -4,3 +4,8 @@ gem "jekyll"
 gem "webrick", "~> 1.7"
 gem 'tzinfo'
 gem 'tzinfo-data'
+
+# Nieuwe beveiligings- en SEO plugins
+gem 'jekyll-sitemap'
+gem 'jekyll-seo-tag'
+gem 'jekyll-feed'
