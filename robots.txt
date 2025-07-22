@@ -1,0 +1,36 @@
+# robots.txt - plaats dit bestand in de root van je project
+# Naast index.html, _config.yml, etc.
+
+User-agent: *
+Allow: /
+
+# Blokkeer gevoelige/technische paden
+Disallow: /assets/docs/private/
+Disallow: /.jekyll-cache/
+Disallow: /.sass-cache/
+Disallow: /admin/
+Disallow: /config/
+Disallow: /_*/
+Disallow: /node_modules/
+Disallow: /vendor/
+
+# Blokkeer bepaalde bestandstypes
+Disallow: *.json$
+Disallow: /Gemfile
+Disallow: /README.md
+Disallow: /LICENSE
+
+# Sitemap locatie (automatisch gegenereerd door jekyll-sitemap plugin)
+Sitemap: https://www.samensaar.nl/sitemap.xml
+
+# Beleefde crawl-delay (niet te agressief)
+Crawl-delay: 1
+
+# Specifiek voor grote search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot  
+Allow: /
+Crawl-delay: 1
