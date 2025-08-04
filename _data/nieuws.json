@@ -1,5 +1,41 @@
 [
   {
+    "date": "4 augustus 2025",
+    "badge": "event",
+    "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook verkrijgbaar bij Jumbo Abbas Gieten",
+    "image": "jumbo-gieten.jpg",
+    "image_alt": "Het boek Sam en Saar bij Jumbo Abbas Gieten",
+    "intro": "Goed nieuws voor de inwoners van Gieten en omgeving! \"Sam en Saar en het geheim van de bronzen bijl\" is nu ook verkrijgbaar bij de Jumbo in Gieten. Dit betekent dat je het boek voortaan ook tijdens je dagelijkse boodschappen kunt aanschaffen.",
+    "quote": "Het is geweldig om het boek ook in Gieten beschikbaar te hebben. Jumbo Abbas is een bekende plek waar veel mensen hun boodschappen doen, dus het is een perfecte locatie om het boek onder de aandacht te brengen.",
+    "content": [
+      "De Jumbo in Gieten heeft vandaag 15 exemplaren van het boek ontvangen, die persoonlijk zijn afgeleverd door Otto Torenbosch. Deze supermarkt wordt veel bezocht door inwoners van Gieten en omliggende dorpen, waardoor het boek nu toegankelijk is voor een nog breder publiek.",
+      "Voor inwoners van Gieten is dit een ideale manier om het boek te ontdekken tijdens hun gewone boodschappen. Het boek kost €19,95 en is beschikbaar in de boekenhoek van de winkel."
+    ],
+    "components": [
+      {
+        "type": "info_box",
+        "title": "Verkrijgbaar bij:",
+        "items": [
+          "**Jumbo Abbas Gieten**",
+          "**Adres:** Stationsstraat 37, 9461 GR Gieten",
+          "**Boekprijs:** €19,95"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bezoek Jumbo Gieten",
+        "url": "https://www.jumbo.com/winkel/gieten/jumbo-gieten-jumbo-abbas",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek online",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
     "date": "17 juli 2025",
     "badge": "museum",
     "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook verkrijgbaar in het OERmuseum",
