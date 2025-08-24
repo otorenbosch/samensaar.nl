@@ -1,5 +1,37 @@
 [
   {
+    "date": "24 augustus 2025",
+    "badge": "event",
+    "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook verkrijgbaar bij Bruna Borger en Readshop Stadskanaal",
+    "image": "bruna-readshop-winkels.jpg",
+    "image_alt": "Het boek Sam en Saar bij lokale boekhandels",
+    "intro": "De beschikbaarheid van \"Sam en Saar en het geheim van de bronzen bijl\" breidt zich verder uit in de regio! Het boek is nu ook verkrijgbaar bij twee bekende boekhandels: Bruna in Borger en Readshop in Stadskanaal. Voor boekliefhebbers in deze regio's betekent dit een perfecte gelegenheid om het avontuurlijke verhaal over archeologie en geschiedenis te ontdekken.",
+    "quote": "Het is prachtig om te zien dat ook de traditionele boekhandels het verhaal omarmen. Bruna en Readshop hebben beide een sterke band met hun lokale gemeenschap en begrijpen hoe belangrijk het is om verhalen te delen die de geschiedenis van onze eigen regio tot leven brengen.",
+    "content": [
+      "De Bruna in Borger is een vertrouwde bestemming voor boekliefhebbers in de gemeente Borger-Odoorn. Met hun brede assortiment kinderboeken en lokale interesse past \"Het geheim van de bronzen bijl\" perfect in hun collectie. Borger ligt bovendien vlakbij het Hunebedcentrum, waar het boek ook verkrijgbaar is, wat de verbinding met de lokale prehistorie extra sterk maakt.",
+      "De Readshop in Stadskanaal biedt inwoners van Zuidoost-Groningen nu ook toegang tot het boek. Deze boekhandel staat bekend om hun zorgvuldige selectie en persoonlijke service. Voor lezers die op zoek zijn naar spannende verhalen over archeologie en geschiedenis is dit een mooie aanvulling op hun assortiment.",
+      "Met deze uitbreiding naar traditionele boekhandels wordt het boek nog toegankelijker voor een breed publiek. Van museumwinkels tot metaaldetector dealers en nu ook reguliere boekhandels - \"Sam en Saar en het geheim van de bronzen bijl\" vindt zijn weg naar steeds meer lezers die geïnteresseerd zijn in de fascinerende wereld van archeologische ontdekkingen."
+    ],
+    "components": [
+      {
+        "type": "info_box",
+        "title": "Verkrijgbaar bij:",
+        "items": [
+          "**Bruna Borger** - Grote Brink 5, 9531 AK Borger",
+          "**Readshop Stadskanaal** - Oude Markt 1C, 9501 VK Stadskanaal",
+          "**Boekprijs:** €19,95"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bestel het boek online",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
     "date": "4 augustus 2025",
     "badge": "event",
     "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook verkrijgbaar bij Jumbo Abbas Gieten",
