@@ -1,10 +1,21 @@
 [
+    {
+    "title": "Ledendag DDA",
+    "date": "2025-10-11",
+    "start_time": "09:00",
+    "end_time": "17:00",
+    "location": "'t Romienendal, Aladnaweg 3, Aalten",
+    "description": "Kom Otto Torenbosch tegen op de gezellige ledendag van de Detector Amateur in Aalten. Een perfecte gelegenheid om ervaringen uit te wisselen, het verhaal achter 'Het geheim van de bronzen bijl' te horen en natuurlijk een gesigneerd exemplaar mee naar huis te nemen.",
+    "url": "#",
+    "registration_url": "#",
+    "visible": true
+  },
   {
     "title": "Zoekdag de Detectorshop Zeeland",
     "date": "2025-08-30",
     "start_time": "09:00",
     "end_time": "17:00",
-    "location": "De Detectorshop Zeeland, Zeeland",
+    "location": "Kaasboerweg 3, Meliskerke",
     "description": "Otto Torenbosch is aanwezig op de jaarlijkse zoekdag van de Detectorshop Zeeland. Een unieke kans om de auteur persoonlijk te ontmoeten, boeken te laten signeren en te praten over archeologie en metaaldetectie. Het boek is ook verkrijgbaar tijdens het evenement.",
     "type": "evenement",
     "url": "#",
@@ -21,7 +32,7 @@
     "type": "radio",
     "url": "#",
     "registration_url": "#",
-    "visible": true
+    "visible": false
   },
   {
     "title": "Boekpresentatie",
