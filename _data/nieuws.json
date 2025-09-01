@@ -1,5 +1,42 @@
 [
   {
+    "date": "31 augustus 2025",
+    "badge": "event", 
+    "title": "Otto Torenbosch promoot 'Het geheim van de bronzen bijl' op zoekdag in Zeeland",
+    "image": "zoekdag-zeeland.jpg",
+    "image_alt": "Otto Torenbosch op de zoekdag in Zeeland met zijn boek",
+    "intro": "Afgelopen zaterdag 30 augustus was Otto Torenbosch aanwezig op de jaarlijkse zoekdag van De Detectorshop Zeeland om 'Sam en Saar en het geheim van de bronzen bijl' te promoten. Een onverwachte verrassing: Omroep Zeeland was aanwezig voor een reportage en interviewde Otto spontaan over zijn boek.",
+    "quote": "Het was fantastisch om weer eens op een zoekdag aanwezig te zijn. Ruim 100 enthousiastelingen waren aanwezig en iedereen was zeer geïnteresseerd in het verhaal achter het boek. Hoewel ik uiteindelijk 3 exemplaren heb verkocht - wat voor zo'n specifieke doelgroep eigenlijk niet slecht is - was het vooral waardevol om het verhaal te kunnen delen.",
+    "content": [
+      "De zoekdag, georganiseerd door De Detectorshop Zeeland, trok ruim 100 liefhebbers van metaaldetectie. Voor Otto was dit de ideale plek om zijn boek onder de aandacht te brengen van mensen die de hobby van de vader van Sam en Saar in het echt beoefenen. Van de vele enthousiaste reacties resulteerden er uiteindelijk drie boekverkopen.",
+      "Een onverwachte wending maakte de dag extra bijzonder: Omroep Zeeland was aanwezig om verslag te doen van de groeiende populariteit van metaaldetectie. Zij interviewden Otto over zijn ervaringen als metaaldetector gebruiker en zijn boek.",
+      "In de geschreven reportage 'Munten, kogels en bomscherven: metaaldetectie zit in de lift' wordt Otto genoemd met informatie over zijn boek en hoe zijn vondsten de inspiratie vormden voor het verhaal van Sam en Saar. In de bijbehorende televisie-uitzending is Otto te zien tijdens zijn zoekactiviteiten, wat mooi de authenticiteit van zijn verhaal onderstreept.",
+      "Voor Otto was het ook een kans om weer eens actief met de metaaldetector aan de slag te gaan en te netwerken met collega-zoekers. Deze contacten zijn waardevol, niet alleen voor de promotie van het boek, maar ook voor mogelijk toekomstige verhalen. Bovendien toont zijn aanwezigheid als actieve zoeker de authenticiteit van zijn verhaal - hij schrijft niet alleen over metaaldetectie, hij beoefent het ook daadwerkelijk."
+    ],
+    "components": [
+      {
+        "type": "info_box",
+        "title": "📺 Bekijk de reportage van Omroep Zeeland",
+        "items": [
+          "**Artikel:** [Munten, kogels en bomscherven: metaaldetectie zit in de lift](https://www.omroepzeeland.nl/nieuws/17746497/munten-kogels-en-bomscherven-metaaldetectie-zit-in-de-lift){:target=\"_blank\"}",
+          "**Video:** [Zeeland Nu - Otto te zien tijdens het zoeken](https://www.omroepzeeland.nl/tv/aflevering/zeeland-nu/370534316){:target=\"_blank\"} (Otto is te zien tijdens zijn zoekactiviteiten, vanaf circa 3:30)"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bekijk de Omroep Zeeland reportage",
+        "url": "https://www.omroepzeeland.nl/nieuws/17746497/munten-kogels-en-bomscherven-metaaldetectie-zit-in-de-lift",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
     "date": "24 augustus 2025",
     "badge": "event",
     "title": "\"Sam en Saar en het geheim van de bronzen bijl\" nu ook verkrijgbaar bij Bruna Borger en Readshop Stadskanaal",
