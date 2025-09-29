@@ -1,5 +1,42 @@
 [
   {
+    "date": "5 oktober 2025",
+    "badge": "event",
+    "title": "Otto Torenbosch en DDA bij Huis van Hilde tijdens Weekend van de Wetenschap",
+    "intro": "Op zondag 5 oktober kun je Otto Torenbosch en Richard Francken (voorzitter DDA) ontmoeten bij Huis van Hilde in Castricum. Van 11:00 tot 16:00 uur verzorgen zij een interactieve middag over metaaldetectie en archeologie in het kader van het Weekend van de Wetenschap.",
+    "quote": "Het is geweldig om samen met de DDA de fascinerende wereld van metaaldetectie te kunnen delen met bezoekers. Deze combinatie van verhaal en praktijk laat zien hoe spannend archeologie kan zijn!",
+    "content": [
+      "Huis van Hilde in Castricum organiseert op 5 oktober een bijzondere activiteit waarbij Otto Torenbosch voorleest uit 'Sam en Saar en het geheim van de bronzen bijl' en Richard Francken, voorzitter van de Nederlandse vereniging voor metaaldetectie (DDA), laat zien hoe een metaaldetector werkt.",
+      "Bezoekers kunnen van dichtbij archeologische vondsten bekijken en leren over de regels en richtlijnen voor verantwoord zoeken. Van oude munten tot bijzondere historische voorwerpen - er is veel te ontdekken!",
+      "Deze activiteit maakt deel uit van het Weekend van de Wetenschap, een landelijk evenement waarbij musea en wetenschappelijke instellingen hun deuren openen. Op 5 oktober zijn er bij Huis van Hilde nog meer leuke activiteiten te doen."
+    ],
+    "components": [
+      {
+        "type": "info_box",
+        "title": "📍 Praktische informatie",
+        "items": [
+          "**Wanneer:** Zondag 5 oktober 2025",
+          "**Hoe laat:** 11:00 - 16:00 uur",
+          "**Waar:** Huis van Hilde, Castricum",
+          "**Toegang:** Gratis",
+          "**Aanmelden:** Niet nodig"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bezoek Huis van Hilde",
+        "url": "https://www.huisvanhilde.nl",
+        "external": true
+      },
+      {
+        "text": "Meer over de DDA",
+        "url": "https://www.detectoramateur.nl",
+        "external": true
+      }
+    ]
+  },
+  {
     "date": "31 augustus 2025",
     "badge": "event", 
     "title": "Otto Torenbosch promoot 'Het geheim van de bronzen bijl' op zoekdag in Zeeland",

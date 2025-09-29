@@ -43,12 +43,12 @@ title: Agenda
                         </p>
                         <div class="event-actions">
                             {% if event.url and event.url != "#" %}
-                                <a href="{{ event.url }}" class="event-button">Meer info</a>
+                                <a href="{{ event.url }}" class="event-button" target="_blank" rel="noopener noreferrer">Meer info</a>
                             {% endif %}
                             {% if event.registration_url and event.registration_url != "#" %}
-                                <a href="{{ event.registration_url }}" class="event-button secondary">Aanmelden</a>
+                                <a href="{{ event.registration_url }}" class="event-button secondary" target="_blank" rel="noopener noreferrer">Aanmelden</a>
                             {% elsif event.ticket_url and event.ticket_url != "#" %}
-                                <a href="{{ event.ticket_url }}" class="event-button secondary">Tickets</a>
+                                <a href="{{ event.ticket_url }}" class="event-button secondary" target="_blank" rel="noopener noreferrer">Tickets</a>
                             {% endif %}
                         </div>
                     </div>

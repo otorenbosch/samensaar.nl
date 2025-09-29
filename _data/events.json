@@ -1,5 +1,17 @@
 [
-    {
+  {
+    "title": "Otto Torenbosch en DDA bij Weekend van de Wetenschap",
+    "date": "2025-10-05",
+    "start_time": "11:00",
+    "end_time": "16:00",
+    "location": "Huis van Hilde, Castricum",
+    "description": "Kom kennismaken met de fascinerende wereld van metaaldetectie! Otto Torenbosch leest voor uit 'Sam en Saar en het geheim van de bronzen bijl' en Richard Francken (voorzitter DDA) demonstreert hoe een metaaldetector werkt. Bekijk echte archeologische vondsten en leer over verantwoord zoeken. Voor alle leeftijden, gratis toegang, aanmelden niet nodig.",
+    "type": "lezing",
+    "url": "https://www.huisvanhilde.nl/events/weekend-van-de-wetenschap-hoe-werkt-een-metaaldetector/",
+    "registration_url": "#",
+    "visible": true
+  },
+  {
     "title": "Ledendag DDA",
     "date": "2025-10-11",
     "start_time": "09:00",
@@ -20,7 +32,7 @@
     "type": "evenement",
     "url": "#",
     "registration_url": "#",
-    "visible": true
+    "visible": false
   },
   {
     "title": "Radiointerview Otto Torenbosch RTVEEN",
