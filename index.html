@@ -3,6 +3,19 @@ layout: default
 title: Home
 ---
 
+<!-- Kinderboekenweek Banner -->
+<div class="kinderboekenweek-banner">
+  <div class="banner-content">
+    <div class="banner-icon">📚</div>
+    <div class="banner-text">
+      <h2>Kinderboekenweek 2025: Vol avontuur!</h2>
+      <p>GRATIS VERZENDING t/m 12 oktober bij BoekenGilde</p>
+      <p class="banner-code">Gebruik code: <strong>kinderboekenweek25</strong></p>
+    </div>
+    <a href="https://www.boekengilde.nl/boekenshop/sam-en-saar-en-het-geheim-van-de-bronzen-bijl/" class="banner-button" target="_blank">Bestel nu!</a>
+  </div>
+</div>
+
 <h1 class="title-text">Het geheim van de bronzen bijl</h1>
 
 <!-- Voeg een container toe rond de afbeelding voor positionering -->
@@ -145,18 +158,138 @@ title: Home
         .media-badge {
             padding: 5px 10px;
         }
-        
+
         .media-logo {
             height: 20px;
         }
-        
+
         .media-text {
             font-size: 0.9rem;
         }
-        
+
         /* Kleinere afstand tussen badges op mobiel */
         .media-badge-second {
             top: 70px;
+        }
+    }
+
+    /* Kinderboekenweek Banner Styling */
+    .kinderboekenweek-banner {
+        background: linear-gradient(135deg, #FF6B6B 0%, #FFA500 50%, #FFD700 100%);
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        50% {
+            transform: scale(1.02);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+    }
+
+    .banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .banner-icon {
+        font-size: 3rem;
+        animation: bounce 1s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .banner-text {
+        flex: 1;
+        color: white;
+        text-align: left;
+    }
+
+    .banner-text h2 {
+        margin: 0 0 10px 0;
+        font-size: 1.8rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .banner-text p {
+        margin: 5px 0;
+        font-size: 1.1rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    }
+
+    .banner-code {
+        background-color: rgba(255,255,255,0.3);
+        padding: 8px 15px;
+        border-radius: 8px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .banner-code strong {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .banner-button {
+        background-color: white;
+        color: #FF6B6B;
+        padding: 15px 30px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        transition: all 0.3s;
+        white-space: nowrap;
+    }
+
+    .banner-button:hover {
+        background-color: #8B4513;
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Responsive banner */
+    @media (max-width: 768px) {
+        .banner-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .banner-text {
+            text-align: center;
+        }
+
+        .banner-text h2 {
+            font-size: 1.4rem;
+        }
+
+        .banner-text p {
+            font-size: 1rem;
+        }
+
+        .banner-button {
+            width: 100%;
+            text-align: center;
         }
     }
 </style>

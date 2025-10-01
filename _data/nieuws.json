@@ -1,5 +1,41 @@
 [
   {
+    "date": "1 oktober 2025",
+    "badge": "event",
+    "title": "Kinderboekenweek 2025: Gratis verzending bij aankoop kinderboek!",
+    "intro": "Ter ere van de Kinderboekenweek 2025 met het thema 'Vol avontuur' biedt BoekenGilde een speciale actie: gratis verzending bij aankoop van een kinderboek in hun online boekenshop. Gebruik kortingscode 'kinderboekenweek25' bij je bestelling van 'Sam en Saar en het geheim van de bronzen bijl'.",
+    "quote": "De Kinderboekenweek past perfect bij ons avontuurlijke verhaal over Sam en Saar. Met hun ontdekking van de bronzen bijl maken ze een spannende reis naar de bronstijd - precies wat het thema 'Vol avontuur' belooft!",
+    "content": [
+      "Van 1 tot en met 12 oktober 2025 staat alles in het teken van de Kinderboekenweek met het thema 'Vol avontuur'. Verhalen die je meenemen naar onbekende werelden, spannende ontdekkingen en bijzondere ontmoetingen - precies waar 'Sam en Saar en het geheim van de bronzen bijl' voor staat.",
+      "'Het geheim van de bronzen bijl' is een perfect avontuurlijk verhaal voor de Kinderboekenweek. Sam en Saar maken door de vondst van een 4000 jaar oude bronzen bijl een fascinerende reis tussen heden en verleden, waarbij dromen en werkelijkheid op magische wijze verweven raken.",
+      "BoekenGilde ondersteunt de Kinderboekenweek met een speciale actie: bij aankoop van een kinderboek krijg je gratis verzending. Gebruik de kortingscode 'kinderboekenweek25' bij het afrekenen in de BoekenGilde Boekenshop."
+    ],
+    "components": [
+      {
+        "type": "info_box",
+        "title": "🎉 Kinderboekenweek actie",
+        "items": [
+          "**Actieperiode:** 1 t/m 12 oktober 2025",
+          "**Voordeel:** Gratis verzending bij aankoop kinderboek",
+          "**Kortingscode:** kinderboekenweek25",
+          "**Waar:** BoekenGilde Boekenshop"
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Bestel met gratis verzending",
+        "url": "https://www.boekengilde.nl/boekenshop/sam-en-saar-en-het-geheim-van-de-bronzen-bijl/",
+        "external": true,
+        "style": "primary"
+      },
+      {
+        "text": "Meer over het boek",
+        "url": "/boeken/"
+      }
+    ]
+  },
+  {
     "date": "5 oktober 2025",
     "badge": "event",
     "title": "Otto Torenbosch en DDA bij Huis van Hilde tijdens Weekend van de Wetenschap",
