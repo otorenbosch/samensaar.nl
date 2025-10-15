@@ -1,5 +1,32 @@
 [
   {
+    "date": "11 oktober 2025",
+    "badge": "event",
+    "title": "Otto Torenbosch promoot 'Het geheim van de bronzen bijl' op DDA zoekdag in Aalten",
+    "image": "dda-zoekdag-aalten.jpg",
+    "image_alt": "Otto Torenbosch op de DDA zoekdag in Aalten",
+    "intro": "Afgelopen zaterdag 11 oktober was Otto Torenbosch aanwezig op de jaarlijkse zoekdag van de DDA (De Detector Amateur) in Aalten om 'Sam en Saar en het geheim van de bronzen bijl' te promoten. Met maar liefst 285 zoekers, diverse dealers en de aanwezigheid van PAN (Portable Antiquities of the Netherlands) was het een drukke en geslaagde dag.",
+    "quote": "Het was geweldig om zoveel enthousiaste metaaldetector liefhebbers te ontmoeten. De interesse in het boek was groot en de gesprekken met collega-zoekers waren inspirerend. Het hoogtepunt was de kinderzoek wedstrijd onder leiding van piraat Dirkie Duit - prachtig om te zien hoe jonge zoekers kennismaken met deze fascinerende hobby.",
+    "content": [
+      "De DDA zoekdag in Aalten trok een indrukwekkend aantal van 285 zoekers uit heel Nederland. Voor Otto was dit de perfecte gelegenheid om zijn boek onder de aandacht te brengen van de doelgroep die de hobby van de vader van Sam en Saar in het echt beoefent. De dag resulteerde in 10 verkochte boeken, maar belangrijker nog: talloze waardevolle gesprekken over metaaldetectie, archeologie en het schrijven van kinderboeken.",
+      "Een bijzonder onderdeel van de dag was de kinderzoek wedstrijd onder leiding van de populaire piraat Dirkie Duit. Ongeveer 18 kinderen namen deel aan deze wedstrijd, waarbij ze spelenderwijs kennismaakten met metaaldetectie. Voor Otto was dit een mooi voorbeeld van hoe je jonge generaties kunt enthousiasmeren voor geschiedenis en archeologie - precies wat zijn boek ook beoogt.",
+      "Naast de vele gesprekken met zoekers was er ook een ontmoeting met een dame die zelf een prentenboek heeft geschreven. Deze uitwisseling tussen auteurs maakte de dag extra waardevol. Ook de aanwezigheid van diverse metaaldetector dealers en PAN zorgde voor een professionele en informatieve sfeer op het evenement.",
+      "De DDA zoekdag bevestigde opnieuw dat er een grote community bestaat van mensen die gepassioneerd zijn door het ontdekken van historische voorwerpen. Otto's boek speelt hierop in door kinderen mee te nemen in de wereld van archeologische vondsten en de verhalen die daarachter schuilgaan."
+    ],
+    "buttons": [
+      {
+        "text": "Meer over de DDA",
+        "url": "https://www.detectoramateur.nl",
+        "external": true
+      },
+      {
+        "text": "Bestel het boek",
+        "url": "/bestel/?boek=bronzen-bijl",
+        "style": "primary"
+      }
+    ]
+  },
+  {
     "date": "1 oktober 2025",
     "badge": "event",
     "title": "Kinderboekenweek 2025: Gratis verzending bij aankoop kinderboek!",
