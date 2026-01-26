@@ -113,14 +113,14 @@
     
     {% include footer.html %}
 
-    <!-- Cookie Consent Banner -->
-    <div id="cookieBanner" class="cookie-banner" style="display: none;">
-        <div class="cookie-content">
-            <p>Wij gebruiken analytics om onze website te verbeteren. Geen persoonlijke gegevens, geen tracking cookies.</p>
-            <div class="cookie-buttons">
-                <button id="cookieAccept" class="cookie-btn accept">Accepteren</button>
-                <button id="cookieDecline" class="cookie-btn decline">Weigeren</button>
-                <a href="/privacy/" class="cookie-link">Meer info</a>
+    <!-- Cookie Consent Banner (GDPR/AVG compliant) -->
+    <div id="cookieBanner" class="cookie-banner cookie-consent cookie-notice cc-banner gdpr-consent" role="dialog" aria-live="polite" aria-label="Cookiemelding" aria-describedby="cookieDescription" style="display: none;">
+        <div class="cookie-content cc-message">
+            <p id="cookieDescription">Wij gebruiken analytics om onze website te verbeteren. Geen persoonlijke gegevens, geen tracking cookies. Lees ons <a href="/privacy/#cookies" class="cc-link cookie-policy-link">cookiebeleid</a>.</p>
+            <div class="cookie-buttons cc-compliance">
+                <button id="cookieAccept" class="cookie-btn accept cc-btn cc-allow">Accepteren</button>
+                <button id="cookieDecline" class="cookie-btn decline cc-btn cc-deny">Weigeren</button>
+                <a href="/privacy/#cookies" class="cookie-link cc-link">Meer info</a>
             </div>
         </div>
     </div>
