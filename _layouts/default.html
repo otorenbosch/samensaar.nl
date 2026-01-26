@@ -16,17 +16,17 @@
     <!-- Privacy-vriendelijke referrer policy -->
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://gc.zgo.at http://gc.zgo.at https://formsubmit.co https://sketchfab.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: http:; media-src 'self' data: blob:; frame-src 'self' https://sketchfab.com https://docs.google.com; connect-src 'self' https://formsubmit.co https://gc.zgo.at http://gc.zgo.at https://samensaar.goatcounter.com; object-src 'none'; base-uri 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://gc.zgo.at http://gc.zgo.at https://formsubmit.co https://sketchfab.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https: http:; media-src 'self' data: blob:; frame-src 'self' https://sketchfab.com https://docs.google.com; connect-src 'self' https://formsubmit.co https://gc.zgo.at http://gc.zgo.at https://samensaar.goatcounter.com; object-src 'none'; base-uri 'self';">
     
     <!-- DNS prefetch voor externe bronnen (snelheidsverbetering) -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link rel="dns-prefetch" href="//gc.zgo.at">
-    
+
+    <!-- Lokaal gehoste fonts (geen Google verbinding) -->
+    <link rel="stylesheet" href="{{ '/assets/fonts/fonts.css' | relative_url }}">
+
     <!-- BESTAANDE HEAD CONTENT BLIJFT... -->
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/nieuws.css' | relative_url }}">
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="{{ '/assets/images/favicon.png' | relative_url }}" type="image/x-icon">
 
     <style>
@@ -112,9 +112,172 @@
     </main>
     
     {% include footer.html %}
-    
-    <!-- Goatcounter.com analytics -->
-    <script data-goatcounter="https://samensaar.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>Wij gebruiken analytics om onze website te verbeteren. Geen persoonlijke gegevens, geen tracking cookies.</p>
+            <div class="cookie-buttons">
+                <button id="cookieAccept" class="cookie-btn accept">Accepteren</button>
+                <button id="cookieDecline" class="cookie-btn decline">Weigeren</button>
+                <a href="/privacy/" class="cookie-link">Meer info</a>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #8B4513;
+            color: white;
+            padding: 15px 20px;
+            z-index: 9999;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
+        }
+
+        .cookie-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .cookie-content p {
+            margin: 0;
+            flex: 1;
+            min-width: 250px;
+            font-size: 14px;
+        }
+
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cookie-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .cookie-btn.accept {
+            background-color: #FFA500;
+            color: #8B4513;
+        }
+
+        .cookie-btn.accept:hover {
+            background-color: #FFB733;
+        }
+
+        .cookie-btn.decline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .cookie-btn.decline:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        .cookie-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: underline;
+            font-size: 14px;
+        }
+
+        .cookie-link:hover {
+            color: #FFA500;
+        }
+
+        @media (max-width: 600px) {
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-buttons {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    </style>
+
+    <script>
+    (function() {
+        var COOKIE_KEY = 'samensaar_analytics_consent';
+
+        function getConsent() {
+            return localStorage.getItem(COOKIE_KEY);
+        }
+
+        function setConsent(value) {
+            localStorage.setItem(COOKIE_KEY, value);
+        }
+
+        function loadGoatCounter() {
+            if (document.getElementById('goatcounter-script')) return;
+            var script = document.createElement('script');
+            script.id = 'goatcounter-script';
+            script.async = true;
+            script.src = '//gc.zgo.at/count.js';
+            script.dataset.goatcounter = 'https://samensaar.goatcounter.com/count';
+            document.body.appendChild(script);
+        }
+
+        function showBanner() {
+            var banner = document.getElementById('cookieBanner');
+            if (banner) banner.style.display = 'block';
+        }
+
+        function hideBanner() {
+            var banner = document.getElementById('cookieBanner');
+            if (banner) banner.style.display = 'none';
+        }
+
+        // Check consent on page load
+        var consent = getConsent();
+        if (consent === 'accepted') {
+            loadGoatCounter();
+        } else if (consent === null) {
+            // No choice made yet, show banner
+            document.addEventListener('DOMContentLoaded', showBanner);
+        }
+        // If consent === 'declined', do nothing
+
+        // Handle button clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            var acceptBtn = document.getElementById('cookieAccept');
+            var declineBtn = document.getElementById('cookieDecline');
+
+            if (acceptBtn) {
+                acceptBtn.addEventListener('click', function() {
+                    setConsent('accepted');
+                    loadGoatCounter();
+                    hideBanner();
+                });
+            }
+
+            if (declineBtn) {
+                declineBtn.addEventListener('click', function() {
+                    setConsent('declined');
+                    hideBanner();
+                });
+            }
+        });
+    })();
+    </script>
 </body>
 </html>

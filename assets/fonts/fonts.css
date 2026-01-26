@@ -1,0 +1,16 @@
+/* Lokaal gehoste Comic Neue fonts - geen Google verbinding */
+@font-face {
+    font-family: 'Comic Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/assets/fonts/comic-neue-400.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Comic Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('/assets/fonts/comic-neue-700.ttf') format('truetype');
+}
