@@ -1,5 +1,27 @@
 [
   {
+  "date": "30 maart 2026",
+  "badge": "fan",
+  "title": "Prachtige boekendoos gemaakt van 'Sam en Saar en het geheim van de bronzen bijl'",
+  "image": "boekendoos-jan-everts-zoon.jpg",
+  "image_alt": "Koen trots met het boek Sam en Saar en zijn zelfgemaakte boekendoos",
+  "intro": "Koen Everts moest voor school een boekendoos maken en koos daarvoor 'Sam en Saar en het geheim van de bronzen bijl'. Het resultaat mag er zijn: een prachtige groene doos vol voorwerpen uit het verhaal — helemaal zelf gemaakt!",
+  "content": [
+    "Als je een boekendoos moet maken voor school, dan kies je natuurlijk het allerleukste boek! Koen bedacht dat 'Sam en Saar en het geheim van de bronzen bijl' de perfecte keuze was. De doos is groen bekleed en voorzien van de boekomslag — maar het echte werk zit in de doos.",
+    "In de doos heeft Koen voorwerpen verzameld die rechtstreeks uit het verhaal komen. Een voetbal, want Saar speelt een spannende kampioenswedstrijd voor VV Veldzicht tegen het sterke SV Woudria — en wint. Een zelfgemaakte metaaldetector van karton, waarmee in het boek de bronzen bijl wordt gevonden. Een nagemaakte bronzen bijl, want dat is natuurlijk hét object waar het hele verhaal om draait. En luciferstokjes als verwijzing naar het vuur dat Sam in zijn dromen moet bewaken — een van de meest mysterieuze en spannende stukken in het boek.",
+    "Op de zijkant van de doos plakte Koen een foto van de schrijver — maar niet zomaar een foto. Hij koos een foto waarop Otto Torenbosch naast zijn vader Jan staat, allebei in het rode shirt van het 45+ voetbalteam. Want zo kent Koen de schrijver: als teamgenoot van zijn papa.",
+    "In het deksel schreef Koen zijn mening: 'Ik vind dit boek leuk omdat de schrijver bij mijn papa in het voetbalteam zit. En het is een mooi boek over het verleden omdat het in de omgeving afspeelt. Het is echt een gaaf boek voor mensen van 7 tot 12 jaar en leerzaam.' Een eerlijker recensie kun je niet krijgen.",
+    "Bedankt Jan en Koen voor dit mooie werkstuk!"
+  ],
+  "buttons": [
+    {
+      "text": "Bestel het boek",
+      "url": "/bestel/?boek=bronzen-bijl",
+      "style": "primary"
+    }
+  ]
+  },
+  {
     "date": "11 oktober 2025",
     "badge": "event",
     "title": "Otto Torenbosch promoot 'Het geheim van de bronzen bijl' op DDA zoekdag in Aalten",
