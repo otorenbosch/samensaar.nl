@@ -1,5 +1,26 @@
 [
   {
+  "date": "4 april 2026",
+  "badge": "event",
+  "title": "\"Sam en Saar\" te zien bij Zandsculpturen Garderen — Het Romeinse Rijk in het zand",
+  "image": "zandsculpturen-garderen-romein.jpg",
+  "image_alt": "Zandsculptuur van een Romeinse ruiter met masker bij Zandsculpturen Garderen — hetzelfde type masker dat Otto en Gert ooit vonden tijdens het detecteren",
+  "intro": "Bij Zandsculpturen Garderen is nu ook \"Sam en Saar en het geheim van de bronzen bijl\" te zien. De tentoonstelling dit jaar draait om het Romeinse Rijk — en dat maakt de combinatie bijzonder persoonlijk.",
+  "quote": "Wie droeg dit masker? Wat heeft hij meegemaakt? Die vragen inspireerden Otto tot schrijven.",
+  "content": [
+    "Zandsculpturen Garderen presenteert dit jaar de grootste zandsculpturententoonstelling van Europa, met het Romeinse Rijk als thema. Bezoekers kunnen er de opkomst, bloei en val van het Rijk bewonderen — van keizers en soldaten tot het dagelijks leven en de Neder-Germaanse Limes, die dit jaar vijf jaar UNESCO Werelderfgoed is.",
+    "Naast het boek is er ook een informatiepaneel over een bijzondere vondst: een koperen Romeins ruitermasker uit de 1e eeuw na Christus. Dit masker werd gevonden door Otto en zijn vriend Gert, toen zij met hun detector een opgebaggerde grindberg onderzochten. Het masker, volledig bewaard gebleven, bevindt zich nu in Museum Het Valkhof in Nijmegen.",
+    "De combinatie van een echte detectievondst, de zandsculpturen en het kinderboek maakt dit tot een bijzondere en leerzame ervaring voor jong en oud. En wie weet — Otto overweegt over dit Romeinse avontuur misschien ook een boek te schrijven."
+  ],
+  "buttons": [
+    {
+      "text": "Bezoek Zandsculpturen Garderen",
+      "url": "https://www.zandsculpturen.nl",
+      "external": true
+    }
+  ]
+  },
+  {
   "date": "30 maart 2026",
   "badge": "fan",
   "title": "Prachtige boekendoos gemaakt van 'Sam en Saar en het geheim van de bronzen bijl'",
